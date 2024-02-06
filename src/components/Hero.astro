@@ -1,0 +1,30 @@
+---
+/**
+ * Defines a full-width banner for the index page.
+ * 
+ * Slots:
+ * @slot default - the heading text
+ * @slot stars - the stared text under the heading
+ * @slot callout - the markup for right side of the banner
+ */
+---
+
+<section class="oasis-banner" >
+  <div class="grid-container">
+    <div class="oasis-banner__inner">
+      <div class="oasis-banner__primary">
+        <div class="oasis-banner__body">
+          <h2 class="usa-hero__heading--alt">
+            <slot></slot>
+          </h2>
+          <div class="oasis-banner__highlights">
+            <slot name="stars" />
+          </div> 
+        </div>
+      </div>
+      <div class="oasis-banner__secondary">
+            <slot name="callout"></slot>
+      </div>
+    </div>
+  </div>
+</section>

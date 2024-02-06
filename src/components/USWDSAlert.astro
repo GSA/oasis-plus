@@ -1,0 +1,31 @@
+---
+/**
+ * A USWDS Alert Component
+ * 
+ * @prop {String} status - One of the four levels of alert that correspond to uswds classes.
+ * @prop {String=} heading -  Optional heading text for alert.
+ */
+
+const { status = 'informative', heading } = Astro.props;
+
+const classMap = {
+        informative: "usa-alert--info",
+        warning: "usa-alert--warning",
+        error: "usa-alert--error",
+        success: "usa-alert--success"
+    };
+const alertClass = classMap[status];
+---
+
+  <div  class:list={["usa-alert margin-y-2", `${alertClass}`]}>
+    <div class="usa-alert__body">
+    {heading &&
+      <h4 class="usa-alert__heading">
+        { heading }
+      </h4>
+    }
+      <p class="usa-alert__text">
+        <slot />
+      </p>
+    </div>
+  </div>

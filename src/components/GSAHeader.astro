@@ -1,0 +1,66 @@
+---
+/**
+ * The primary menu navigation for all pages
+ */ 
+
+import GSALogo from '@assets/images/gsa-logo.svg'
+import searchIcon from "@assets/images/usa-icons/search--white.svg"
+import PrimaryMenu from '@components/PrimaryMenu.astro';
+---
+
+
+<header class="usa-header usa-header--extended">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="header-logo">
+        <a href={`${import.meta.env.BASE_URL}`}>
+            <img class="usa-logo-img" src={GSALogo.src} alt="GSA Logo" title="U.S. General Services Administration" />
+            <em class="usa-logo__text text-base-dark">
+                General Services Administration
+            </em>
+        </a>
+      </div>
+      <button type="button" class="usa-menu-btn cursor-pointer">Menu</button>
+    </div>
+    
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <div class="usa-nav__inner">
+       
+        <PrimaryMenu />
+        <div class="usa-nav__secondary">
+          <ul class="usa-nav__secondary-links">
+            <li class="usa-nav__secondary-item">
+              <a href="contact">
+                Contact
+              </a>
+            </li>
+            <li class="usa-nav__secondary-item">
+              <a href={`${import.meta.env.BASE_URL}contact/`}>
+                Follow us
+              </a>
+            </li>
+          </ul>
+          <section aria-label="Search component">
+            <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+              <input type="hidden" name="affiliate" id="affiliate"  autocomplete="off" />
+              <label class="usa-sr-only" for="query">Search</label>
+              <input
+                class="usa-input"
+                id="query" 
+                autocomplete="off"
+                type="search"
+                name="query"
+              />
+              <button class="usa-button" type="submit">
+                <img
+                  src={searchIcon.src}
+                  class="usa-search__submit-icon"
+                  alt="Search"
+                />
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </nav>
+  </header>
+  

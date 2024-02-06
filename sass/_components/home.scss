@@ -1,0 +1,108 @@
+//header section
+.usa-header--extended {  
+  .usa-logo {
+    margin: 1rem 0 0.5rem;
+  }
+}
+.usa-header {  
+    .usa-logo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: self-end;
+      font-size: 1.125rem;
+      line-height: 1.7;  
+      margin: 1rem 0 0.5rem;
+      max-width: 50%;
+
+      @include at-media($theme-header-min-width)  {
+        line-height: 1;
+        em {
+            margin-top: .25em;
+        }
+      }
+      .usa-logo-img {
+        height: 5rem;
+        margin-right: units(1);
+  
+        @include at-media($theme-header-min-width) {
+          margin-top: 0;
+          height: 5rem;
+        }
+
+        + .usa-logo__text {
+          display: inline;
+        }
+      }
+      // address mobile view logo too big issue
+       @media screen and (max-width:1023px) {
+          .usa-logo-img {
+            height: 2rem;
+          }
+        }
+    }
+  
+    &.usa-header--extended .usa-logo-img {
+      @include at-media($theme-header-min-width) {
+        height: 5rem;
+      }
+    }
+  }
+
+
+// Hero Section
+.usa-hero{
+    color: color('ink');
+    line-height: line-height('body', 6);
+    .usa-hero__callout{
+        background-color: white;
+        max-width: 27em;
+    }
+    .usa-hero__heading--alt{
+        color: color('base-darkest');
+    }
+    // address mobile view default spacing too much causing text not align properly issue
+    @media screen and (max-width:768px) {
+    .usa-button{
+      padding: 0.75rem 1rem;
+    }
+  }
+}
+// Business Line Section
+.align-items-center{
+  display:flex;
+  align-items: center;
+}
+.usa-graphic-list{
+  font-size: 1em;
+}
+
+.usa-section--dark{
+    line-height: line-height('body', 6);
+    color: white;
+    background-color: color('primary-dark');
+    h2, h3 {
+      color: white;
+    }
+}
+// added more space for business line headers for moblie view only
+@media screen and (max-width:768px) {
+  .usa-graphic-list__heading {
+    padding-top: 1rem;
+  }
+}
+
+.base-color{
+  color:color('base');
+}
+
+.oasis-reversed-box {
+  padding: 2em 1em;
+  color: color('base-darkest');
+  h2 {
+    margin-top: 0;
+    color: inherit;
+  }
+  p {
+    color: inherit;
+  }
+}

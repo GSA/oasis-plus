@@ -1,0 +1,18 @@
+---
+/**
+ * A component that defines a single list item in a USWDS Item List
+ * 
+ * @prop {String=arrow_forward} icon - the name of an uswds svg sprite to use for the icon.
+ */
+ const { icon = "verified"} = Astro.props;
+---
+<li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon text-primary">
+      <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+        <use xlink:href=`/images/sprite.svg#${icon}`></use>
+      </svg>
+    </div>
+    <div class="usa-icon-list__content">
+        <slot />
+    </div>
+</li>

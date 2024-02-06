@@ -1,0 +1,116 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import USWSDAlert from '@components/USWDSAlert.astro'
+import Hero from '@components/Hero.astro';
+import CTAHeroSection from '@components/CTAHeroSection.astro';
+import IconList from '@components/IconList.astro';
+import ArrowListItem from '@components/ArrowListItem.astro';
+import oasis_cta_buy from "@assets/images/oasis-cta-buy.png";
+import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
+---
+
+<BaseLayout title="OASIS+ | U.S. General Services Administration" description="OASIS+">
+  <main id="main-content">
+    <Hero>
+      One Acquisition Solution for Integrated Services Plus (OASIS+)
+      <Fragment slot="stars">
+        <div class="oasis-banner__highlight">★ Government-wide</div>
+        <div class="oasis-banner__highlight">★ Multiple award IDIQ</div>
+        <div class="oasis-banner__highlight">★ Continuous on-ramping</div>
+      </Fragment>
+      
+      <Fragment slot="callout">
+        <p>
+          We are the largest governmentwide, multi-agency contracting program that provides professional services via six Indefinite Delivery Indefinite Quantity (IDIQ) contract families.
+        </p>
+        <div class="oasis-banner__actions">
+          <div class="oasis-banner__action">
+            <a href="#a1">Learn more about OASIS+</a>
+          </div>
+        </div>
+      </Fragment>
+    </Hero>
+
+    <div class="grid-container">
+      <USWSDAlert heading="Initial proposal submissions: Closed.">
+        <p>Awards issued: No later than [date]. Until we award contracts, it is not possible to buy services.</p>
+        <p>You cannot currently submit an offer to join OASIS+. Solicitations will reopen in FY25 and will be continuously open from that point forward.</p>
+        <p><a href="#">Visit the OASIS+ Interact Community for updates and announcements.</a></p>
+      </USWSDAlert>
+
+      <CTAHeroSection hero_image={oasis_cta_buy}>
+        <h2>Buy through OASIS+</h2>
+        <IconList>
+        {
+          [
+            'Learn more about buying with the <a href="#">OASIS+ Buyers’ Guide</a>',
+            'Get <a href="#">delegation of Procurement Authority (DPA) training.</a>',
+            'Determine the <a href="#">best OASIS+ contract for your requirements.</a>',
+            'Learn how <a href="#">OASIS+ compares to OASIS Legacy.</a>',
+          ].map(s => <ArrowListItem set:html={s}/>)}
+      </IconList>
+
+    </CTAHeroSection>
+    
+    <CTAHeroSection hero_image={oasis_cta_plan}>
+      <h2>Plan to get on OASIS+</h2>
+      <IconList>
+        {
+          [
+            'Learn more about the steps in the selling process in the<a href="#">OASIS+ Seller’s Guide.</a>',
+            'Learn how <a href="#">OASIS+ compares to OASIS Legacy.</a>',
+          ].map(s => <ArrowListItem set:html={s}/>)
+        }
+      </IconList>
+    </CTAHeroSection>
+    
+    </div>
+   
+      <section class="usa-section usa-section--dark">
+        <div class="grid-container">
+          <div class="oasis-reversed-box grid-row grid-gap margin-bottom-4 bg-white ">
+          <div class="grid-col-4">
+            <h2>Domains</h2>
+            Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
+          </div>
+          <div class="grid-col-4">
+            <p>Management & Advisory </p>
+            <p>Facilities</p>
+            <p>Technical & Engineering</p>
+            <p>Logistices</p>
+          </div>
+          <div class="grid-col-4">
+            <p>Intelligence Services</p>
+            <p>Research & Development </p>
+            <p>Environmental</p>
+            <p>Enterprise Solutions </p>
+          </div>
+          </div>
+          <div class="grid-row grid-gap margin-bottom-4">
+          <div class="grid-col-6">
+              <h2>Contract families </h2>
+              <p>OASIS+ has six separate and distinct IDIQ contract families. The size and type of your business determines what contract you are eligible for.</p>
+              <IconList>
+                {
+                  [
+                    'Total Small Business', 
+                    'Women-owned Small Business', 
+                    'Service Disabled Veteran-Owned Small Business',
+                    'HUBZone Small Business',
+                    '8(a) Small Business',
+                    'Unrestricted'
+                  ].map(s => <ArrowListItem>{s}</ArrowListItem>)
+                }
+              </IconList>
+
+          </div>
+          <div class="grid-col-6">
+            <!-- Icons go here -->
+          </div>
+         </div>    
+        </div>
+      </section>
+    
+  </main>
+</BaseLayout>
+	

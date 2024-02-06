@@ -1,0 +1,29 @@
+---
+/**
+ * Component defining the image + list used on the home page.
+ * 
+ * @prop {String} hero_image - an imported image
+ * 
+ * @slot default - the markup for the text section of the component appearing on the left
+ * 
+ */
+
+const {hero_image} = Astro.props;
+---
+
+<section class="oasis-cta-section">
+    <div class="grid-container">
+      <div class="oasis-cta-section__inner">
+        <div class="oasis-cta-section__hero">
+          <div class="oasis-cta-section__hero-images display-flex flex-column flex-align-center">
+            <div class="oasis-cta-section__hero-image flex-align-self-center">        
+              <img loading="lazy" src={hero_image.src} alt="Illustration of two individuals facing each other, one holding a large checkmark in their hands">
+            </div>
+          </div>
+        </div>
+        <div class="oasis-cta-section__content">
+            <slot />
+        </div>
+      </div>
+    </div>
+  </section>

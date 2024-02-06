@@ -1,0 +1,73 @@
+
+.oasis-banner {
+    background-color: color('primary-dark');
+    @include u-padding-y(4);
+  
+    h2 {
+      @include u-font('sans', xl);
+    }
+  }
+  
+  .oasis-banner__inner {
+    @include grid-row;
+    @include grid-gap(lg);
+  }
+  
+  .oasis-banner__primary {
+    @include grid-col(12);
+    color: color('white');
+    margin-bottom: units(2);
+  
+    @include at-media(tablet) {
+      @include grid-col(8);
+    }
+  }
+  
+  .oasis-banner__secondary {
+    @include grid-col(12);
+    background-color: white;
+  
+    @include at-media(tablet) {
+      @include grid-col(4);
+    }
+  }
+  
+  .oasis-banner__highlights {
+    @include grid-row;
+    @include u-flex('column');
+  
+    @include at-media(mobile-lg) {
+      @include u-flex('row');
+    }
+  }
+  
+  .oasis-banner__highlight {
+    @include at-media(mobile-lg) {
+      @include u-margin-right(3);
+    }
+  }
+  
+  .oasis-banner__actions {
+    @include u-margin-y(2);
+    @include grid-row;
+    @include u-flex('column');
+  }
+  
+  .oasis-banner__action {
+    @include u-margin-y(1);
+    @include u-flex('align-self-start');
+  }
+  
+  .oasis-banner__action a {
+    display: block;
+    color: white;
+    background-color: color('primary');
+    text-decoration: none;
+    @include u-radius(md);
+    @include u-margin-y(1);
+    @include u-padding-x(2);
+    @include u-padding-y(1.5);
+    @include u-font('sans', xs);
+    @include u-text('bold');
+  }
+  

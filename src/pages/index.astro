@@ -7,6 +7,10 @@ import IconList from '@components/IconList.astro';
 import ArrowListItem from '@components/ArrowListItem.astro';
 import ImageList from '@components/ImageList.astro';
 import ImageListItem from '@components/ImageListItem.astro';
+import CalloutImageBox from '@components/CalloutImageBox.astro';
+import OasisHelpFooter from '@components/OasisHelpFooter.astro';
+
+import callout_background from "@assets/images/message-background.png";
 import oasis_cta_buy from "@assets/images/oasis-cta-buy.png";
 import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
 
@@ -50,7 +54,8 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
     </Hero>
 
     <div class="grid-container">
-      <USWSDAlert heading="Initial proposal submissions: Closed.">
+      <USWSDAlert slim=true>
+        Initial proposal submissions: Closed.
         <p>Awards issued: No later than [date]. Until we award contracts, it is not possible to buy services.</p>
         <p>You cannot currently submit an offer to join OASIS+. Solicitations will reopen in FY25 and will be continuously open from that point forward.</p>
         <p><a href="#">Visit the OASIS+ Interact Community for updates and announcements.</a></p>
@@ -89,7 +94,12 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
           <div class="oasis-reversed-box grid-row grid-gap margin-bottom-4 bg-white ">
             <div class="desktop:grid-col-4">
               <h2>Domains</h2>
-              Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
+                <p>
+                  Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
+                </p>
+                <p>
+                  <a href="#">Learn more about domains and labor categories</a>
+                </p>
             </div>
             <div class="desktop:grid-col-8">
               <div class="grid-container">
@@ -135,7 +145,11 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
                   ].map(s => <ArrowListItem>{s}</ArrowListItem>)
                 }
               </IconList>
-
+              <p>
+                <a href="#" class="usa-button usa-button--outline usa-button--inverse">
+                  View master contracts
+                </a>
+              </p>
           </div>
           <div class="tablet:grid-col">
             <div class="grid-row grid-gap margin-top-6">
@@ -152,7 +166,22 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
          </div>    
         </div>
       </section>
-    
+      
+      <CalloutImageBox background_image={callout_background}>
+        <Fragment slot="header">
+          Find out what’s next
+        </Fragment>
+        <h3>
+          Get the latest news and updates from the OASIS+ Interact community.
+        </h3>
+        <p>
+          <a href="#" class="usa-button usa-button--outline">
+            Explore Interact
+          </a>
+        </p>
+      </CalloutImageBox>
+
+      <OasisHelpFooter / >    
   </main>
 </BaseLayout>
 	

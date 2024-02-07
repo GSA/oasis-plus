@@ -5,8 +5,26 @@ import Hero from '@components/Hero.astro';
 import CTAHeroSection from '@components/CTAHeroSection.astro';
 import IconList from '@components/IconList.astro';
 import ArrowListItem from '@components/ArrowListItem.astro';
+import ImageList from '@components/ImageList.astro';
+import ImageListItem from '@components/ImageListItem.astro';
 import oasis_cta_buy from "@assets/images/oasis-cta-buy.png";
 import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
+
+import wosb from "@assets/images/sba-icons/wosb-certified.svg";
+import service_owned from "@assets/images/sba-icons/service-disabled-veteran-owned.svg";
+import eight_a from "@assets/images/sba-icons/8-a.svg";
+import hub_zone from "@assets/images/sba-icons/hub-zone.svg";
+import unrestricted from "@assets/images/sba-icons/unrestricted.svg";
+import total_small_business from "@assets/images/sba-icons/total-small-business.svg";
+import management_icon from "@assets/images/domain-icons/management.jpg";
+import facilities_icon from "@assets/images/domain-icons/facilities.jpg";
+import tech_engineering_icon from "@assets/images/domain-icons/tech-and-engineering.jpg";
+import logistics_icon from "@assets/images/domain-icons/logistics.jpg";
+import intelligence_icon from "@assets/images/domain-icons/intelligence.jpg";
+import r_d_icon from "@assets/images/domain-icons/r-and-d.jpg";
+import environmental_icon from "@assets/images/domain-icons/environmental.jpg";
+import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
+
 ---
 
 <BaseLayout title="OASIS+ | U.S. General Services Administration" description="OASIS+">
@@ -69,25 +87,40 @@ import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
       <section class="usa-section usa-section--dark">
         <div class="grid-container">
           <div class="oasis-reversed-box grid-row grid-gap margin-bottom-4 bg-white ">
-          <div class="grid-col-4">
-            <h2>Domains</h2>
-            Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
-          </div>
-          <div class="grid-col-4">
-            <p>Management & Advisory </p>
-            <p>Facilities</p>
-            <p>Technical & Engineering</p>
-            <p>Logistices</p>
-          </div>
-          <div class="grid-col-4">
-            <p>Intelligence Services</p>
-            <p>Research & Development </p>
-            <p>Environmental</p>
-            <p>Enterprise Solutions </p>
-          </div>
+            <div class="desktop:grid-col-4">
+              <h2>Domains</h2>
+              Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
+            </div>
+            <div class="desktop:grid-col-8">
+              <div class="grid-container">
+                <div class="grid-row grid-gap">
+                  <div class="mobile-lg:grid-col-6">
+                    <ImageList>
+                      {[
+                        ['Management & Advisory', management_icon],
+                        ['Facilities', facilities_icon],
+                        ['Technical & Engineering', tech_engineering_icon],
+                        ['Logistics', logistics_icon]
+                      ].map(([text, img]) =>  <ImageListItem image={img} image_width="50px">{text}</ImageListItem>) }
+                    </ImageList>
+                  </div>
+                
+                  <div class="mobile-lg:grid-col-6">
+                    <ImageList>
+                    {[
+                      ['Intelligence Services', intelligence_icon],
+                      ['Research & Development', r_d_icon],
+                      ['Environmental', environmental_icon],
+                      ['Enterprise Solutions ', enterprise_icon]
+                    ].map(([text, img]) =>  <ImageListItem image={img} image_width="50px">{text}</ImageListItem>) }
+                    </ImageList>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="grid-row grid-gap margin-bottom-4">
-          <div class="grid-col-6">
+          <div class="tablet:grid-col">
               <h2>Contract families </h2>
               <p>OASIS+ has six separate and distinct IDIQ contract families. The size and type of your business determines what contract you are eligible for.</p>
               <IconList>
@@ -104,8 +137,17 @@ import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
               </IconList>
 
           </div>
-          <div class="grid-col-6">
-            <!-- Icons go here -->
+          <div class="tablet:grid-col">
+            <div class="grid-row grid-gap margin-top-6">
+              <img src={wosb.src} alt="SBA Woman-owned small business certified icon" style="width:33%"/>
+              <img src={service_owned.src} alt="Service-owned veteran-owned certified icon" style="width:33%"/>
+              <img src={unrestricted.src} alt="Unrestricted icon" style="width:33%"/>
+            </div>
+            <div class="grid-row grid-gap margin-top-4">
+              <img src={eight_a.src} alt="8(a) certified icon" style="width:33%"/>
+              <img src={hub_zone.src} alt="HUB zone cerfified icon" style="width:33%"/>
+              <img src={total_small_business.src} alt="Total small business icon" style="width:33%"/>
+            </div>
           </div>
          </div>    
         </div>

@@ -1,0 +1,11 @@
+---
+const {image, image_width} = Astro.props;
+---
+<li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon">
+      <img src={image.src} style=`width:${image_width}` aria-hidden="true" role="img">
+    </div>
+    <div class="usa-icon-list__content">
+       <slot />
+    </div>
+</li>

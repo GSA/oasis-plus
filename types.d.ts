@@ -208,9 +208,9 @@ declare module 'astro:content' {
 		collection: "buyers-guide";
 		data: any
 		} & { render(): Render[".mdx"] };
-		"consider-which-contract.mdx": {
-			id: "consider-which-contract.mdx";
-		  slug: "consider-which-contract";
+		"research-contract-features.mdx": {
+			id: "research-contract-features.mdx";
+		  slug: "research-contract-features";
 		  body: string;
 		  collection: "buyers-guide";
 		  data: any

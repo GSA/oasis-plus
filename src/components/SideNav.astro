@@ -1,4 +1,9 @@
 ---
+/*
+Used for side navigation for pages
+Headings default to null for pages without in page nav needs.
+For pages need in page nav (long article that needs navigation to h2 headers), can set in_page_nav to be true in front matter of the page
+*/
 const { id, pages, headings = null, parent_path } = Astro.props;
 pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
 ---

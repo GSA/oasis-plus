@@ -215,6 +215,13 @@ declare module 'astro:content' {
 		  collection: "buyers-guide";
 		  data: any
 		} & { render(): Render[".mdx"] };
+		"register-in-symphony.mdx": {
+			id: "register-in-symphony.mdx";
+		  slug: "register-in-symphony";
+		  body: string;
+		  collection: "buyers-guide";
+		  data: any
+		} & { render(): Render[".mdx"] };
 	};
 
 	};

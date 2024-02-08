@@ -200,6 +200,22 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdx"] };
 };
+	"buyers-guide": {
+		"index.mdx": {
+			id: "index.mdx";
+		slug: "./";
+		body: string;
+		collection: "buyers-guide";
+		data: any
+		} & { render(): Render[".mdx"] };
+		"consider-which-contract.mdx": {
+			id: "consider-which-contract.mdx";
+		  slug: "consider-which-contract";
+		  body: string;
+		  collection: "buyers-guide";
+		  data: any
+		} & { render(): Render[".mdx"] };
+	};
 
 	};
 

@@ -1,9 +1,14 @@
 ---
-const { id, pages, parent_path } = Astro.props;
+/*
+Used for side navigation for pages
+Headings default to null for pages without in page nav needs.
+For pages need in page nav (long article that needs navigation to h2 headers), can set in_page_nav to be true in front matter of the page
+*/
+const { id, pages, headings = null, parent_path } = Astro.props;
 pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
-
 ---
-  <nav aria-label="Secondary navigation">
+<div class="usa-layout-docs__sidenav desktop:grid-col-4">
+  <nav class="sticky_site_nav" aria-label="Secondary navigation">
     <ul class="usa-sidenav">
       {pages.map(page => (
         <li class="usa-sidenav__item">
@@ -12,7 +17,24 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
             href={`${import.meta.env.BASE_URL}${parent_path}/${page.slug}`}
           >{page.data.title}
           </a>
+          {page.data.in_page_nav?
+            (
+              <ul class="usa-sidenav__sublist">
+              {id === page.id && headings
+                .filter(h => h.depth == 2)
+                .map(h => (
+                  <li class="usa-sidenav__item">
+                    <a
+                      href={`#${h.slug}`}
+                    >
+                      {h.text}
+                    </a>
+                  </li>)
+              )}
+              </ul>
+
+            ): null }
         </li>))}
     </ul>
   </nav>
-
+</div>

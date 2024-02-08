@@ -1,0 +1,24 @@
+---
+/**
+ * A component that defines a single content list item in OASIS+
+ * 
+ */
+ const { img_src, img_alt, header } = Astro.props;
+---
+<li class="usa-card desktop:grid-col-6">
+  
+  <div class="content-list-item">
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="grid-col-4 padding-top-2"> <img
+          src={`${import.meta.env.BASE_URL}${img_src}`}
+          alt={img_alt}
+        /></div>
+        <div class="grid-col padding-left-2 conent-list-item-header"><h2>{header}</h2></div>
+      </div>
+    </div>
+    <div class="usa-card__body">
+      <slot />
+    </div>
+  </div>
+</li>

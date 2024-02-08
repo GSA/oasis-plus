@@ -1,0 +1,10 @@
+---
+/* Used as a wrapper for content pages that doesn't have side nav */
+const { title } = Astro.props;
+---
+<main id="main-content" class ="usa-layout-docs__main usa-prose usa-layout-docs">
+    <section class="wide-screen-content ">
+        <h1>{ title }</h1>
+        <slot />
+    </section>
+</main>

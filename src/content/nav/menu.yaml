@@ -1,7 +1,13 @@
 - title: About OASIS+
   href: about/
 - title: Buyers
-  href: buyers/
+  submenu: 
+  - title: "Buyer’s guide"
+    href: buyers-guide/
+  - title: "Research the OASIS+ contract features"
+    href: buyers-guide/research-contract-features
+  - title: Register in Symphony
+    href: buyers-guide/register-in-symphony
 - title: Sellers
   href: sellers/
 - title: Resources

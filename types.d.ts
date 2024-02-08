@@ -200,6 +200,29 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdx"] };
 };
+	"buyers-guide": {
+		"index.mdx": {
+			id: "index.mdx";
+		slug: "./";
+		body: string;
+		collection: "buyers-guide";
+		data: any
+		} & { render(): Render[".mdx"] };
+		"research-contract-features.mdx": {
+			id: "research-contract-features.mdx";
+		  slug: "research-contract-features";
+		  body: string;
+		  collection: "buyers-guide";
+		  data: any
+		} & { render(): Render[".mdx"] };
+		"register-in-symphony.mdx": {
+			id: "register-in-symphony.mdx";
+		  slug: "register-in-symphony";
+		  body: string;
+		  collection: "buyers-guide";
+		  data: any
+		} & { render(): Render[".mdx"] };
+	};
 
 	};
 

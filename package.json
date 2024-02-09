@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint src --ext js,astro"
+    "lint": "eslint src --ext js,astro",
+    "federalist": "astro build"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",

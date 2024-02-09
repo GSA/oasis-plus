@@ -12,10 +12,11 @@
       font-size: 1.125rem;
       line-height: 1.7;  
       margin: 1rem 0 0.5rem;
-      max-width: 50%;
+      
 
       @include at-media($theme-header-min-width)  {
         line-height: 1;
+        max-width: 50%;
         em {
             margin-top: .25em;
         }
@@ -23,15 +24,17 @@
       .usa-logo-img {
         height: 5rem;
         margin-right: units(1);
-  
+        + .usa-logo__text {
+          display: none;
+        }
         @include at-media($theme-header-min-width) {
           margin-top: 0;
           height: 5rem;
+          + .usa-logo__text {
+            display: inline;
+          }
         }
-
-        + .usa-logo__text {
-          display: inline;
-        }
+       
       }
       // address mobile view logo too big issue
        @media screen and (max-width:1023px) {

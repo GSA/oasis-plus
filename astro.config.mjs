@@ -6,4 +6,5 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [mdx()],
   outDir: '_site',
+  base: process.env.BASEURL,
 });

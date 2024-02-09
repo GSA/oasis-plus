@@ -11,10 +11,11 @@
   .oasis-cta-section__hero {
     border-radius: 4px;
     background: rgba(217, 232, 246, 0.50);
-  
+    min-height: 280px;
+    width: 100%;
     @include at-media(tablet) {
       @include grid-col(6);
-      min-height: 280px;
+      
     }
   }
   

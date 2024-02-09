@@ -98,11 +98,21 @@
 .oasis-reversed-box {
   padding: 2em 1em;
   color: color('base-darkest');
+  a {
+    color: color($theme-link-color) !important;
+    &:hover {
+      color: color($theme-link-hover-color) !important;
+    }
+    &:visited {
+      color: color($theme-link-visited-color) !important;
+    }
+  }
   h2 {
     margin-top: 0;
     color: inherit;
   }
   p {
     color: inherit;
+    a {color: inherit};
   }
 }

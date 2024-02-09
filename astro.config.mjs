@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import process_anchors from "./src/plugins/process_anchors";
 
 import mdx from "@astrojs/mdx";
 
@@ -8,4 +9,9 @@ export default defineConfig({
   outDir: '_site',
   base: process.env.BASEURL,
   trailingSlash: 'always',
+  markdown: {
+    rehypePlugins: [
+      [process_anchors, {baseURL: process.env.BASEURL || '/'}],
+    ]
+  }
 });

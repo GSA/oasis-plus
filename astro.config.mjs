@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [mdx()],
   outDir: '_site',
   base: process.env.BASEURL,
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
   markdown: {
     rehypePlugins: [
       [process_anchors, {baseURL: process.env.BASEURL || '/'}],

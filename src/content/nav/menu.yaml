@@ -9,7 +9,13 @@
   - title: Register in Symphony
     href: buyers-guide/register-in-symphony/
 - title: Sellers
-  href: sellers/
+  submenu:
+  - title: "Seller's guide overview"
+    href: sellers-guide/
+  - title: "Review solicitations"
+    href: sellers-guide/review-solicitations/
+  - title: "Register in Symphony"
+    href: "sellers-guide/register-in-symphony/"
 - title: Resources
   href: resources/
 - title: Events & Training

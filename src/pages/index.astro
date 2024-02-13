@@ -29,6 +29,7 @@ import r_d_icon from "@assets/images/domain-icons/r-and-d.jpg";
 import environmental_icon from "@assets/images/domain-icons/environmental.jpg";
 import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
 
+const base_url = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout 
@@ -69,8 +70,8 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
         <IconList>
         {
           [
-            'Learn more about buying with the <a href="#" class="usa-link">OASIS+ Buyers’ Guide</a>',
-            'Get <a href="#" class="usa-link">delegation of Procurement Authority (DPA) training.</a>',
+            `Learn more about buying with the <a href="${base_url}buyers-guide/" class="usa-link">OASIS+ Buyers’ Guide</a>`,
+            `Get <a href="${base_url}events-training/" class="usa-link">delegation of Procurement Authority (DPA) training.</a>`,
             'Determine the <a href="#" class="usa-link">best OASIS+ contract for your requirements.</a>',
             'Learn how <a href="#" class="usa-link">OASIS+ compares to OASIS Legacy.</a>',
           ].map(s => <ArrowListItem set:html={s}/>)}
@@ -83,7 +84,7 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
       <IconList>
         {
           [
-            'Learn more about the steps in the selling process in the <a href="# class="usa-link">OASIS+ Seller’s Guide.</a>',
+            `Learn more about the steps in the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Seller’s Guide.</a>`,
             'Learn how <a href="#" class="usa-link">OASIS+ compares to OASIS Legacy.</a>',
           ].map(s => <ArrowListItem set:html={s}/>)
         }
@@ -101,7 +102,7 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
                   Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
                 </p>
                 <p>
-                  <a href="#">Learn more about domains and labor categories</a>
+                  <a href=`${base_url}domains-labor-categories` class="usa-link">Learn more about domains and labor categories</a>
                 </p>
             </div>
             <div class="desktop:grid-col-8">
@@ -149,7 +150,7 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
                 }
               </IconList>
               <p>
-                <a href="#" class="usa-button usa-button--outline usa-button--inverse">
+                <a href=`${base_url}about/contract-families/` class="usa-button usa-button--outline usa-button--inverse">
                   View master contracts
                 </a>
               </p>
@@ -178,7 +179,7 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
           Get the latest news and updates from the OASIS+ Interact community.
         </h3>
         <p>
-          <a href="#" class="usa-button usa-button--outline">
+          <a href="https://buy.gsa.gov/interact/community/196/activity-feed" class="usa-button usa-button--outline">
             Explore Interact
           </a>
         </p>

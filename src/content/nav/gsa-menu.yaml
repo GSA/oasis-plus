@@ -1,0 +1,28 @@
+- title: Buy through us
+  submenu: 
+  - title: Explore buy through us
+    href: "https://www.gsa.gov/buy-through-us?topnav=buy-through-us"
+  - title: Government property for sale or lease
+    href: "https://www.gsa.gov/buy-through-us/government-property-for-sale-or-disposal?topnav=buy-through-us"
+  - title: Products and services
+    href: "https://www.gsa.gov/buy-through-us/products-services?topnav=buy-through-us"
+  - title: Purchasing programs
+    href: "https://www.gsa.gov/buy-through-us/purchasing-programs?topnav=buy-through-us"
+  - title: Shared services
+    href: "https://www.gsa.gov/buy-through-us/shared-services?topnav=buy-through-us"
+- title: Sell to government
+  submenu:
+  - title: Explore sell to government
+    href: "https://www.gsa.gov/sell-to-government?topnav=sell-to-government"
+  - title: "Step 1: Learn about government contracting"
+    href: "https://www.gsa.gov/sell-to-government/step-1-learn-about-government-contracting?topnav=sell-to-government"
+  - title: "Step 2: Compete for a contract"
+    href: "https://www.gsa.gov/sell-to-government/step-2-compete-for-a-contract?topnav=sell-to-government"
+  - title: "Step 3: Manage your contract"
+    href: "https://www.gsa.gov/sell-to-government/step-3-manage-your-contract?topnav=sell-to-government"
+- title: Real estate
+- title: Policy and regulations
+- title: Small business
+- title: Travel
+- title: Technology
+- title: About us

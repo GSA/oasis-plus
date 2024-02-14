@@ -3,7 +3,8 @@
  * The site navigation menu under the header. 
  * This component will look for menu content in the yaml file in src/nav/content
  */
- import PrimaryMenuItem from '@components/PrimaryMenuItem.astro';
+import PrimaryMenuItem from '@components/PrimaryMenuItem.astro';
+import PrimaryMenuHeader from '@components/PrimaryMenuheader.astro'
 import closeIcon from '@assets/images/usa-icons/close.svg'
 
 import { getEntry } from 'astro:content';
@@ -24,6 +25,19 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
       />
     ))
   }
+</ul>
+<ul id='header_main_menu_gsa' class="usa-nav__primary usa-accordion desktop:display-none">
+  <li class="usa-nav__primary-item">
+    <button
+        type="button"
+        class="usa-accordion__button usa-nav__link"
+        aria-expanded="false"
+        aria-controls='extended-nav-section-gsa'
+    >
+      <span>Explore all of GSA.gov</span>
+    </button>
+    <ul id='extended-nav-section-gsa' class="usa-nav__primary usa-accordion">
+
   {
     gsaMenuData.data.map(menu => (
       <PrimaryMenuItem 
@@ -33,6 +47,8 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
       />
     ))
   }
+    </ul>
+    </li>
 </ul>
     
     

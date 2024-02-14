@@ -1,0 +1,31 @@
+---
+import { getEntry } from 'astro:content';
+const domains = await getEntry('data', 'naics_codes_by_domain');
+---
+
+{
+  domains.data.map(domain => (
+    <h2>{ domain.name } ({ domain.shortName })</h2>
+
+    <table class="usa-table usa-table--borderless">
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>NAICS code and title</th>
+          <th>Size standard</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          domain.naics.map(naics => (
+            <tr>
+              <td>{ domain.shortName }</td>
+              <td>{ naics.codeAndTitle }</td>
+              <td>{ naics.sizeStandard }</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  ))
+}

@@ -58,16 +58,4 @@
     @include u-flex('align-self-start');
   }
   
-  .oasis-banner__action a {
-    display: block;
-    color: white;
-    background-color: color('primary');
-    text-decoration: none;
-    @include u-radius(md);
-    @include u-margin-y(1);
-    @include u-padding-x(2);
-    @include u-padding-y(1.5);
-    @include u-font('sans', xs);
-    @include u-text('bold');
-  }
   

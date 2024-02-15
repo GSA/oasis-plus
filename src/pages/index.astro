@@ -11,8 +11,8 @@ import CalloutImageBox from '@components/CalloutImageBox.astro';
 import OasisHelpFooter from '@components/OasisHelpFooter.astro';
 
 import callout_background from "@assets/images/message-background.png";
-import oasis_cta_buy from "@assets/images/oasis-cta-buy.png";
-import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
+import oasis_cta_buy from "@assets/images/buy-through-oasis.svg";
+import oasis_cta_plan from "@assets/images/join-oasis-image.svg";
 
 import wosb from "@assets/images/sba-icons/wosb-certified.svg";
 import service_owned from "@assets/images/sba-icons/service-disabled-veteran-owned.svg";
@@ -34,7 +34,7 @@ const base_url = import.meta.env.BASE_URL;
 
 <BaseLayout 
   title="One Acquisition for Integrated Services Plus OASIS+"
-  description="OASIS plus (OASIS+) is GSA’s governmentwide multi-agency, multiple award indefinite delivery indefinite quantity (IDIQ) contract for non-IT services."
+  description="OASIS plus (OASIS+) is GSA’s government-wide multi-agency, multiple award indefinite delivery indefinite quantity (IDIQ) contract for non-IT services."
 >
   <main id="main-content">
     <Hero>
@@ -51,7 +51,7 @@ const base_url = import.meta.env.BASE_URL;
         </p>
         <div class="oasis-banner__actions">
           <div class="oasis-banner__action">
-            <a href={`${import.meta.env.BASE_URL}about/`}>Learn more about OASIS+</a>
+            <a href={`${base_url}about/`} class="usa-button">Learn more about OASIS+</a>
           </div>
         </div>
       </Fragment>
@@ -72,8 +72,8 @@ const base_url = import.meta.env.BASE_URL;
           [
             `Learn more about buying with the <a href="${base_url}buyers-guide/" class="usa-link">OASIS+ Buyers’ Guide</a>`,
             `Get <a href="${base_url}events-training/" class="usa-link">delegation of Procurement Authority (DPA) training.</a>`,
-            'Determine the <a href="#" class="usa-link">best OASIS+ contract for your requirements.</a>',
-            'Learn how <a href="#" class="usa-link">OASIS+ compares to OASIS Legacy.</a>',
+            `Determine the <a href="${base_url}buyers-guide/research-contract-features/" class="usa-link">best OASIS+ contract for your requirements.</a>`,
+            `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)}
       </IconList>
 
@@ -85,7 +85,7 @@ const base_url = import.meta.env.BASE_URL;
         {
           [
             `Learn more about the steps in the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Seller’s Guide.</a>`,
-            'Learn how <a href="#" class="usa-link">OASIS+ compares to OASIS Legacy.</a>',
+            `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)
         }
       </IconList>

@@ -1,8 +1,13 @@
 ---
+import { imageConfig } from "astro:assets";
+import { isTemplateExpression } from "typescript";
+
 /*
-Used for side navigation for pages
-Headings default to null for pages without in page nav needs.
+Used for side navigation for OASIS+
+Headings default to null for pages without in page nav.
 For pages need in page nav (long article that needs navigation to h2 headers), can set in_page_nav to be true in front matter of the page
+For page that has child menus, use child_menus in front matter to pass in child menu item (e.g. About section: domains-labl-categories/index.mdx)
+For page that is a child, use is_child flag in front matter to skip the menu bulit on its own. It should be built under the parent menu(e.g. About section: naics-codes.mdx)
 */
 const { id, pages, headings = null, parent_path } = Astro.props;
 pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
@@ -12,14 +17,33 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
     <ul class="usa-sidenav">
       {pages.map(page => (
         <li class="usa-sidenav__item">
-          <a 
+          <!--single menu or parent menu -->
+          {!page.data.is_child &&
+            (
+            <a 
             class={id === page.id ? 'usa-current' : null } 
             href={`${import.meta.env.BASE_URL}${parent_path}/${page.slug}/`}
-          >{page.data.title}
-          </a>
-          {page.data.in_page_nav?
-            (
+            >{page.data.title}
+            </a>
+            )
+          }
+          <!--Sub menus for child pages with direct link -->
+          {id.split('/')[0] === page.id.split('/')[0] &&
+          (
+           page.data.child_menus  &&
               <ul class="usa-sidenav__sublist">
+               {page.data.child_menus.map((item)=>
+                (
+                  <li  class='usa-sidenav__item'>
+                  <a href={`${import.meta.env.BASE_URL}${parent_path}/${item.path}/`} class={ item.path === id.split('.')[0] ? 'usa-current': null }>{item.title}</a>
+                  </li>
+                ))} 
+              </ul>
+           ) 
+          }
+          <!--Sub menus for long page that needs in page navigation to H2 -->
+          {page.data.in_page_nav &&
+            <ul class="usa-sidenav__sublist">
               {id === page.id && headings
                 .filter(h => h.depth == 2)
                 .map(h => (
@@ -31,9 +55,8 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
                     </a>
                   </li>)
               )}
-              </ul>
-
-            ): null }
+            </ul>
+          }
         </li>))}
     </ul>
   </nav>

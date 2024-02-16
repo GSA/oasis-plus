@@ -4,6 +4,8 @@
  */ 
 
 import GSALogo from '@assets/images/gsa-logo.svg'
+import closeIcon from '@assets/images/usa-icons/close.svg'
+
 import searchIcon from "@assets/images/usa-icons/search--white.svg"
 import PrimaryMenu from '@components/PrimaryMenu.astro';
 ---
@@ -23,11 +25,18 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
     </div>
     
     <nav aria-label="Primary navigation" class="usa-nav">
+      <button type="button" class="usa-nav__close">
+        <img src={ closeIcon.src } alt="Close" />
+      </button>
+      
       <div class="usa-nav__inner">
-       
-        <PrimaryMenu />
-        <div class="usa-nav__secondary">
-          <ul class="usa-nav__secondary-links">
+       <div class="usa-nav__secondary">
+          <div>
+            <a class="oasis-perdiem-link" href="#">
+              Per Diem Lookup
+            </a>
+          </div>
+          <ul class="usa-nav__secondary-links desktop:display-flex display-none">
             <li class="usa-nav__secondary-item">
               <a href="contact">
                 Contact
@@ -39,6 +48,7 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
               </a>
             </li>
           </ul>
+          
           <section aria-label="Search component">
             <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
               <input type="hidden" name="affiliate" id="affiliate"  autocomplete="off" />
@@ -60,6 +70,8 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
             </form>
           </section>
         </div>
+        <PrimaryMenu />
+        
       </div>
     </nav>
   </header>

@@ -1,0 +1,53 @@
+.usa-nav {
+    padding-left: 0;
+    padding-right: 0;
+}
+.usa-nav__primary-item {
+    border: unset;
+}
+.oasis-menu-heading {
+    border-bottom: 2px solid !important;
+    border-color: #565c65;
+    color:#565c65;
+    padding-top:0.75rem;
+    padding-bottom:0.75rem;
+}
+.usa-nav__primary {
+    margin-top: 1em;
+    >.usa-nav__primary-item{
+        line-height: 1.25;
+    }
+    >li {
+        margin-top:2px;
+    }
+}
+.usa-nav__primary button[aria-expanded=true] span::after {
+    right: 1em;
+}
+
+.usa-nav__primary button[aria-expanded=false] span::after {
+    right: 1em;
+}
+
+.usa-nav .usa-accordion {
+    font-size: 0.875rem;
+}
+
+.usa-nav__close {
+    margin-right:0;
+}
+
+.oasis-perdiem-link {
+    color: #71767a;
+    display: inline-block;
+    font-size: .93rem;
+    text-decoration: none;
+    padding-left: 33px;
+    padding-bottom: 5px;
+    background-size: 68px;
+    padding-top: 0.5em;
+    background-position: top left;
+    background-image: url(../images/icon-perdiem.svg),linear-gradient(transparent,transparent);
+    background-repeat: no-repeat;
+    white-space: nowrap;
+}

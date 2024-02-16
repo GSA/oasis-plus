@@ -4,18 +4,16 @@
  * This component will look for menu content in the yaml file in src/nav/content
  */
 import PrimaryMenuItem from '@components/PrimaryMenuItem.astro';
-import PrimaryMenuHeader from '@components/PrimaryMenuheader.astro'
-import closeIcon from '@assets/images/usa-icons/close.svg'
 
 import { getEntry } from 'astro:content';
 const menuData = await getEntry('nav', 'menu');
 const gsaMenuData = await getEntry('nav', 'gsa-menu');
 ---
-<button type="button" class="usa-nav__close">
-  <img src={ closeIcon.src } alt="Close" />
-</button>
 
-<ul id='header_main_menu' class="usa-nav__primary usa-accordion">
+<ul id='header_main_menu' class="usa-nav__primary usa-accordion margin-top-4">
+  <li class="usa-nav__primary-item oasis-menu-heading desktop:display-none">
+    <span class="text-bold margin-x-2">OASIS+</span>
+  </li>
   {
     menuData.data.map(menu => (
       <PrimaryMenuItem 
@@ -26,15 +24,17 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
     ))
   }
 </ul>
+
 <ul id='header_main_menu_gsa' class="usa-nav__primary usa-accordion desktop:display-none">
-  <li class="usa-nav__primary-item">
+  <li class="usa-nav__primary-item ">
     <button
         type="button"
-        class="usa-accordion__button usa-nav__link"
+        class="usa-accordion__button usa-nav__link oasis-menu-heading"
         aria-expanded="false"
         aria-controls='extended-nav-section-gsa'
     >
-      <span>Explore all of GSA.gov</span>
+      <span class="text-bold">Explore all of GSA.gov</span>
+
     </button>
     <ul id='extended-nav-section-gsa' class="usa-nav__primary usa-accordion">
 
@@ -50,6 +50,5 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
     </ul>
     </li>
 </ul>
-    
     
 

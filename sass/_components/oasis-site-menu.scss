@@ -51,3 +51,16 @@
     background-repeat: no-repeat;
     white-space: nowrap;
 }
+.oasis-navbar {
+    position: relative;
+}
+.oasis-nav__secondary.usa-nav__secondary {
+    right: 6.5em;
+}
+.oasis-menu-button.usa-menu-btn {
+    display: block; // override display: none for desktop
+    position:absolute;
+    bottom:0;
+    right:1.5em;
+
+}

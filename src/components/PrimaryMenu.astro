@@ -11,7 +11,7 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
 ---
 
 <ul id='header_main_menu' class="usa-nav__primary usa-accordion margin-top-4">
-  <li class="usa-nav__primary-item oasis-menu-heading desktop:display-none">
+  <li class="usa-nav__primary-item oasis-menu-heading">
     <span class="text-bold margin-x-2">OASIS+</span>
   </li>
   {
@@ -36,7 +36,7 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
       <span class="text-bold">Explore all of GSA.gov</span>
 
     </button>
-    <ul id='extended-nav-section-gsa' class="oasis-nav__primary usa-nav__primary usa-accordion">
+    <ul id='extended-nav-section-gsa' class="usa-nav__primary usa-nav__primary usa-accordion">
 
   {
     gsaMenuData.data.map(menu => (

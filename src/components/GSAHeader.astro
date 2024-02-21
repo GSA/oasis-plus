@@ -31,23 +31,9 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
       
       <div class="usa-nav__inner">
        <div class="usa-nav__secondary oasis-nav__secondary">
-          <div class="desktop:display-none">
             <a class="oasis-perdiem-link" href="#">
               Per Diem Lookup
             </a>
-          </div>
-          <ul class="usa-nav__secondary-links desktop:display-flex display-none">
-            <li class="usa-nav__secondary-item">
-              <a href="contact">
-                Contact
-              </a>
-            </li>
-            <li class="usa-nav__secondary-item">
-              <a href={`${import.meta.env.BASE_URL}contact/`}>
-                Follow us
-              </a>
-            </li>
-          </ul>
           
           <section aria-label="Search component">
             <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">

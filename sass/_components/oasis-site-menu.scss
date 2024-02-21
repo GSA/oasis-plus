@@ -1,10 +1,21 @@
+@use "uswds-theme" as *;
+
+.usa-js-mobile-nav--active.is-safari {
+    // TODO figure out why they need this on mobile safari
+    overflow-y: scroll;
+    position: relative; 
+    top: var(--scrolltop, 0);
+}
+
 .usa-nav {
     padding-left: 0;
     padding-right: 0;
 }
+
 .usa-nav__primary-item {
     border: unset;
 }
+
 .oasis-menu-heading {
     border-bottom: 2px solid !important;
     border-color: #565c65;
@@ -12,6 +23,7 @@
     padding-top:0.75rem;
     padding-bottom:0.75rem;
 }
+
 .usa-nav__primary {
     margin-top: 1em;
     >.usa-nav__primary-item{
@@ -21,6 +33,7 @@
         margin-top:2px;
     }
 }
+
 .usa-nav__primary button[aria-expanded=true] span::after {
     right: 1em;
 }
@@ -51,9 +64,11 @@
     background-repeat: no-repeat;
     white-space: nowrap;
 }
+
 .oasis-navbar {
     position: relative;
 }
+
 .oasis-menu-button.usa-menu-btn {
     display: block; // override display: none for desktop
     position:absolute;
@@ -69,6 +84,7 @@
         right: 6.5em;
         display:block;
         position: unset;
+        margin-top: 1rem;
     }
 
     // .usa-nav__secondary {
@@ -85,6 +101,26 @@
     .usa-nav__primary {
         display:list-item;
     }
+    .usa-nav__submenu {
+        background-color: inherit;
+        position: relative;
+
+        a {
+            color:inherit;
+        }
+        a:hover {
+            color:inherit;
+        }
+
+    }
+    // .usa-nav__secondary {
+    //     margin-left: unset;
+    //     margin-right: unset;
+    //     max-width: unset;
+    //     padding-left: unset;
+    //     padding-right: unset;
+    //     position:relative
+    // }
 }
 
 .oasis-nav-drawer.is-visible {
@@ -102,4 +138,5 @@
     width: 15rem;
     z-index: 500;
 }
+
 

@@ -54,13 +54,52 @@
 .oasis-navbar {
     position: relative;
 }
-.oasis-nav__secondary.usa-nav__secondary {
-    right: 6.5em;
-}
 .oasis-menu-button.usa-menu-btn {
     display: block; // override display: none for desktop
     position:absolute;
     bottom:0;
     right:1.5em;
-
 }
+
+.oasis-nav-drawer {
+    display:none;
+    width: unset;
+
+    .usa-nav__secondary {
+        right: 6.5em;
+        display:block;
+        position: unset;
+    }
+
+    // .usa-nav__secondary {
+    //     /* flex-direction: column; */
+    //     /* align-items: flex-end; */
+    //     /* bottom: 4rem; */
+    //     /* display: flex; */
+    //     font-size: .88rem;
+    //     /* margin-top: .5rem; */
+    //     /* min-width: calc(27ch + 3rem); */
+    //     /* position: absolute; */
+    //     right: 2rem;
+    //     }
+    .usa-nav__primary {
+        display:list-item;
+    }
+}
+
+.oasis-nav-drawer.is-visible {
+    animation: slidein-left .3s ease-in-out;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+    background: #fff;
+    border-right: 0;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1rem;
+    width: 15rem;
+    z-index: 500;
+}
+

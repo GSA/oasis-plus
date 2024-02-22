@@ -31,7 +31,7 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
           {id.split('/')[0] === page.id.split('/')[0] &&
           (
            page.data.child_menus  &&
-              <ul class="usa-sidenav__sublist">
+              <ul class="usa-sidenav__sublist" >
                {page.data.child_menus.map((item)=>
                 (
                   <li  class='usa-sidenav__item'>
@@ -43,7 +43,7 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
           }
           <!--Sub menus for long page that needs in page navigation to H2 -->
           {page.data.in_page_nav &&
-            <ul class="usa-sidenav__sublist">
+            <ul class="usa-sidenav__sublist" id="usa-sidenav__sublist_header">
               {id === page.id && headings
                 .filter(h => h.depth == 2)
                 .map(h => (

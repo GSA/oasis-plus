@@ -5,7 +5,7 @@
  * @prop {String} title - the display text of the menu ite,
  * @prop {Url} href - the relative link to another page in the site 
  */
-const {title, submenu, href} = Astro.props;
+const {title, submenu, href, menu_id} = Astro.props;
 let title_slug = title.toLowerCase().replace(/\s/g,'-');
 
 ---
@@ -17,13 +17,13 @@ let title_slug = title.toLowerCase().replace(/\s/g,'-');
           type="button"
           class="usa-accordion__button usa-nav__link"
           aria-expanded="false"
-          aria-controls={`extended-nav-section-${title_slug}`}
+          aria-controls={`extended-nav-section-${title_slug}-${menu_id}`}
       >
         <span>
           {title}
         </span>
         </button>
-        <ul id={`extended-nav-section-${title_slug}`} class="usa-nav__submenu">
+        <ul id={`extended-nav-section-${title_slug}-${menu_id}`} class="usa-nav__submenu">
           { submenu.map(menuItem => (
             <li class="usa-nav__submenu-item tablet:padding-x-1">
               <a href={menuItem.href.startsWith('https://') 

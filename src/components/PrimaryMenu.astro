@@ -1,54 +1,32 @@
 ---
 /**
- * The site navigation menu under the header. 
+ * The site navigation menu under the pull out drawer. 
  * This component will look for menu content in the yaml file in src/nav/content
  */
-import PrimaryMenuItem from '@components/PrimaryMenuItem.astro';
+ import PrimaryMenuItem from '@components/PrimaryMenuItem.astro';
 
 import { getEntry } from 'astro:content';
 const menuData = await getEntry('nav', 'menu');
 const gsaMenuData = await getEntry('nav', 'gsa-menu');
 ---
 
-<ul id='header_main_menu' class="usa-nav__primary usa-accordion margin-top-4">
-  <li class="usa-nav__primary-item oasis-menu-heading">
-    <span class="text-bold margin-x-2">OASIS+</span>
-  </li>
+<ul id='header_main_menu' class="usa-nav__primary usa-accordion">
+  
   {
     menuData.data.map(menu => (
       <PrimaryMenuItem 
         title={ menu.title }
         href={ menu.href } 
         submenu={ menu.submenu }
+        menu_id="main"
       />
     ))
   }
+  <li class="usa-nav__primary-item">
+    <a href=`${import.meta.env.BASE_URL}/contact`>Contact</a>
+  </li>
 </ul>
 
-<ul id='header_main_menu_gsa' class="usa-nav__primary usa-accordion desktop:display-none">
-  <li class="usa-nav__primary-item ">
-    <button
-        type="button"
-        class="usa-accordion__button usa-nav__link oasis-menu-heading"
-        aria-expanded="false"
-        aria-controls='extended-nav-section-gsa'
-    >
-      <span class="text-bold">Explore all of GSA.gov</span>
 
-    </button>
-    <ul id='extended-nav-section-gsa' class="usa-nav__primary usa-nav__primary usa-accordion">
-
-  {
-    gsaMenuData.data.map(menu => (
-      <PrimaryMenuItem 
-        title={ menu.title }
-        href={ menu.href } 
-        submenu={ menu.submenu }
-      />
-    ))
-  }
-    </ul>
-    </li>
-</ul>
     
 

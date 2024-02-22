@@ -63,9 +63,10 @@ const base_url = import.meta.env.BASE_URL;
           <li>Initial proposal submissions: Closed.</li>
           <li>Awards issued: No later than [date]. Until we award contracts, it is not possible to buy services.</li>
           <li>You cannot currently submit an offer to join OASIS+. Solicitations will reopen in FY25 and will be continuously open from that point forward.</li>
-          <p>
-            <a class="usa-link" href="https://buy.gsa.gov/interact/community/196/activity-feed">Visit the OASIS+ Interact Community for updates and announcements.</a>
-          </p>
+        </ul>
+        <p>
+          <a class="usa-link" href="https://buy.gsa.gov/interact/community/196/activity-feed">Visit the OASIS+ Interact Community for updates and announcements.</a>
+        </p>
       </USWSDAlert>
 
       <CTAHeroSection hero_image={oasis_cta_buy} hero_alt="Two people facing each other with a checkmark in front of the shorter person.">
@@ -87,7 +88,7 @@ const base_url = import.meta.env.BASE_URL;
       <IconList>
         {
           [
-            `Learn more about the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Seller’s Guide.</a>`,
+            `Learn more about the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Sellers' Guide.</a>`,
             `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)
         }

@@ -34,20 +34,20 @@ const base_url = import.meta.env.BASE_URL;
 
 <BaseLayout 
   title="One Acquisition for Integrated Services Plus OASIS+"
-  description="OASIS plus (OASIS+) is GSA’s government-wide multi-agency, multiple award indefinite delivery indefinite quantity (IDIQ) contract for non-IT services."
+  description="OASIS plus (OASIS+) is GSA’s government wide multi-agency, multiple award indefinite delivery indefinite quantity (IDIQ) contract for non-IT services."
 >
   <main id="main-content">
     <Hero>
       One Acquisition Solution for Integrated Services Plus (OASIS+)
       <Fragment slot="stars">
-        <div class="oasis-banner__highlight">★ Government-wide</div>
+        <div class="oasis-banner__highlight">★ Government wide</div>
         <div class="oasis-banner__highlight">★ Multiple award IDIQ</div>
         <div class="oasis-banner__highlight">★ Continuous on-ramping</div>
       </Fragment>
       
       <Fragment slot="callout">
         <p>
-          We are the largest government-wide, multi-agency contracting program that provides professional services via six Indefinite Delivery Indefinite Quantity (IDIQ) contract families.
+          We are the largest government wide, multi-agency contracting program that provides professional services via six Indefinite Delivery Indefinite Quantity (IDIQ) contract families.
         </p>
         <div class="oasis-banner__actions">
           <div class="oasis-banner__action">
@@ -65,13 +65,13 @@ const base_url = import.meta.env.BASE_URL;
         <p><a class="usa-link" href="https://buy.gsa.gov/interact/community/196/activity-feed">Visit the OASIS+ Interact Community for updates and announcements.</a></p>
       </USWSDAlert>
 
-      <CTAHeroSection hero_image={oasis_cta_buy}>
+      <CTAHeroSection hero_image={oasis_cta_buy} hero_alt="Two people facing each other with a checkmark in front of the shorter person.">
         <h2>Buy through OASIS+</h2>
         <IconList>
         {
           [
-            `Learn more about buying with the <a href="${base_url}buyers-guide/" class="usa-link">OASIS+ Buyer’s Guide</a>`,
-            `Get <a href="${base_url}events-training/" class="usa-link">delegation of Procurement Authority (DPA) training.</a>`,
+            `Learn more about buying with the <a href="${base_url}buyers-guide/" class="usa-link">OASIS+ Buyers’ Guide</a>`,
+            `Get <a href="${base_url}events-training/" class="usa-link">Delegation of Procurement Authority (DPA) training.</a>`,
             `Determine the <a href="${base_url}buyers-guide/research-contract-features/" class="usa-link">best OASIS+ contract for your requirements.</a>`,
             `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)}
@@ -79,12 +79,12 @@ const base_url = import.meta.env.BASE_URL;
 
     </CTAHeroSection>
     
-    <CTAHeroSection hero_image={oasis_cta_plan}>
+    <CTAHeroSection hero_image={oasis_cta_plan} hero_alt="Browser window displaying a progress indicator in front of a person giving a thumbs-up.">
       <h2>Plan to get on OASIS+</h2>
       <IconList>
         {
           [
-            `Learn more about the steps in the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Seller’s Guide.</a>`,
+            `Learn more about the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Seller’s Guide.</a>`,
             `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)
         }

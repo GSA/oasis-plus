@@ -25,6 +25,11 @@
     color:$theme-color-base-dark;
     padding-top:0.75rem;
     padding-bottom:0.75rem;
+
+    a {
+        padding:0 !important;
+        font-weight: bold !important;
+    }
 }
 
 .oasis-perdiem-link {

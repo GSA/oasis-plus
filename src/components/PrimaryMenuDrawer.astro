@@ -12,7 +12,7 @@ const gsaMenuData = await getEntry('nav', 'gsa-menu');
 
 <ul id='header_main_menu_drawer' class="tablet:display-none usa-nav__primary usa-accordion margin-top-4">
   <li class="usa-nav__primary-item oasis-menu-heading">
-    <span class="text-bold margin-x-2">OASIS+</span>
+    <a class="text-bold margin-x-2" href={import.meta.env.BASE_URL}>OASIS+</a>
   </li>
   {
     menuData.data.map(menu => (

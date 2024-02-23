@@ -8,7 +8,7 @@
  * 
  */
 
-const {hero_image} = Astro.props;
+const {hero_image, hero_alt} = Astro.props;
 ---
 
 <section class="oasis-cta-section">
@@ -17,7 +17,7 @@ const {hero_image} = Astro.props;
         <div class="oasis-cta-section__hero">
           <div class="oasis-cta-section__hero-images display-flex flex-column flex-align-center">
             <div class="oasis-cta-section__hero-image flex-align-self-center">        
-              <img loading="lazy" src={hero_image.src} alt="Illustration of two individuals facing each other, one holding a large checkmark in their hands">
+              <img loading="lazy" src={hero_image.src} alt={hero_alt}>
             </div>
           </div>
         </div>

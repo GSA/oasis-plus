@@ -2,15 +2,17 @@
   href: about/
 - title: Buyers
   submenu: 
-  - title: "Buyer’s guide"
+  - title: "Buyers’ guide"
     href: buyers-guide/
   - title: "Research the OASIS+ contract features"
     href: buyers-guide/research-contract-features/
+  - title: Obtain a Delegation of Procurement Authority
+    href: buyers-guide/obtain-dpa/
   - title: Register in Symphony
     href: buyers-guide/register-in-symphony/
 - title: Sellers
   submenu:
-  - title: "Seller's guide overview"
+  - title: "Sellers’ guide overview"
     href: sellers-guide/
   - title: "Review solicitations"
     href: sellers-guide/review-solicitations/

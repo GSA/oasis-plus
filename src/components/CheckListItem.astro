@@ -4,10 +4,10 @@
  * 
  * @prop {String=arrow_forward} icon - the name of an uswds svg sprite to use for the icon.
  */
- const { icon = "verified"} = Astro.props;
+ const { icon = "verified", color="text-primary"} = Astro.props;
 ---
 <li class="usa-icon-list__item">
-    <div class="usa-icon-list__icon text-primary">
+    <div class={`usa-icon-list__icon  ${color}`}>
       <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
         <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#${icon}`></use>
       </svg>

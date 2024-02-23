@@ -2,6 +2,9 @@
 /**
  * The primary menu navigation for all pages
  */ 
+ interface Props {
+  show_site_link: boolean;
+}
 
 import GSALogo from '@assets/images/gsa-logo.svg'
 import closeIcon from '@assets/images/usa-icons/close.svg'
@@ -9,6 +12,8 @@ import closeIcon from '@assets/images/usa-icons/close.svg'
 import searchIcon from "@assets/images/usa-icons/search--white.svg"
 import PrimaryMenuDrawer from '@components/PrimaryMenuDrawer.astro';
 import PrimaryMenu from '@components/PrimaryMenu.astro';
+let {show_site_link='true'} = Astro.props;
+show_site_link = show_site_link==='true';
 ---
 
 
@@ -28,7 +33,7 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
     <!-- This is the main horizontal navigation bar. It will be hidden at tablet and smaller sizes -->
     <nav aria-label="Primary navigation" class="usa-nav oasis-main-nav">
       <div class="usa-nav__inner">
-        <div class="usa-nav__secondary">
+        <div class:list={["usa-nav__secondary", {show_site_link: show_site_link}]}>
           <ul class="usa-nav__secondary-links">
             <li class="usa-nav__secondary-item">
               <a href="contact">
@@ -62,7 +67,10 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
             </form>
           </section>
         </div>
+        {show_site_link && (<h1><a href="">OASIS+</a></h1>)}
+        
         <PrimaryMenu />
+        
       </div>
     </nav>
     
@@ -77,8 +85,7 @@ import PrimaryMenu from '@components/PrimaryMenu.astro';
           <a class="oasis-perdiem-link" href="#">
             Per Diem Lookup
           </a>
-          
-          <section aria-label="Search component">
+          <section aria-label="Search component" class="desktop:display-none">
             <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
               <input type="hidden" name="affiliate" id="affiliate"  autocomplete="off" />
               <label class="usa-sr-only" for="query">Search</label>

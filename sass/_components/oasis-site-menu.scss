@@ -42,7 +42,30 @@
     background-repeat: no-repeat;
     white-space: nowrap;
 }
+.usa-nav__secondary {
+    bottom:4rem;
+    &.show_site_link{
+        bottom:7.6rem;
+    }
 
+}
+
+.usa-nav__inner {
+    h1 {
+        a {
+            color:color($theme-color-base-ink);
+            text-decoration: none;
+            &:visited {
+                color:color($theme-color-base-ink);
+            }
+            &:hover {
+                color:color($theme-color-base);
+            }
+
+        }
+        margin-bottom:.25rem;
+    }
+}
 .oasis-navbar {
     position: relative;
 }
@@ -178,6 +201,8 @@
     }
     .usa-nav__inner {
         padding:0;
+        margin-left:0;
+        margin-right:0
     }
     .usa-nav__submenu {
         background-color: inherit;
@@ -213,5 +238,3 @@
     width: 15rem;
     z-index: 500;
 }
-
-

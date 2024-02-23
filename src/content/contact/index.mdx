@@ -4,6 +4,8 @@ description: "Get answers to your questions about OASIS+, Symphony, and more. Re
 order: 0
 slug: "index"
 ---
+import IconList from "@components/IconList.astro";
+import CheckListItem from "@components/CheckListItem.astro";
 
 Get answers to your questions about OASIS+: ask via email or explore our other resources.
 
@@ -11,14 +13,33 @@ Get answers to your questions about OASIS+: ask via email or explore our other r
 ## Have questions about OASIS+?
 For general questions about the program or a solicitation, visit the [Tools and Resources]() page or reach out to our team.
 
-[OASISplus@gsa.gov](mailto:OASISplus@gsa.gov)
 
+
+<IconList>
+  <CheckListItem icon="mail_outline" color="text">
+    [OASISplus@gsa.gov](mailto:OASISplus@gsa.gov)
+  </CheckListItem>
+</IconList>
 
 ## Have questions about the Symphony system?
 For questions related to access, technical issues, or additional information about Symphony, visit the [Tools and Resources]() page or reach out to the support team. 
-[client.support@apexlogic.com](mailto:client.support@apexlogic.com)
+
+<IconList>
+  <CheckListItem icon="mail_outline" color="text">
+    [client.support@apexlogic.com](mailto:client.support@apexlogic.com)
+  </CheckListItem>
+</IconList>
+
 
 ## Connect with us on social media
-[OASIS+ Multi-Agency Contract Interact Community](https://buy.gsa.gov/interact/community/196/activity-feed)
-[PSHC on LinkedIn](https://linkedin.com)
-[PSHC on X ](https://twitter.com)
+<IconList>
+  <CheckListItem icon="comment" color="text">
+   [OASIS+ Multi-Agency Contract Interact Community](https://buy.gsa.gov/interact/community/196/activity-feed)
+  </CheckListItem>
+  <CheckListItem icon="linkedin" color="text">
+   [PSHC on LinkedIn](https://linkedin.com)
+  </CheckListItem>
+  <CheckListItem icon="twitter" color="text">
+   [PSHC on X](https://twitter.com)  
+  </CheckListItem>
+</IconList>

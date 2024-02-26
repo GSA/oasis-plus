@@ -1,7 +1,7 @@
 ---
-
+const {scope='col'} = Astro.props;
 ---
 
-<th scope="col">
+<th scope={scope}>
     <slot />
 </th>

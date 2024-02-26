@@ -3,7 +3,7 @@ import GSAHeader from '@components/GSAHeader.astro';
 import USAIdentifier from '@components/USAIdentifier.astro';
 import Banner from '@components/Banner.astro';
 
-const { title, description } = Astro.props;
+const { title, description, show_site_link} = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -30,7 +30,7 @@ const { title, description } = Astro.props;
       <a class="usa-skipnav" href="#main-content">Skip to main content</a>
       <Banner />
       <div class="background flex-fill">
-        <GSAHeader />
+        <GSAHeader show_site_link={show_site_link}/>
 
         <div class="border-top-1px border-base-lightest wide-layout">
           <slot />

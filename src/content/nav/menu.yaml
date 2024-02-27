@@ -1,5 +1,13 @@
 - title: About OASIS+
-  href: about/
+  submenu:
+  - title: "About OASIS+"
+    href: about/
+  - title: "Contract families"
+    href: about/contract-families/
+  - title: "Domains and labor categories"
+    href: about/domains-labor-categories/
+  - title: "How OASIS+ compares to OASIS legacy"
+    href: about/oasis-plus-comparison/
 - title: Buyers
   submenu: 
   - title: "Buyers’ guide"
@@ -21,4 +29,4 @@
 - title: Resources
   href: resources/
 - title: Events & Training
-  href: Events
+  href: events-training/

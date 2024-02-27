@@ -1,16 +1,25 @@
 ---
 /**
- * A component that defines a single content list item in OASIS+
+ * A component that defines a single collection list item in OASIS+
  * 
  */
- const { img_src, img_alt } = Astro.props;
+ const { img_src= null, img_alt= null, calendar_month=null, calendar_day = null } = Astro.props;
 ---
 <li class="usa-collection__item">
-  <img
-    class="usa-collection__img padding-top-1"
-    src={`${import.meta.env.BASE_URL}${img_src}`}
-    alt={img_alt}
-  />
+  { img_src &&
+    <img
+      class="usa-collection__img padding-top-1"
+      src={`${import.meta.env.BASE_URL}${img_src}`}
+      alt={img_alt}
+    />
+  }
+  { calendar_month && 
+    <div class="usa-collection__calendar-date">
+      <time datetime="2020-09-30T12:00:00+01:00"
+        ><span class="usa-collection__calendar-date-month">{calendar_month}</span>
+        <span class="usa-collection__calendar-date-day">{calendar_day}</span></time>
+    </div>
+  }
   <div class="usa-collection__body">
     <slot />
   </div>

@@ -3,17 +3,57 @@ title: Contract Families
 description: "TODO: Description goes here"
 order: 1
 ---
-import Alert from "@components/USWDSAlert.astro";
-
-
-<Alert>
-    We are in the process of finalizing the master contracts. 
-
-    Please continue to check [Interact](https://interact.gsa.gov) for updates. 
-
-    You can also review the solicitations, which are currently closed but can give you a sense of what to expect on the master contracts. 
-
-    [View Solicitations](#)
-</Alert>
+import CollectionListItem from "@components/CollectionListItem.astro";
+import CollectionList from "@components/ColletionList.astro";
 
 OASIS+ has six separate “families” of multi-agency contract vehicles, collectively referred to as OASIS+. The contracts and their requirements are as follows:
+
+<CollectionList>
+    <CollectionListItem  img_src="images/sba-icons/total-small-business.svg" img_alt="Total small business icon">
+        ### Total small business (SB)
+        All small businesses, including those designated by socioeconomic groups
+
+        [Learn more about the Total Small Business program](https://certify.sba.gov/) 
+    </CollectionListItem>
+</CollectionList>
+<CollectionList>
+    <CollectionListItem  img_src="images/sba-icons/8-a.svg" img_alt="8(a) certified icon">
+        ### 8(a) SB 
+        SBA Offer & Approval only required for sole-source, direct award task orders
+
+        [Learn more about the 8(a) Business Development program](https://www.sba.gov/federal-contracting/contracting-assistance-programs/8a-business-development-program) 
+    </CollectionListItem>
+</CollectionList>
+<CollectionList>
+    <CollectionListItem  img_src="images/sba-icons/hub-zone.svg" img_alt="HUB zone cerfified icon">
+        ### Historically underutilized business zone (HUBZone)
+        - Only certain businesses that are historically underutilized
+        - Certified by SBA
+
+        [Learn more about the HUBZone program](https://www.sba.gov/federal-contracting/contracting-assistance-programs/hubzone-program) 
+    </CollectionListItem>
+</CollectionList>
+<CollectionList>
+    <CollectionListItem  img_src="images/sba-icons/service-disabled-veteran-owned.svg" img_alt="Service-owned veteran-owned certified icon">
+        ### Service-Disabled Veteran-Owned SB (SDVOSB)
+        - At least 51% owned and operated by veterans
+        - SBA-certified at time of award
+
+        [Learn more about the Service-Disabled Veteran Owned program](https://www.sba.gov/federal-contracting/contracting-assistance-programs/veteran-contracting-assistance-programs) 
+    </CollectionListItem>
+</CollectionList>
+<CollectionList>
+    <CollectionListItem  img_src="images/sba-icons/wosb-certified.svg" img_alt="SBA Woman-owned small business certified icon">
+        ### Women-owned small business (WOSB)
+        - At least 51% owned and operated by women
+        - SBA-certified at time of award
+
+        [Learn more about the Women-Owned program](https://www.sba.gov/federal-contracting/contracting-assistance-programs/women-owned-small-business-federal-contract-program) 
+    </CollectionListItem>
+</CollectionList>
+<CollectionList>
+    <CollectionListItem  img_src="images/sba-icons/unrestricted.svg" img_alt="Unrestricted icon">
+        ### Unrestricted (U)
+        - Full and open; no restrictions
+    </CollectionListItem>
+</CollectionList>

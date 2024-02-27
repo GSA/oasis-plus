@@ -1,0 +1,17 @@
+---
+/**
+ * A component that defines a single content list item in OASIS+
+ * 
+ */
+ const { img_src, img_alt } = Astro.props;
+---
+<li class="usa-collection__item">
+  <img
+    class="usa-collection__img padding-top-1"
+    src={`${import.meta.env.BASE_URL}${img_src}`}
+    alt={img_alt}
+  />
+  <div class="usa-collection__body">
+    <slot />
+  </div>
+</li>

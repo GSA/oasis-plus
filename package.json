@@ -13,7 +13,7 @@
     "federalist": "astro build"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.5",
+    "@astrojs/check": "^0.5.6",
     "@astrojs/mdx": "^2.1.1",
     "@astrojs/sitemap": "^3.1.1",
     "@uswds/uswds": "3.7.1",

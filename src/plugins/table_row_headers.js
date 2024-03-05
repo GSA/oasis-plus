@@ -39,7 +39,7 @@ function process_table_row(node) {
 }
 
 
-export default (options) => {
+export default () => {
   return tree => {
     visit(tree, [{"type": "element", "tagName": "tr"}], function (node) {
         process_table_row(node)

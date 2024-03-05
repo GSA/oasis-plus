@@ -5,7 +5,7 @@ export function setCurrentHeader(){
     const sidenav_links = document.querySelectorAll('#usa-sidenav__sublist_header a')
     // Add click event listener to each sub menu link
     sidenav_links.forEach(link => {
-        link.addEventListener('click', (event) => {
+        link.addEventListener('click', () => {
         // clear all
         sidenav_links.forEach(item => {
             item.classList.remove('usa-current');

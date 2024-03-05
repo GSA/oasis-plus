@@ -10,7 +10,13 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint src --ext js,astro",
-    "federalist": "astro build"
+    "federalist": "astro build",
+    "serve": "npm run build && npm run preview -- --port 4321",
+    "pa11y-ci": "npm run pa11y-ci:desktop && npm run pa11y-ci:mobile",
+    "pa11y-ci:desktop": "pa11y-ci --config ./.pa11yci-desktop --sitemap http://localhost:4321/sitemap-0.xml  --sitemap-find \"^https://www.gsa.gov/oasis-plus/\" --sitemap-replace \"http://localhost:4321/\"",
+    "pa11y-ci:mobile": "pa11y-ci --config ./.pa11yci-mobile --sitemap http://localhost:4321/sitemap-0.xml    --sitemap-find \"^https://www.gsa.gov/oasis-plus/\" --sitemap-replace \"http://localhost:4321/\"",
+    "pa11y-ci:gh": "npx start-server-and-test serve http://localhost:4321 pa11y-ci"
+   
   },
   "dependencies": {
     "@astrojs/check": "^0.5.6",
@@ -27,6 +33,8 @@
     "@uswds/compile": "^1.1.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "pa11y-ci": "^3.0.1",
+    "start-server-and-test": "^1.15.4"
   }
 }

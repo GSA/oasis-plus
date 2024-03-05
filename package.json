@@ -35,6 +35,6 @@
     "eslint-plugin-astro": "^0.31.4",
     "gulp": "^4.0.2",
     "pa11y-ci": "^3.0.1",
-    "start-server-and-test": "^1.15.4"
+    "start-server-and-test": "^2.0.3"
   }
 }

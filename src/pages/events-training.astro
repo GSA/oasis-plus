@@ -5,7 +5,7 @@ import PageLayout from '@layouts/PageLayout.astro'
 
 
 const entry = await getEntry('events-training', 'index');
-const { Content, headings } = await entry.render();
+const { Content} = await entry.render();
 
 ---
 <PageLayout title={entry.data.title} description={entry.data.description}>

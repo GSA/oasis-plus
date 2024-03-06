@@ -7,7 +7,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
 
 {
   domains.data.map(domain => (
-    <h2 id={ slug(domain.name) }>{ domain.name } ({ domain.shortName })</h2>
+    <h2 id={ slug(domain.name) }><img src={domain.icon} aria-hidden="true" alt="" />{ domain.name } ({ domain.shortName })</h2>
 
     <table class="usa-table usa-table--borderless">
       <thead>
@@ -31,3 +31,13 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
     </table>
   ))
 }
+
+<style>
+  h2 {
+    display: flex;
+    align-items: center; 
+  }
+  h2 img {
+    margin-right: .5em;
+  }
+</style>

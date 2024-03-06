@@ -1,6 +1,6 @@
 - name: Management & Advisory
   shortName: M&A
-  icon: /images/domain-icons/management.svg
+  icon: images/domain-icons/management.svg
   naics:
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
@@ -19,7 +19,7 @@
 
 - name: Technical & Engineering
   shortName: T&E
-  icon: /images/domain-icons/tech.svg
+  icon: images/domain-icons/tech.svg
   naics:
     - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
@@ -38,7 +38,7 @@
 
 - name: Research & Development
   shortName: R&D
-  icon: /images/domain-icons/research.svg
+  icon: images/domain-icons/research.svg
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
@@ -75,7 +75,7 @@
 
 - name: Intelligence Services
   shortName: INTEL
-  icon: /images/domain-icons/intelligence.svg
+  icon: images/domain-icons/intelligence.svg
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
@@ -112,7 +112,7 @@
 
 - name: Environmental
   shortName: ENV
-  icon: /images/domain-icons/sustainability.svg
+  icon: images/domain-icons/sustainability.svg
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
@@ -139,7 +139,7 @@
 
 - name: Facilities
   shortName: FAC
-  icon: /images/domain-icons/facilities.svg
+  icon: images/domain-icons/facilities.svg
   naics:
     - codeAndTitle: 238160 Roofing Contractors
       sizeStandard: $19.0 Million
@@ -164,7 +164,7 @@
 
 - name: Logistics
   shortName: LOG
-  icon: /images/domain-icons/logistics.svg
+  icon: images/domain-icons/logistics.svg
   naics:
     - codeAndTitle: 336611S Ship Building and Repairing
       sizeStandard: 1,300 employees

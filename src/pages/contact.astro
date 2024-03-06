@@ -8,7 +8,7 @@ const entry = await getEntry('contact', 'index');
 const { Content} = await entry.render();
 
 ---
-<PageLayout title={entry.data.title} description={entry.data.description}>
+<PageLayout title={`${entry.data.title} information`} description={entry.data.description}>
     <PageContentLayoutWideScreen title={entry.data.title}>
         <div class="usa-prose">
             <Content />

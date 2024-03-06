@@ -27,12 +27,11 @@ const { title, description, show_site_link} = Astro.props;
   </head>
   <body>
     <div class="usa-overlay"></div>
-    <div id="app" class="grid-row flex flex-column height-full">
+    <div id="app">
       <a class="usa-skipnav" href="#main-content">Skip to main content</a>
       <Banner />
-      <div class="background flex-fill">
-        <GSAHeader show_site_link={show_site_link}/>
-
+      <GSAHeader show_site_link={show_site_link}/>
+      <div class="flex-fill grid-row flex flex-column height-full">
         <div class="border-top-1px border-base-lightest wide-layout">
           <slot />
         </div>

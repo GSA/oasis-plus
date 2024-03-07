@@ -113,7 +113,12 @@ i.e.
    border-color: #dfe1e2;
 }
 
+// remove process list's the last list itme bottom padding to avoid extra top space for the next section header
+ .usa-process-list__item:last-child {
+   padding-bottom: 0;
+ }
+
 .usa-process-list__item p strong {
    font-size: 1.2em; 
-   
 } 
+

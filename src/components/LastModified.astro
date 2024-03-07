@@ -1,0 +1,22 @@
+---
+const {lastModified} = Astro.props;
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
+const updateDate = dayjs(lastModified)
+  .utc()
+  .format("MMMM DD, YYYY");
+---
+<div class="last-reviewed grid-container " id="page-last-reviewed">
+    Last updated: {updateDate}
+</div>
+
+<style>
+    .last-reviewed {
+        font-size: .75rem;
+        text-align: right;
+        margin-bottom: .5em;
+    }
+</style>

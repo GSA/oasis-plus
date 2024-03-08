@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-const { title, description, lastModified } = Astro.props;
+const { title, description, last_modified } = Astro.props;
 
 ---
-<BaseLayout title={title} description={description} lastModified={lastModified}>
+<BaseLayout title={title} description={description} last_modified={last_modified}>
   <section class="grid-container usa-section">
     <div class="grid-row grid-gap">
       <slot />

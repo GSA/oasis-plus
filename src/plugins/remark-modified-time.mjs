@@ -18,12 +18,12 @@ export function remarkModifiedTime() {
     // allow content creators to override date in front-matter
     const manual_last_modified_date = file.data.astro.frontmatter.last_modified
     if (manual_last_modified_date) {
-      file.data.astro.frontmatter.lastModified = manual_last_modified_date
+      file.data.astro.frontmatter.last_modified = manual_last_modified_date
     }
     else {
       const filepath = file.history[0];
       const result = execSync(`git log -1 --pretty="format:%cI" "${filepath}"`);
-      file.data.astro.frontmatter.lastModified = result.toString();
+      file.data.astro.frontmatter.last_modified = result.toString();
     }
   };
 }

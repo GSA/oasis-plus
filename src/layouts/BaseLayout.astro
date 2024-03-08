@@ -4,7 +4,7 @@ import USAIdentifier from '@components/USAIdentifier.astro';
 import Banner from '@components/Banner.astro';
 import LastModified from "@components/LastModified.astro"
 
-const { title, description, show_site_link, lastModified} = Astro.props;
+const { title, description, show_site_link, last_modified} = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -37,7 +37,7 @@ const { title, description, show_site_link, lastModified} = Astro.props;
           <slot />
         </div>
       </div>
-      {lastModified && ( <LastModified lastModified={lastModified} /> )}
+      {last_modified && ( <LastModified last_modified={last_modified} /> )}
       <USAIdentifier />
     </div>
     <script is:inline src={`${import.meta.env.BASE_URL}js/uswds.min.js`}></script>

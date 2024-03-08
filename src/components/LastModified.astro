@@ -1,11 +1,11 @@
 ---
-const {lastModified} = Astro.props;
+const {last_modified} = Astro.props;
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 
 dayjs.extend(utc);
 
-const updateDate = dayjs(lastModified)
+const updateDate = dayjs(last_modified)
   .utc()
   .format("MMMM DD, YYYY");
 ---

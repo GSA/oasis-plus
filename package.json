@@ -16,7 +16,6 @@
     "pa11y-ci:desktop": "pa11y-ci --config ./.pa11yci-desktop --sitemap http://localhost:4321/sitemap-0.xml  --sitemap-find \"^https://www.gsa.gov/oasis-plus/\" --sitemap-replace \"http://localhost:4321/\"",
     "pa11y-ci:mobile": "pa11y-ci --config ./.pa11yci-mobile --sitemap http://localhost:4321/sitemap-0.xml    --sitemap-find \"^https://www.gsa.gov/oasis-plus/\" --sitemap-replace \"http://localhost:4321/\"",
     "pa11y-ci:gh": "npx start-server-and-test serve http://localhost:4321 pa11y-ci"
-   
   },
   "dependencies": {
     "@astrojs/check": "^0.5.6",
@@ -24,6 +23,7 @@
     "@astrojs/sitemap": "^3.1.1",
     "@uswds/uswds": "3.7.1",
     "astro": "^4.4.11",
+    "dayjs": "^1.11.10",
     "typescript": "^5.3.3",
     "unist-util-visit": "^5.0.0"
   },

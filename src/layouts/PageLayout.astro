@@ -1,16 +1,12 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import LastModified from "@components/LastModified.astro"
-const { title, description, lastModified=undefined } = Astro.props;
+const { title, description, lastModified } = Astro.props;
 
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} lastModified={lastModified}>
   <section class="grid-container usa-section">
     <div class="grid-row grid-gap">
       <slot />
     </div>
   </section>
-  {lastModified && (
-  <LastModified lastModified={lastModified} />
-  )}
 </BaseLayout>

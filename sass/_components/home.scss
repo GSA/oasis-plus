@@ -39,7 +39,7 @@
       // address mobile view logo too big issue
        @media screen and (max-width:1023px) {
           .usa-logo-img {
-            height: 2rem;
+            height: 3rem;
           }
         }
     }
@@ -99,7 +99,7 @@
 }
 
 .oasis-reversed-box {
-  padding: 2em 1em;
+  padding: 2em;
   color: color('base-darkest');
   a {
     color: color($theme-link-color) !important;

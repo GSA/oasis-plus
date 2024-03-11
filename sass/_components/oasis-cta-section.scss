@@ -25,6 +25,9 @@
   
   .oasis-cta-section__hero-image {
     margin: auto;
+    img {
+      height: 200px; // responsive svg needs a dimension
+    }
   }
   
   .oasis-cta-section__content {

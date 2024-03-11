@@ -1,0 +1,17 @@
+---
+import { getEntry } from 'astro:content';
+import PageContentLayoutWideScreen from '@layouts/PageContentLayoutWideScreen.astro';
+import PageLayout from '@layouts/PageLayout.astro'
+
+
+const entry = await getEntry('contact', 'index');
+const { Content, remarkPluginFrontmatter:{last_modified}} = await entry.render();
+
+---
+<PageLayout title={entry.data.title} description={entry.data.description} last_modified={last_modified}>
+    <PageContentLayoutWideScreen title={entry.data.title}>
+        <div class="usa-prose">
+            <Content />
+        </div>
+    </PageContentLayoutWideScreen>
+</PageLayout>

@@ -1,16 +1,26 @@
 - title: About OASIS+
-  href: about/
+  submenu:
+  - title: "About OASIS+"
+    href: about/
+  - title: "Contract families"
+    href: about/contract-families/
+  - title: "Domains and labor categories"
+    href: about/domains-labor-categories/
+  - title: "How OASIS+ compares to OASIS legacy"
+    href: about/oasis-plus-comparison/
 - title: Buyers
   submenu: 
-  - title: "Buyer’s guide"
+  - title: "Buyers’ guide"
     href: buyers-guide/
   - title: "Research the OASIS+ contract features"
     href: buyers-guide/research-contract-features/
+  - title: Obtain a Delegation of Procurement Authority
+    href: buyers-guide/obtain-dpa/
   - title: Register in Symphony
     href: buyers-guide/register-in-symphony/
 - title: Sellers
   submenu:
-  - title: "Seller's guide overview"
+  - title: "Sellers’ guide"
     href: sellers-guide/
   - title: "Review solicitations"
     href: sellers-guide/review-solicitations/
@@ -19,6 +29,4 @@
 - title: Resources
   href: resources/
 - title: Events & Training
-  href: Events
-- title: Community
-  href: community/
+  href: events-training/

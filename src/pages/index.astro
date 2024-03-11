@@ -11,35 +11,38 @@ import CalloutImageBox from '@components/CalloutImageBox.astro';
 import OasisHelpFooter from '@components/OasisHelpFooter.astro';
 
 import callout_background from "@assets/images/message-background.png";
-import oasis_cta_buy from "@assets/images/oasis-cta-buy.png";
-import oasis_cta_plan from "@assets/images/oasis-cta-plan.png";
+import oasis_cta_buy from "@assets/images/buy-through-oasis.svg";
+import oasis_cta_plan from "@assets/images/join-oasis-image.svg";
 
+import oasis_logo_white from "@assets/images/oasis-logo-reversed.svg";
 import wosb from "@assets/images/sba-icons/wosb-certified.svg";
 import service_owned from "@assets/images/sba-icons/service-disabled-veteran-owned.svg";
 import eight_a from "@assets/images/sba-icons/8-a.svg";
 import hub_zone from "@assets/images/sba-icons/hub-zone.svg";
 import unrestricted from "@assets/images/sba-icons/unrestricted.svg";
 import total_small_business from "@assets/images/sba-icons/total-small-business.svg";
-import management_icon from "@assets/images/domain-icons/management.jpg";
-import facilities_icon from "@assets/images/domain-icons/facilities.jpg";
-import tech_engineering_icon from "@assets/images/domain-icons/tech-and-engineering.jpg";
-import logistics_icon from "@assets/images/domain-icons/logistics.jpg";
-import intelligence_icon from "@assets/images/domain-icons/intelligence.jpg";
-import r_d_icon from "@assets/images/domain-icons/r-and-d.jpg";
-import environmental_icon from "@assets/images/domain-icons/environmental.jpg";
-import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
+import management_icon from "@assets/images/domain-icons/management.svg";
+import facilities_icon from "@assets/images/domain-icons/facilities.svg";
+import tech_engineering_icon from "@assets/images/domain-icons/tech.svg";
+import logistics_icon from "@assets/images/domain-icons/logistics.svg";
+import intelligence_icon from "@assets/images/domain-icons/intelligence.svg";
+import r_d_icon from "@assets/images/domain-icons/research.svg";
+import environmental_icon from "@assets/images/domain-icons/sustainability.svg";
+import enterprise_icon from "@assets/images/domain-icons/enterprise.svg";
 
+const base_url = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout 
   title="One Acquisition for Integrated Services Plus OASIS+"
   description="OASIS plus (OASIS+) is GSA’s governmentwide multi-agency, multiple award indefinite delivery indefinite quantity (IDIQ) contract for non-IT services."
+  show_site_link=false
 >
   <main id="main-content">
     <Hero>
-      One Acquisition Solution for Integrated Services Plus (OASIS+)
+      <img src={oasis_logo_white.src} alt="OASIS-plus, one acquisition solution for integrated services plus" width="500px" />
       <Fragment slot="stars">
-        <div class="oasis-banner__highlight">★ Government-wide</div>
+        <div class="oasis-banner__highlight">★ Governmentwide</div>
         <div class="oasis-banner__highlight">★ Multiple award IDIQ</div>
         <div class="oasis-banner__highlight">★ Continuous on-ramping</div>
       </Fragment>
@@ -50,41 +53,47 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
         </p>
         <div class="oasis-banner__actions">
           <div class="oasis-banner__action">
-            <a href={`${import.meta.env.BASE_URL}about/`}>Learn more about OASIS+</a>
+            <a href={`${base_url}about/`} class="usa-button">Learn more about OASIS+</a>
           </div>
         </div>
       </Fragment>
     </Hero>
 
     <div class="grid-container">
-      <USWSDAlert heading="Updates and announcements">
-        Initial proposal submissions: Closed.
-        <p>Awards issued: No later than [date]. Until we award contracts, it is not possible to buy services.</p>
-        <p>You cannot currently submit an offer to join OASIS+. Solicitations will reopen in FY25 and will be continuously open from that point forward.</p>
-        <p><a class="usa-link" href="https://buy.gsa.gov/interact/community/196/activity-feed">Visit the OASIS+ Interact Community for updates and announcements.</a></p>
+      <USWSDAlert heading="Announcements and upcoming dates">
+      <p>Initial proposal submissions: Closed on October 23, 2023.</p>
+        <p>Upcoming dates:</p>
+        <ul>
+          <li>Awards issued: No later than [date].</li>
+          <li>Notice to proceed (ability to buy services): Estimated Q3 FY24.</li>
+          <li>Solicitations open for on-ramping: FY25. They will be continuously open from that point forward.</li>
+        </ul>
+        <p>
+          <a class="usa-link usa-link--external" href="https://buy.gsa.gov/interact/community/196/activity-feed">Visit the OASIS+ Interact Community for additional updates and announcements.</a>
+        </p>
       </USWSDAlert>
 
-      <CTAHeroSection hero_image={oasis_cta_buy}>
+      <CTAHeroSection hero_image={oasis_cta_buy} hero_alt="Two people facing each other with a checkmark in front of the shorter person.">
         <h2>Buy through OASIS+</h2>
         <IconList>
         {
           [
-            'Learn more about buying with the <a href="#" class="usa-link">OASIS+ Buyers’ Guide</a>',
-            'Get <a href="#" class="usa-link">delegation of Procurement Authority (DPA) training.</a>',
-            'Determine the <a href="#" class="usa-link">best OASIS+ contract for your requirements.</a>',
-            'Learn how <a href="#" class="usa-link">OASIS+ compares to OASIS Legacy.</a>',
+            `Learn more about buying with the <a href="${base_url}buyers-guide/" class="usa-link">OASIS+ Buyers’ Guide</a>`,
+            `Get <a href="${base_url}events-training/" class="usa-link">Delegation of Procurement Authority (DPA) training.</a>`,
+            `Determine the <a href="${base_url}buyers-guide/research-contract-features/" class="usa-link">best OASIS+ contract for your requirements.</a>`,
+            `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)}
       </IconList>
 
     </CTAHeroSection>
     
-    <CTAHeroSection hero_image={oasis_cta_plan}>
+    <CTAHeroSection hero_image={oasis_cta_plan} hero_alt="Browser window displaying a progress indicator in front of a person giving a thumbs-up.">
       <h2>Plan to get on OASIS+</h2>
       <IconList>
         {
           [
-            'Learn more about the steps in the selling process in the <a href="# class="usa-link">OASIS+ Seller’s Guide.</a>',
-            'Learn how <a href="#" class="usa-link">OASIS+ compares to OASIS Legacy.</a>',
+            `Learn more about the selling process in the <a href="${base_url}sellers-guide/" class="usa-link">OASIS+ Sellers’ Guide.</a>`,
+            `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)
         }
       </IconList>
@@ -94,14 +103,49 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
    
       <section class="usa-section usa-section--dark">
         <div class="grid-container">
-          <div class="oasis-reversed-box grid-row grid-gap margin-bottom-4 bg-white ">
+          <div class="grid-row grid-gap margin-bottom-4">
+            <div class="tablet:grid-col">
+                <h2 class="margin-top-0">OASIS+ contract families </h2>
+                <p>OASIS+ has six separate and distinct IDIQ contract families. The size and type of your business determines what contract you are eligible for.</p>
+                <IconList>
+                  {
+                    [
+                      'Total Small Business (SB)', 
+                      'Women-owned Small Business', 
+                      'Service Disabled Veteran-Owned Small Business',
+                      'HUBZone Small Business',
+                      '8(a) Small Business',
+                      'Unrestricted'
+                    ].map(s => <ArrowListItem>{s}</ArrowListItem>)
+                  }
+                </IconList>
+                <p>
+                  <a href=`${base_url}about/contract-families/` class="usa-button usa-button--outline usa-button--inverse">
+                    View master contracts
+                  </a>
+                </p>
+            </div>
+            <div class="tablet:grid-col">
+              <div class="grid-row grid-gap margin-top-6">
+                <img src={wosb.src} alt="SBA Woman-owned small business certified icon" style="width:33%"/>
+                <img src={service_owned.src} alt="Service-owned veteran-owned certified icon" style="width:33%"/>
+                <img src={unrestricted.src} alt="Unrestricted icon" style="width:33%"/>
+              </div>
+              <div class="grid-row grid-gap margin-top-4">
+                <img src={eight_a.src} alt="8(a) certified icon" style="width:33%"/>
+                <img src={hub_zone.src} alt="HUB zone cerfified icon" style="width:33%"/>
+                <img src={total_small_business.src} alt="Total Small Business (SB) icon" style="width:33%"/>
+              </div>
+            </div>
+           </div>  
+          <div class="oasis-reversed-box grid-row bg-white padding-x-4 margin-left-neg-4 margin-right-neg-4">
             <div class="desktop:grid-col-4">
               <h2>Domains</h2>
                 <p>
                   Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
                 </p>
                 <p>
-                  <a href="#">Learn more about domains and labor categories</a>
+                  <a href=`${base_url}about/domains-labor-categories` class="usa-link">Learn more about domains and labor categories</a>
                 </p>
             </div>
             <div class="desktop:grid-col-8">
@@ -131,42 +175,7 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid-row grid-gap margin-bottom-4">
-          <div class="tablet:grid-col">
-              <h2>OASIS+ contract families </h2>
-              <p>OASIS+ has six separate and distinct IDIQ contract families. The size and type of your business determines what contract you are eligible for.</p>
-              <IconList>
-                {
-                  [
-                    'Total Small Business', 
-                    'Women-owned Small Business', 
-                    'Service Disabled Veteran-Owned Small Business',
-                    'HUBZone Small Business',
-                    '8(a) Small Business',
-                    'Unrestricted'
-                  ].map(s => <ArrowListItem>{s}</ArrowListItem>)
-                }
-              </IconList>
-              <p>
-                <a href="#" class="usa-button usa-button--outline usa-button--inverse">
-                  View master contracts
-                </a>
-              </p>
-          </div>
-          <div class="tablet:grid-col">
-            <div class="grid-row grid-gap margin-top-6">
-              <img src={wosb.src} alt="SBA Woman-owned small business certified icon" style="width:33%"/>
-              <img src={service_owned.src} alt="Service-owned veteran-owned certified icon" style="width:33%"/>
-              <img src={unrestricted.src} alt="Unrestricted icon" style="width:33%"/>
-            </div>
-            <div class="grid-row grid-gap margin-top-4">
-              <img src={eight_a.src} alt="8(a) certified icon" style="width:33%"/>
-              <img src={hub_zone.src} alt="HUB zone cerfified icon" style="width:33%"/>
-              <img src={total_small_business.src} alt="Total small business icon" style="width:33%"/>
-            </div>
-          </div>
-         </div>    
+          </div>  
         </div>
       </section>
       
@@ -178,13 +187,13 @@ import enterprise_icon from "@assets/images/domain-icons/enterprise.jpg";
           Get the latest news and updates from the OASIS+ Interact community.
         </h3>
         <p>
-          <a href="#" class="usa-button usa-button--outline">
-            Explore Interact
+          <a href="https://buy.gsa.gov/interact/community/196/activity-feed" class="usa-button usa-button--outline">
+            Explore OASIS+ Interact Community
           </a>
         </p>
       </CalloutImageBox>
 
-      <OasisHelpFooter / >    
+      <OasisHelpFooter />    
   </main>
 </BaseLayout>
 	

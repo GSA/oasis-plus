@@ -26,6 +26,7 @@
   .oasis-banner__secondary {
     @include grid-col(12);
     background-color: white;
+    align-self: center;
   
     @include at-media(tablet) {
       @include grid-col(4);

@@ -8,10 +8,13 @@
 
 import GSALogo from '@assets/images/gsa-logo.svg'
 import closeIcon from '@assets/images/usa-icons/close.svg'
+import oasisLogo from '@assets/images/oasis-logo.svg';
 
 import searchIcon from "@assets/images/usa-icons/search--white.svg"
 import PrimaryMenuDrawer from '@components/PrimaryMenuDrawer.astro';
 import PrimaryMenu from '@components/PrimaryMenu.astro';
+
+
 let {show_site_link='true'} = Astro.props;
 show_site_link = show_site_link==='true';
 ---
@@ -48,7 +51,7 @@ show_site_link = show_site_link==='true';
                   <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#linkedin`></use>
                 </svg>
               </a>
-              <a href="https://twitter.com/GSAProfServices" class="text-midddle" style="display:inline; vertical-align:bottom; font-size:1.125em">
+              <a href="https://twitter.com/GSAProfServices" class="text-middle" style="display:inline; vertical-align:bottom; font-size:1.125em">
                 <svg class="usa-icon" aria-hidden="false" focusable="true" role="img">
                   <title id="twitter-title">OASIS Plus Twitter account</title>
                   <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#twitter`></use>
@@ -77,7 +80,10 @@ show_site_link = show_site_link==='true';
             </form>
           </section>
         </div>
-        {show_site_link && (<h1><a href={import.meta.env.BASE_URL} title="OASIS plus">OASIS+</a></h1>)}
+        {show_site_link && (<a href={import.meta.env.BASE_URL} title="OASIS plus">
+          <img src={oasisLogo.src} alt="OASIS Plus Logo" class="margin-top-1" width="140px" height="58.79px"/>
+          </a>
+        )}
         
         <PrimaryMenu />
         

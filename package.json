@@ -15,7 +15,8 @@
     "pa11y-ci": "npm run pa11y-ci:desktop && npm run pa11y-ci:mobile",
     "pa11y-ci:desktop": "pa11y-ci --config ./.pa11yci-desktop --sitemap http://localhost:4321/sitemap-0.xml  --sitemap-find \"^https://www.gsa.gov/oasis-plus/\" --sitemap-replace \"http://localhost:4321/\"",
     "pa11y-ci:mobile": "pa11y-ci --config ./.pa11yci-mobile --sitemap http://localhost:4321/sitemap-0.xml    --sitemap-find \"^https://www.gsa.gov/oasis-plus/\" --sitemap-replace \"http://localhost:4321/\"",
-    "pa11y-ci:gh": "npx start-server-and-test serve http://localhost:4321 pa11y-ci"
+    "pa11y-ci:gh": "npx start-server-and-test serve http://localhost:4321 pa11y-ci",
+    "test:links": "npm run build > /dev/null 2>&1 && linkinator --verbosity error _site"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.7",
@@ -34,6 +35,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
     "gulp": "^4.0.2",
+    "linkinator": "^6.0.4",
     "pa11y-ci": "^3.0.1",
     "start-server-and-test": "^2.0.3"
   }

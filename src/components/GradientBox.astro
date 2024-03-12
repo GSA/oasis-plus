@@ -1,5 +1,11 @@
 ---
+const { callout_url = null, callout_text = null } = Astro.props;
 ---
 <div class="oasis-gradient-box">
     <slot></slot>
+    { callout_url &&     
+        <div class="text-center">
+            <a href={`${import.meta.env.BASE_URL}${callout_url}`} class="usa-button usa-button--outline bg-white margin-3">{callout_text}</a>
+        </div>
+    }
 </div>

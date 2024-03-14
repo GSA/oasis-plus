@@ -24,8 +24,8 @@ export default defineConfig({
 })],
   outDir: '_site',
   site: 'https://www.gsa.gov/',
-  base: process.env.BASEUR + '/',
-  trailingSlash: 'ignore',
+  base: process.env.BASEURL,
+  trailingSlash: 'never',
   markdown: {
     remarkPlugins: [remarkModifiedTime],
     rehypePlugins: [

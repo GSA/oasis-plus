@@ -24,7 +24,7 @@ export default defineConfig({
 })],
   outDir: '_site',
   site: 'https://www.gsa.gov/',
-  base: process.env.BASEURL,
+  base: process.env.BASEURL ? process.env.BASEURL + '/oasis-plus' : '/oasis-plus',
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [remarkModifiedTime],

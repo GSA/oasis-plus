@@ -80,7 +80,7 @@ const base_url = import.meta.env.BASE_URL;
         {
           [
             `Learn more about buying with the <a href="${base_url}buyers-guide/" class="usa-link">OASIS+ Buyers’ Guide.</a>`,
-            `Get <a href="${base_url}events-training/" class="usa-link">Delegation of Procurement Authority (DPA) training.</a>`,
+            `Get <a href="${base_url}events-training/" class="usa-link">Delegation of Procurement Authority or DPA training.</a>`,
             `Determine the <a href="${base_url}buyers-guide/research-contract-features/" class="usa-link">best OASIS+ contract for your requirements.</a>`,
             `Learn how <a href="${base_url}about/oasis-plus-comparison/" class="usa-link">OASIS+ compares to OASIS Legacy.</a>`,
           ].map(s => <ArrowListItem set:html={s}/>)}
@@ -128,20 +128,21 @@ const base_url = import.meta.env.BASE_URL;
             </div>
             <div class="tablet:grid-col">
               <div class="grid-row grid-gap margin-top-6">
-                <img src={wosb.src} alt="SBA Woman-owned small business certified icon" style="width:33%"/>
+                <img src={total_small_business.src} alt="Total Small Business (SB) icon" style="width:33%"/>
+		<img src={wosb.src} alt="SBA Woman-owned small business certified icon" style="width:33%"/>
                 <img src={service_owned.src} alt="Service-owned veteran-owned certified icon" style="width:33%"/>
-                <img src={unrestricted.src} alt="Unrestricted icon" style="width:33%"/>
               </div>
               <div class="grid-row grid-gap margin-top-4">
-                <img src={eight_a.src} alt="8(a) certified icon" style="width:33%"/>
                 <img src={hub_zone.src} alt="HUB zone cerfified icon" style="width:33%"/>
-                <img src={total_small_business.src} alt="Total Small Business (SB) icon" style="width:33%"/>
+		<img src={eight_a.src} alt="8(a) certified icon" style="width:33%"/>
+		<img src={unrestricted.src} alt="Unrestricted icon" style="width:33%"/>
+
               </div>
             </div>
            </div>  
           <div class="oasis-reversed-box grid-row bg-white padding-x-4 margin-left-neg-4 margin-right-neg-4">
             <div class="desktop:grid-col-4">
-              <h2>Domains</h2>
+              <h2>Domains and labor categories</h2>
                 <p>
                   Domains are functionally aligned groupings of related non-IT services. Each domain includes multiple, related North American Industry Classification System or NAICS codes. Domains and NAICS codes help determine the scope of a contract.
                 </p>

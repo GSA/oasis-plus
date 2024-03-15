@@ -7,20 +7,20 @@ import process_image_urls from './src/plugins/process_image_urls';
 import table_row_headers from './src/plugins/table_row_headers';
 import { remarkModifiedTime } from './src/plugins/remark-modified-time.mjs';
 
-
+const base = process.env.BASEURL ? process.env.BASEURL + '/oasis-plus' : '/oasis-plus'
 // https://astro.build/config
 export default defineConfig({
   integrations: [mdx(), sitemap()],
   outDir: '_site',
   site: 'https://www.gsa.gov/',
-  base: process.env.BASEURL ? process.env.BASEURL + '/oasis-plus' : '/oasis-plus',
+  base: base,
   trailingSlash: 'always',
   markdown: {
     remarkPlugins: [remarkModifiedTime],
     rehypePlugins: [
       [table_row_headers, {}],
-      [process_anchors, {baseURL: process.env.BASEURL || '/'}],
-      [process_image_urls, {baseURL: process.env.BASEURL || '/'}]
+      [process_anchors, {baseURL: base}],
+      [process_image_urls, {baseURL: base}]
     ]
   }
 });

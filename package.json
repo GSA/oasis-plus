@@ -19,7 +19,7 @@
     "test:links": "npm run build > /dev/null 2>&1 && linkinator --verbosity error _site"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.7",
+    "@astrojs/check": "^0.5.9",
     "@astrojs/mdx": "^2.2.0",
     "@astrojs/sitemap": "^3.1.1",
     "@uswds/uswds": "3.7.1",

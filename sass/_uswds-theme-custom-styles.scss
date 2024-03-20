@@ -122,3 +122,9 @@ i.e.
    font-size: 1.2em; 
 } 
 
+.icon-button {
+   @include at-media(mobile-lg) {
+      text-wrap: nowrap
+    }
+}
+

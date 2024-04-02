@@ -25,7 +25,7 @@
     "@uswds/uswds": "3.8.0",
     "astro": "^4.5.5",
     "dayjs": "^1.11.10",
-    "typescript": "^5.4.2",
+    "typescript": "^5.4.3",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {

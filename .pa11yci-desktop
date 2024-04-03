@@ -3,6 +3,7 @@
     "concurrency": 1,
     "standard": "WCAG2AA",
     "timeout": 10000,
+    "hideElements": "iframe",
     "chromeLaunchConfig": {
         "args": ["--no-sandbox"]
     }

@@ -119,3 +119,10 @@
     a {color: inherit};
   }
 }
+
+#oasis-homepage-logo{
+  width:45%;
+  @include at-media(mobile-lg) {
+    width:500px;
+  }
+}

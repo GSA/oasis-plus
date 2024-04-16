@@ -5,6 +5,10 @@ order: 0
 slug: "./"
 in_page_nav: true
 ---
+import TableBorderless from "@components/TableBorderless.astro"
+import TableHeaderBorderless from "@components/TableHeaderBorderless.astro"
+import TableCellBorderless from "@components/TableCellBorderless.astro"
+export const components = {table: TableBorderless, th: TableHeaderBorderless, td: TableCellBorderless}
 
 ## Introduction
 Thank you for choosing the OASIS+ family of contracts to fulfill your complex, integrated multiple service needs! This suite of services contracts is available for use by agencies throughout the Federal Government, as defined in Section 2.1, who hold a Delegation of Procurement Authority (DPA), as referenced in Section 3.0.
@@ -41,7 +45,7 @@ Orders issued against the OASIS+ contracts are considered Interagency Acquisitio
 ### Contracts Scope
 The contract scope of OASIS+ is organized by Domains. The term Domain refers to a functional grouping of related services spanning multiple NAICS codes. Domains and the NAICS codes listed under the Domains are designed to align order requirements to qualified industry partners. Each Domain is limited to the NAICS codes and associated size standards specifically listed under that Domain. 
 
-The OASIS+ contracts cover services that are: primarily noncommercial, with the allowance for commercial services task orders classified and unclassified; and within the Continental US (CONUS) and Outside the Continental US (OCONUS). All OASIS+ task orders must be within scope of the respective OASIS+ IDIQ contract for which it is awarded, provided the Ordering Contracting Officer (OCO) determines the principal purpose NAICS code for the order to be one of the OASIS+ NAICS codes ([Appendix A](#)). If the OCO determines its requirement has a NAICS code outside one of the OASIS+ NAICS codes, the requirement is not within scope of OASIS+.
+The OASIS+ contracts cover services that are: primarily noncommercial, with the allowance for commercial services task orders classified and unclassified; and within the Continental US (CONUS) and Outside the Continental US (OCONUS). All OASIS+ task orders must be within scope of the respective OASIS+ IDIQ contract for which it is awarded, provided the Ordering Contracting Officer (OCO) determines the principal purpose NAICS code for the order to be one of the OASIS+ NAICS codes ([Appendix A](/ordering-guide/#appendix-a-performance-areas---domains)). If the OCO determines its requirement has a NAICS code outside one of the OASIS+ NAICS codes, the requirement is not within scope of OASIS+.
 #### Scope for Information Technology & Non-Information Technology
 
 Information Technology (IT), by definition, means any equipment, or interconnected system(s) or subsystem(s) of equipment that is used for the automatic acquisition, storage, analysis, evaluation, manipulation, management, movement, control, display, switching, interchange, transmission, or reception of data or information by the agency. For purposes of this definition, if the equipment is used by the agency directly or is used by a contractor under a contract with the agency that requires its use, or to a significant extent, its use in the performance of a service or the furnishing of a product.
@@ -185,7 +189,7 @@ OASIS+ offers several approaches to aid the market research, such as:
 
 **Only one Domain and one NAICS code under one contract family must be selected.**
 
-OASIS+ Domains each contain multiple NAICS codes. [FAR 19.102](https://www.acquisition.gov/far/19.102) requires the OCO to determine the appropriate NAICS code and assign one NAICS code and corresponding small business size standard in all solicitations and task orders. [FAR 19.102(b)(1)](https://www.acquisition.gov/far/19.102) requires that the NAICS code assigned describes the principal purpose of the service being acquired. The tables in [Appendix A](#) identify the OASIS+ Domains and NAICS codes with their corresponding size standards. 
+OASIS+ Domains each contain multiple NAICS codes. [FAR 19.102](https://www.acquisition.gov/far/19.102) requires the OCO to determine the appropriate NAICS code and assign one NAICS code and corresponding small business size standard in all solicitations and task orders. [FAR 19.102(b)(1)](https://www.acquisition.gov/far/19.102) requires that the NAICS code assigned describes the principal purpose of the service being acquired. The tables in [Appendix A](/ordering-guide/#appendix-a-performance-areas---domains) identify the OASIS+ Domains and NAICS codes with their corresponding size standards. 
 
 Note: In accordance with regulation, OCOs must select the task order NAICS code based upon the work to be performed and not based upon the applicable size standard or program office supported. Apparent discrepancies will be brought to the OCO’s attention. If the Domain/NAICS code selection is deemed inappropriate, the OASIS+ Contracting Officer(s) may rescind the OCO’s OASIS+ Delegation of Procurement Authority.
 
@@ -259,7 +263,7 @@ The ceiling rates do not apply when the provision FAR 52.216-29 Time-and-Materia
 #### Travel Pricing (All Order Types)
 Travel may be required to support the OASIS+ task order requirements. For those task orders requiring travel, the contractor must include estimated travel requirements in the task order proposal as required by the OCO. All travel shall be in accordance with the Federal Travel Regulation (FTR) [as applicable] and all lodging shall be at or below allowable, published lodging rates for the respective locality, unless an exception applies. The contractor is required to ensure good stewardship of travel funds, and shall seek rates lower than the approved FTR lodging rates whenever possible. 
 
-For CAF considerations for travel, refer to [Section 3.2.3 Contract Access Fee](#); CAF is applied to travel. 
+For CAF considerations for travel, refer to [Section 3.2.3 Contract Access Fee](/ordering-guide/#contract-access-fee); CAF is applied to travel. 
 
 #### Outside the Continental United States/OCONUS 
 
@@ -327,7 +331,985 @@ OASIS+ includes five SB contracts that were awarded as 100% small business set-a
 
 An OCO may NOT issue a solicitation to multiple OASIS+ contracts at the same time (e.g., issuing the same solicitation to the OASIS+ UR contract under the Management and Advisory Domain with NAICS code 541611 and the OASIS+ SB contract under the Management and Advisory Domain with NAICS code 541611 simultaneously is prohibited), nor multiple Domains at the same time (e.g., issuing the same solicitation to the Technical & Engineering Domain and Environmental Services Domain), nor multiple NAICS codes at the same time (e.g., issuing the same solicitation to NAICS code 541330 and NAICS code 541715). 
 
-**Prohibited Action: No new awards of a task order to a contractor in dormant status ([Section 3.4.3](#)).**
+**Prohibited Action: No new awards of a task order to a contractor in dormant status ([Section 3.4.3](/ordering-guide/#contracts-in-dormant-status)).**
 
 ### Step 3 - Solicitation Considerations
+
+The OCO must consider the [Appendix B: Task Order Solicitation Methodology](/ordering-guide/#appendix-b-task-order-solicitation-methodology) and must create the task order solicitation within Symphony, consistent with [FAR 16.505](https://www.acquisition.gov/far/16.505) ordering procedures.
+
+In addition to the information required by [FAR 16.505(a)(7)](https://www.acquisition.gov/far/16.505), the following information is required to be provided within Symphony:
+
+- Domain being solicited
+- Master contract CLIN (applicable NAICS code)
+- Task order Request for Proposal number
+- Solicitation title
+- Issuing agency and bureau
+- Funding agency and bureau
+- OCO name, email, and phone number
+- Type of services (commercial or non-commercial)
+- Contract type
+- Task order CLIN structure
+- SOW/PWS/SOO
+- Product Service Code (PSC)
+- Description of services
+- Security clearances
+- Labor categories/descriptions
+- Extent of competition (fair opportunity, exception to fair opportunity)
+- Invoicing Instructions
+- Evaluation factors
+- Source selection methodology
+- Solicitation questions due date
+- Proposal due date
+- Proposal instructions
+- Basis for award
+- Other pertinent information (Ex. agency specific provisions/ clauses, optional clauses, etc.) 
+
+#### OASIS+ Minimum and Maximum Order Limitations
+
+Minimum Order 
+
+- OASIS+ minimum order is the Simplified Acquisition Threshold (SAT);
+- When the government requires supplies or services covered by this contract in an amount of less than the SAT, as amended, the government is not obligated to purchase, nor is the contractor obligated to furnish, those supplies or services under the contract. 
+- In accordance with Section C.2.5.1 of the OASIS+ UR contract, the minimum order threshold for task orders issued through the Enterprise Solutions Domain is $250 million total estimated value (including the base and all option periods).
+
+Maximum Order
+
+- Except for any limitations imposed by the FAR, there is no maximum order limitation under OASIS+; the OASIS+ program has no ceiling on any OASIS+ MAC.
+
+#### Task Order Period of Performance Duration
+OASIS+ has a five year base period of performance with one option period of five years that may extend the cumulative term of the contract to 10 years in accordance with [FAR 52.217-9, Option to Extend the Term of the Contract](https://www.acquisition.gov/far/52.217-9), if exercised by the OASIS+ CO(s). The master contract also includes [FAR 52.217-8, Option to Extend Services](https://www.acquisition.gov/far/52.217-8), which may extend this period up to an additional six months, if exercised by the OASIS+ CO(s). Each OASIS+ master contract family has a unique ordering period of performance end date. 
+
+The period of performance for each task order awarded under the master contract shall be specified in the task order by the ordering agency. Task orders must be solicited and awarded prior to the master contract’s term expiring and may extend up to five years and six months (which includes the extension at FAR 52.217-8 clause, if applicable) after the term’s expiration. 
+
+Task order option periods may be exercised after the contract term expires as long as the final task order option period does not extend the cumulative term of the task order beyond five years and six months after the OASIS+ contract ordering term ends. 
+
+After the contract ordering term expires, the master contract terms and conditions will be actively administered by the government and the contractor until the contractor’s final task order is closed out. Therefore, the master contract terms and conditions shall remain in effect with respect to all active task orders until the last task order is closed out. 
+
+#### Contract Access Fee
+GSA’s operating costs are reimbursed through a CAF charged on all task orders placed against the master contract(s). The CAF is paid by the ordering agency, but remitted to GSA by the contractor. GSA maintains the unilateral right to establish and change the CAF rate. GSA will provide at least a 60-day notice prior to the effective date of any change to the CAF rate or payment process. 
+
+The OASIS+ CAF shall be included in each task order under a separate CLIN (e.g. a CAF CLIN for the base and a CAF CLIN for each option period). This CLIN should be established as a flexibly reimbursable no-fee CLIN. OCOs may use a different contract type for this CLIN; however, it is NOT recommended.
+
+The CAF rate is a flat 0.15%, applied to the total amount billed on each invoice (including ancillary support, travel, and profit) for all task orders. 
+
+Due to the low CAF rate, there are no Memorandums of Understanding with federal agencies that discount the established CAF rate; additionally, there is no cap/ceiling applicable to the CAF.
+
+Using the established CAF rate, the contractor shall include the estimated CAF in each task order proposal based on the total estimated order value, which helps avoid potential funding issues. The contractor must include the CAF as a separate line item on all proposals and invoices to the government, regardless of contract type. The CAF is established by GSA, and must never be treated as a negotiable element between the contractor and the ordering agency. If the contractor does not ensure a separate CAF CLIN is included in its task order proposal and resulting task order award, the contractor shall still be liable to pay the owed CAF to the government. 
+
+OCOs shall instruct contractors to bill for CAF on every invoice/voucher as a separate line item in accordance with the OASIS+ contract Section B.11 OASIS+ Contract Access Fee.
+
+Each invoice billed under the task order shall include a separate CAF line item as in the following example:
+
+| CAF line item | Cost |
+| --------------| -----|
+|CLIN 0001 Labor|$100.00|
+|CLIN 0002 Material|$50.00|
+|CLIN 0003 Travel|$50.00|
+|Subtotal|$200.00|
+|CLIN 0004 CAF (0.15% of subtotal)|$0.30|
+|Total Invoice including CAF|$200.30|
+
+#### Clauses and Provisions
+
+Due to the various combinations of contract provisions/clauses which may be required for an individual task order based on the contract type, statement of work, dollar value, and other specific customer agency requirements, the OASIS+ IDIQ cannot predetermine all the contract provisions/clauses for future individual task orders. However, all ‘Required’ and ‘Required when Applicable’ provisions / clauses set forth in [FAR 52.301](https://www.acquisition.gov/far/52.301) automatically flow down to all orders, based on their specific contract type, statement of work, and dollar value. The Attachment J-5, OASIS+ Task Order Clause and Provision Matrix, applies to task orders, as applicable. If there is a conflict between task order terms and conditions and master contract terms and conditions, the master contract terms shall take precedence.
+
+The OCO must include any FAR clauses in full text that need to be filled in (e.g. [FAR 52.217-9](https://www.acquisition.gov/far/52.217-9) applicable to orders with options).
+
+#### DoD-Specific Clauses and Provisions
+
+For task orders subject to DoD requirements, DoD provisions and clauses from the [DoD FAR Supplement (DFARS)](https://www.acquisition.gov/dfars) have been incorporated in Attachment J-4. If applicable, the OCO may use the Attachment J-4 to ensure the required DFARS provisions and clauses will flow down to the task order Level. The required provisions and clauses are updated through the version date indicated on the J-4 attachment. Alternate and supplemental provisions and clauses from Command-specific and/or DoD Component levels are not included and may be incorporated by the OCO into the specific solicitation and subsequent task order. The required DoD provisions and clauses are updated through the master contract version date indicated on the J-4 attachment. Should Attachment J-4 not reflect any updated DoD provision or clause at the time of task order solicitation or award, the OCOs may insert those required updated provisions or clauses into their task order. Periodically, during the term of the master contract, an update to Attachment J-4, may be executed on the master contract via a bilateral contract modification.
+
+#### Department of Labor-Specific Clauses and Provisions
+
+For task orders subject to SCLS or construction wage rate requirements, DoL provisions and clauses from [FAR part 22](https://www.acquisition.gov/far/part-22) have been incorporated in Attachment J-5. Only the applicable provisions and clauses shall flow down to the task order level. Alternate, supplemental, or agency-level provisions and clauses may be incorporated by the OCO into the specific solicitation and subsequent task order. Should this list not reflect any updated DoL provision or clause at the time of task order solicitation or award, the OCOs may insert those required updated provisions or clauses into their task order. Periodically, during the term of the master contract, an update to these DoL Required Provisions and Clauses may be executed on the master contract via a bilateral contract modification. 
+
+#### CAS-Specific Clauses and Provisions
+For task orders subject to CAS requirements, CAS provisions and clauses from [FAR part 30](https://www.acquisition.gov/far/part-30) have been incorporated in Attachment J-5. The OCO must identify the provisions/clauses in the task order solicitation and subsequent task order award, as applicable.
+
+#### Ability One
+
+The OASIS+ Program fully supports the subcontracting with Ability One contractors, where the services are included on the Ability One Procurement List. 
+
+In accordance with FAR 8.005, the OCO shall, “Insert the clause at [FAR 52.208-9, Contractor Use of Mandatory Sources of Supply and Services](https://www.acquisition.gov/far/52.208-9), in solicitations and contracts that require a contractor to provide supplies or services for government use that are on the Procurement List maintained by the Committee for Purchase From People Who Are Blind or Severely Disabled.” For certain task orders where supplies are anticipated to be supplied for use by the government, the Procurement List maintained by the Committee for Purchase From People Who Are Blind or Severely Disabled is a mandatory source of supply and should be checked to see if these supplies are available from this source. 
+
+Under DoD regulations, prime contractors are allowed to receive credit toward their small business subcontracting goals if they subcontract with qualified nonprofit agencies participating in the AbilityOne Program. (See [10 US Code 3903](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section3903&num=0&edition=prelim)).
+
+### Step 4 - Solicitation Issuance Considerations
+
+It is not allowable to solicit the same requirement under two different IDIQs (e.g. issuing a solicitation to OASIS+ UR and OASIS+ WOSB concurrently.) Refer to statute [41 USC 3302 (c)(2)(A)](https://uscode.house.gov/view.xhtml?req=(title:41%20section:3302%20edition:prelim)%20OR%20(granuleid:USC-prelim-title41-section3302)&f=treesort&edition=prelim&num=0&jumpTo=true), which includes the requirement of fair notice with the intent to make the purchase. Additionally, if an OCO solicits from two separate IDIQs, then there is a violation of statute because each Domain under an OASIS+ IDIQ is independent from a Domain under another IDIQ. Also see [Section 3.1.11 Prohibited Actions Against/Under OASIS+ Contracts](#).
+
+#### Methods of Issuing the Task Order Solicitation
+
+OASIS+ uses [Symphony](https://oasis.app.cloud.gov/) and OASIS+ task order solicitations must be issued via Symphony (mandatory).
+
+Symphony is a full lifecycle procurement Software as a Service (SaaS) allowing government organizations to manage complex contracts. Symphony ensures organizations are purchasing according to fair opportunity regulation, law, and/or governing rules. 
+
+Symphony provides users increased transparency and integrity at both the master contract level and task order level. Symphony provides OASIS+ customers and OASIS+ contract holders an easy to use, highly secure, and efficient method to submit task order proposals, and capture information as a database of record for all stakeholders. Symphony will reduce the amount of time between order creation and award, which in turn fulfills customer requirements faster, thus decreasing the time spent on tedious tasks and allowing more time for complex decision making.
+
+**Symphony users can (some actions may only be performed by an OCO with a DPA):**
+
+- Review contractor information and capabilities;
+- Create/release a Request for Information (RFI);
+- Create/release a Request for Proposal (RFP)/solicitation; 
+- Create RFI and RFP amendments; 
+- Conduct Questions and Answers and monitor responses; 
+- Receive offer proposals;
+- Report task order award information.
+
+**Important:**
+
+- How to Complete Government Registration
+- How to Set-Up Multi-Factor Authentication
+- Frequently Asked Questions
+- Symphony Helpdesk: client.support@apexlogic.com
+
+Use of Symphony to broadcast the solicitation notice to all qualifying contract holders, under one contract vehicle, within one given Domain and CLIN (NAICS code) satisfies the “fair opportunity” notification requirement. For classified requirements, see [Section 3.1.9 Classified Task Order Considerations](). 
+
+#### Off-Ramping 
+
+GSA reserves the unilateral right to off-ramp non-performing contractors. Off-ramping methods may result from conditions such as: 
+
+- Debarment, suspension, or ineligibility as defined in FAR subpart 9.4;
+- Termination as defined in FAR part 49;
+- Failure to meet the standards of performance, deliverables, or compliances;
+- Failure to accept or conform to program-wide terms and/or conditions; and/or
+- Taking any other action which may not be permitted under the master contract’s terms and conditions.
+
+The OASIS+ CO may off-ramp the contractor by not exercising the option, terminating the contract, or canceling the contract.  Contract cancellation may occur at any time and for any reason by either the OASIS+ contractor or the government. 
+#### Contracts in Dormant Status
+
+The OASIS+ master contract(s) terms and conditions provide for contracts to be placed in dormant status, see OASIS+ contract section H.12 Dormant Status. While a contract is in dormant status, contractors are required to continue work on existing task orders, but are not eligible to compete for new task order awards under the contract that is in Dormant Status.
+
+### Step 5 - Proposal Evaluation Considerations
+OCOs should evaluate proposals based on the methodology stated in the task order solicitation to maintain fairness in the ordering process and mitigate protest risk. 
+
+#### Price
+The OCO is responsible for analyzing task order proposals and documenting their cost or price analysis to include a determination that the final agreed-upon price is fair and reasonable at the task order level. To the maximum extent practicable, price analysis should be based on competition.
+
+OASIS+ Master Contract Ceiling Rates:
+
+- Except for sole source T&M/LH orders as detailed in the OASIS+ Prices section, in accordance with FAR 16.505(b)(3), price rates are determined fair and reasonable at the task order level.
+
+#### Evaluation Factors
+
+In accordance with [FAR 16.505(b)(1)(ii)](https://www.acquisition.gov/far/16.505), “The contracting officer may exercise broad discretion in developing appropriate order placement procedures. The contracting officer should keep submission requirements to a minimum. Contracting officers may use streamlined procedures, including oral presentations.”
+
+The source selection procedures in [FAR Part 15.3](https://www.acquisition.gov/far/subpart-15.3) do not apply when using the procedures of FAR 16.505 Ordering (when providing for fair opportunity). The task order solicitation and award process should be as streamlined as practical to reduce solicitation and proposal preparation costs and time for both the government and contractor.
+
+### Step 6 - Task Order Award Considerations
+OCOs are required to use Symphony to report award information for any task orders awarded under OASIS+. 
+
+#### Task Order Award Information
+Symphony task order solicitation methodology information is available at [Appendix B: Task Order Solicitation Methodology](). Symphony will require the reporting of information not collected as part of the solicitation process that is known only upon award of a task order. OCOs accepting proposals via Symphony and issuing award notices via Symphony will benefit from having less information to report than OCO’s who accept proposals and issue awards external to Symphony. 
+
+OCOs are requested to verify solicitation information input into Symphony, and correct as needed, prior to reporting any award information. Information required to be reported in Symphony includes:
+
+- Task order number
+- Awarded contractor’s name
+- Awarded contractor’s Unique Entity IDentifier (UEID)
+- Task order award date
+- Period of Performance beginning and estimated ultimate completion dates
+- Initial obligated dollar value
+- Total estimated value
+- Commercial or noncommercial type task order
+- FAR 52.219-14 Limitations on Subcontracting included at the task order level
+
+#### Public Notice of Awards with Exceptions to Fair Opportunity
+
+For orders based on an exception to fair opportunity, in accordance with [FAR 16.505(b)(2)(ii)(D)](https://www.acquisition.gov/far/16.505), the OCO must post the required public notice within 14 days after placing the order. If exception (A) (urgency-unacceptable delay) is used, the public notice must be posted within 30 days after placing the order. This posting requirement includes posting the justification approved for the exception at the [System for Award Management](https://sam.gov/content/home). 
+
+Note the actions excluded from this notice requirement are:
+
+- Disclosures that would compromise national security, and
+- Socioeconomic set-asides authorized by [FAR 16.505(b)(2)(i)(F)](https://www.acquisition.gov/far/16.505).
+
+#### Task Order Level Protests
+
+Task order protests are the responsibility of the specific agency which solicited the task order (GSA is only responsible for GSA-solicited task order protests.) [FAR 16.505 (a)(10)](https://www.acquisition.gov/far/16.505) prohibits protests under [FAR subpart 33.1](https://www.acquisition.gov/far/subpart-33.1) in connection with the issuance or proposed issuance of task orders or delivery order contract, except for:
+
+- A protest on the grounds that the order increases the scope, period of performance, or maximum value of the contract; or
+- For agencies other than DoD, NASA, and the Coast Guard, a protest of an order valued in excess of $10 million ([41 U.S.C. 4106(f)](http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section4106(f)&num=0&edition=prelim)); or
+- For DoD, NASA, or the Coast Guard, a protest of an order valued in excess of $25 million ([10 U.S.C. 3406(f)](https://www.govinfo.gov/link/uscode/10/3406)).
+
+#### NAICS Code Appeals
+
+The OASIS+ NAICS code chosen by the OCO from [Appendix A](/ordering-guide/#appendix-a-performance-areas---domains) representing the principal purpose of a task order may be appealed in accordance with [FAR 19.103](https://www.acquisition.gov/far/19.103). 
+
+#### Ombudsman
+
+In accordance with [GSAM/R 516.505 (b)](https://www.acquisition.gov/gsam/516.505): The [GSA Task Order and Delivery Order Ombudsman](https://www.gsa.gov/policy-regulations/policy/acquisition-policy/gsa-ombudsman) shall review and resolve complaints from contractors concerning all task and delivery order actions made by GSA.
+
+Complaints regarding task and delivery order actions of other agencies using GSA contract vehicles shall be directed to the ordering agency’s Task Order and Delivery Order Ombudsman. For orders issued by any other ordering activity, refer to the agency specific Ombudsman.
+
+#### Reporting Task Order Awards in FPDS
+
+Contract actions are reported in the FPDS within three (3) days after execution of the action. It is important that each OASIS+ task order is reported as an order under the respective OASIS+ master contract number. Each OASIS+ contractor may have multiple OASIS+ contract numbers depending on how many IDIQ contracts they were awarded.  
+
+Double check that the FPDS report accurately reflects the appropriate values in all fields, in particular those related to award data, fair opportunity procedures used, and number of offers received.
+
+The FPDS system will propagate the NAICS code field in the task order action report with the NAICS code reported for the indefinite delivery vehicle (IDV, i.e., IDIQ) contract. Refer to Appendix A for additional information.
+
+### Step 7 - Contract Administration Considerations
+The OCO should consider the following for task order contract administration:
+
+#### Reassigning Task Orders for Administration
+OASIS+ task orders can only be reassigned for administration to the awarding agency’s OCOs who have been issued an OASIS+ DPA. Agencies should plan for workforce turnover and development of qualified OCOs to administer task orders. GSA will work with agencies to expedite training and DPA issuance when personnel turnover is sudden and unexpected.
+
+#### Quality Assurance – Contractor Surveillance
+
+The OCO is responsible for ensuring contractor performance meets the minimum requirements established in the task order, documenting the order file, and communicating with the contractor to ensure the government is receiving the contracted services. 
+
+#### OASIS+ UR Subcontracting Plans
+
+Subcontracting plans are incorporated into OASIS+ UR IDIQ contracts awarded to Other Than Small Business concerns, and administered at the master contract level. An OCO may establish small business goals at the order level in accordance with [FAR 19.705-1(b)(2)](https://www.acquisition.gov/far/19.705-1). but may NOT establish a new subcontracting plan.
+
+The following subcontracting goals were included in the OASIS+ UR solicitation as a target:
+
+| Category | Percent of Planned Subcontracted Dollars |
+| --------------| -----|
+|Total Small Business|50|
+|Small Disadvantaged Business|7|
+|WOSB|7|
+|HUBZone|3|
+|VOSB |3|
+|SDVOSB|3|
+
+Each OASIS+ UR contract has its own unique Subcontracting Plan. 
+
+#### Performance Evaluation
+
+Each OCO is responsible for ensuring that the contractors’ performance on each order is reported in the CPARS in accordance with the policies in [FAR subpart 42.15](https://www.acquisition.gov/far/subpart-42.15). Follow the OCO’s agency procedures for preparation, review, and submission of performance reports. 
+
+#### Task Order Closeout
+
+Task order files shall be closed out by the OCO in accordance with [FAR 4.804](https://www.acquisition.gov/far/4.804) and agency specific policies/guidance. The OCO shall email [oasisplusmods@gsa.gov](mailto:oasisplusmods@gsa.gov) within 30 days after task order closeout to report the task order has been closed out.  
+
+## Appendix A: Performance Areas - Domains
+
+OASIS+ Domains contain multiple NAICS codes. [FAR 19.102](https://www.acquisition.gov/far/19.102) requires the OCO to determine the appropriate NAICS code and related small business size standard and include them in all solicitations above the micro-purchase threshold. [FAR 19.102(b)(1)](https://www.acquisition.gov/far/19.102) requires that the NAICS code assigned describe the principal nature of the service being acquired. 
+
+The primary NAICS code for all OASIS+ UR contracts will be selected and assigned based on the smallest size standard within its awarded Domains. When the OASIS+ CO assigns a primary NAICS Code, receipts-based size standards take precedence over NAICS codes based on employees. This primary NAICS code will be reflected in each awarded contract and associated FPDS record. However, assignment of a primary NAICS code does not limit contractors’ eligibility to respond to task order solicitations or perform work outside of the NAICS assigned as their primary NAICS on their contract. Contractors will be eligible to compete within all awarded Domain CLINs (NAICS codes), which represent the contractor’s specific fair opportunity pools. 
+
+The primary NAICS code for all OASIS+ SB contracts will be selected and assigned based on the largest size standard within its awarded Domains. When the OASIS+ CO assigns a primary NAICS code, employee-based size standards take precedence over NAICS codes based on annual receipts. 
+
+This is critical to ensure contractors are not locked out of Domain fair opportunity during re-representation in accordance with Section G.3.1.7.2, as long as they are otherwise eligible based on their size standard at time of re-representation. 
+For administrative purposes only, the six OASIS+ solicitations are assigned a single NAICS code (541990) which represents the preponderance scope of the OASIS+ Contract Program as a whole. This is not the NAICS that will be reported at the task order level.
+FPDS is currently designed to accept only one NAICS code to be associated with a procurement action. This is simply a limitation of the FPDS system and has no bearing on individual task order NAICS code assignments. The OASIS+ process of NAICS code assignment at the individual master contract level is for administrative purposes, and will ensure proper socioeconomic and size status reporting at the task order level. Due to a limitation with the FPDS, only a single NAICS code may be assigned to a contract and subsequently reported with each contract action (i.e., task order); therefore, each contractor will be assigned a single primary NAICS code to its master contract based on its awarded Domains. This primary NAICS code will be reflected in each awarded contract and associated FPDS record. However, assignment of a primary NAICS code does not limit contractors’ eligibility to respond to task order solicitations or perform work outside of the NAICS assigned as their primary NAICS on their contract. contractors will be eligible to compete within all awarded Domain CLINs (NAICS codes), which represent the contractor’s specific fair opportunity pools. Fair opportunity will be managed in the OSP, which will be the mandatory, sole system for OCOs to issue task order solicitations. The contractor will only be included in and allowed to compete under the NAICS codes where they are represented (and subsequently re-represent) as a small business concern for the corresponding size standard, and are otherwise eligible under the socioeconomic contract. 
+
+### Management and Advisory Domain
+
+This Domain includes a full range of management and consulting services that can improve a Federal agency’s performance, its endeavors to meet mission goals, and provide operating advice and assistance on administrative and management issues. Management and Advisory Domain scope areas include, but are not limited to:
+
+- Acquisition & grants management support
+- Business case development/analysis support
+- Business consulting
+- Business intelligence support
+- Business process improvement
+- Business process reengineering
+- Change management
+- Concept development & requirements analysis
+- Configuration management
+- Cost/schedule/performance analysis & improvement
+- Cost estimation & analysis
+- Cost/performance trade-off analysis & studies
+- Decision analysis
+- Earned value management (EVM) analysis
+- Ebusiness support
+- Executive-level administrative support
+- Governance
+- Horizontal analysis & protection activities
+- Information analytics
+- Integration of support systems
+- Interface management
+- Investigative services
+- Knowledge based acquisition
+- Knowledge management
+- Leadership & organizational assessments
+- Long range planning, futures, & forecasting
+- Manpower estimating
+- Policy analysis
+- Project management, program management, integrated program management
+- Program documentation
+- Coordination with law/policy making entities
+- Regulatory compliance support
+- Requirements management
+- Risk assessment, mitigation, & management
+- Stakeholder requirements analysis
+- Strategy development
+- Strategic forecasting & planning
+- Technical & analytical support
+- Vulnerability assessment
+
+|CLIN <br/> xx=UR, SB,8A,VO, WO,HZ|Management and Advisory Domain NAICS Codes & Titles|Size|
+|---------------------------------|---------------------------------------------------|----|
+|MA-541611-XX|541611 Administrative Management and General Management Consulting Services|$24.5 Million|
+|MA-541612-XX|541612 Human Resources Consulting Services|$29.0 Million|
+|MA-541613-XX|541613 Marketing Consulting Services|$19.0 Million|
+|MA-541614-XX|541614 Process, Physical Distribution, and Logistics Consulting Services|$20.0 Million|
+|MA-541618-XX|541618 Other Management Consulting Services|$19.0 Million|
+|MA-541620-XX|541620 Environmental Consulting Services |$19.0 Million|
+|MA-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|MA-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+
+### Technical and Engineering Domain
+
+This Domain includes requirements to provide specific engineering, geoscience, or other technical professional skills, such as those performed by engineers, geologists, geophysicists, and technicians, required to handle specific operating conditions and problems for the benefit of the government. Work under this Domain typically involves the application of physical laws and principles of engineering in the design; development, and utilization of machines, materials, instruments, processes, and systems; and providing expert advice and assistance on technical functions and issues. Technical and Engineering Domain scope areas include, but are not limited to:
+- Advanced technology pilot & trials
+- Alternative energy sources & engineering
+- Capabilities integration & development
+- Communications engineering
+- Configuration management
+- Concept development
+- Data analytics & management
+- Design documentation & technical data
+- Energy services to include management planning & strategies, audit services & metering
+- Engineering (aeronautical, astronomical, chemical, civil, electrical, materials, mechanical, Etc.)
+- Engineering process improvement
+- Environmental engineering
+- Human factors/usability engineering
+- Human systems integration
+- Independent verification & validation
+- Integration support
+- Interoperability
+- Life cycle management
+- Mission assurance
+- Modeling & simulation
+- Operational test & evaluation
+- Optical engineering
+- Program analysis
+- Quality assurance
+- Radar engineering
+- Red teaming & wargaming
+- Requirements analysis (technical)
+- Operation & maintenance or direct support of an existing weapon system or major system
+- Risk management
+- Scientific (non-R&D) analysis & support 
+- Software development (for IT services involving 40 USC § 11103 (a) activities)
+- Surveying and mapping (except Geophysical) services
+- System design & integration
+- System effectiveness & analysis
+- System engineering
+- System safety engineering
+- System security & information assurance
+- System verification & validation 
+- Technical assessment, data management, & planning
+- Technical documentation
+
+|CLIN <br/> xx=UR, SB,8A,VO, WO,HZ|Management and Advisory Domain NAICS Codes & Titles|Size|
+|---------------------------------|---------------------------------------------------|----|
+|TE-336611-XX|336611 Ship Building and Repairing|1,300 employees|
+|TE-488190-XX|488190 Other Support Activities for Air Transportation|$40.0 Million|
+|TE-488999-XX|488999 All Other Support Activities for Transportation|$25.0 Million|
+|TE-541310-XX|541310 Architectural Services|$12.5 Million|
+|TE-541330-XX|541330 Engineering Services|$25.5 Million|
+|TE-541330E1-XX|541330 (Exception 1) Military and Aerospace Equipment and Military Weapons|$47.0 Million|
+|TE-541330E2-XX|541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992|$47.0 Million|
+|TE-541330E3-XX|541330 (Exception 3) Marine Engineering and Naval Architecture|$47.0 Million|TE-541350-XX|541350 Building Inspection Services|$11.5 Million|
+|TE-541360-XX|541360 Geophysical Surveying and Mapping Services|$28.5 Million|
+|TE-541370-XX|541370 Surveying and Mapping (except Geophysical) Services|$19.0 Million|
+|TE-541380-XX|541380 Testing Laboratories|$19.0 Million|
+|TE-541611-XX|541611 Administrative Management and General Management Consulting Services|$24.5 Million|
+|TE-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|TE-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|TE-611512-XX|611512 Flight Training|$34.0 Million|
+
+### Research and Development
+
+This Domain includes any requirements in support of Research and Development (R&D) activities. R&D activities may be aimed at achieving either specific or general objectives. The term R&D includes basic research, applied research and experimental development. Services include conducting R&D in: the physical, engineering and life sciences, Nanotechnology, Biotechnology and social sciences and humanities. The R&D Domain scope areas include, but are not limited to:
+
+- Cell & tissue culture & engineering
+- Conceptual design & modification of product or process alternatives
+- Design & specification development
+- Conducting clinical tests to satisfy requirements prior to commercialization
+- Decision support sciences
+- Design & improvement of manufacturing or production technologies, processes, techniques
+- Design, construction, & testing of preproduction prototypes & models
+- Design, development & implementation of new reagents, testing methods or protocols
+- Design of tools & materials involving new technology
+- Development of new experimental therapeutic drugs, compounds, or molecules 
+- Development of tools, resources & procedures relating to advanced biologics, assays & testing 
+- Development of new methods for drug delivery
+- DNA: genomics, gene probes, DNA sequencing, genetic engineering
+- Environmental science research
+- Experimental development
+- Laboratory & clinical research
+- Life science research
+- Mathematical science research
+- Physical science research
+- Biotechnology research & process development
+- Product experimentation & modification
+- Psychological science research
+- R&D advanced training
+- R&D of automated processes or robotics 
+- Protein/peptide sequencing & synthesis 
+- Research of new applications for existing products
+- Software development or I.T. initiatives related to experimental product or process improvements
+- Social science research
+- Special studies & analysis
+- Technical research consulting, development, and facilitation services
+- Technology transfer/insertion, training & consulting
+- Test & evaluation (non-routine) services
+- Regulatory requirements compliance testing
+
+|CLIN<br/>XX = UR, SB, 8A, VO, WO, HZ|Research and Development Domain NAICS Codes & Titles|Size Standards|
+|------------------------------------|----------------------------------------------------|--------------|
+|RD-541330-XX|541330 Engineering Services|$25.5 Million|
+|RD-541330E1-XX|541330 (Exception 1) Military and Aerospace Equipment and Military Weapons|$47.0 Million|
+|RD-541330E2-XX|541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992|$47.0 Million|
+|RD-541330E3-XX|541330 (Exception 3) Marine Engineering and Naval Architecture|$47.0 Million|
+|RD-541380-XX|541380 Testing Laboratories|$19.0 Million|
+|RD-541611-XX|541611 Administrative Management and General Management Consulting Services|$24.5 Million|
+|RD-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|RD-541713-XX|541713 Research and Technology in Nanotechnology|1,000 employees|
+|RD-541714-XX|541714 Research and Technology in Biotechnology (except Nanobiotechnology)|1,000 employees|
+|RD-541715-XX|541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)|1,000 employees|
+|RD-541715E1-XX|541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts|1,500 employees|
+|RD-541715E2-XX|541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment|1,250 employees|
+|RD-541715E3-XX|541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts|1,300 employees|
+|RD-541720-XX|541720 Research and Development in the Social Sciences and Humanities|$28.0 Million|
+|RD-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|RD-621511-XX|621511 Medical Laboratories|$41.5 Million|
+
+### Intelligence Services Domain
+
+This Domain focuses on Command, Control, Communications, Intelligence, Surveillance, and Reconnaissance mission requirements. Organizational and Technological capabilities improve situational awareness and enhance command and control strategies within defense and intelligence environments. Intelligence Services Domain scope areas include, but are not limited to:
+
+- Assured positioning, navigation & timing capabilities support
+- Prototyping, integrating & testing
+- Command, power & integration support
+- Counter-IED & minefield detection & neutralization
+- Counterintelligence (CI)
+- Cyberspace operational support
+- Cyber & tactical network science
+- Detection & neutralization of explosive hazards
+- Electro-optical/infrared surveillance
+- Electronic countermeasures
+- Information superiority support
+- Electromagnetic spectrum operations
+- Field & enterprise intelligence support
+- Geospatial intelligence (GEOINT)
+- Human intelligence (HUMINT)
+- Imagery intelligence (IMINT)
+- Integrated power support services
+- Intelligence, information and electronic warfare
+- Intelligence production, collection, analysis, exploitation & dissemination
+- Intelligence, surveillance, reconnaissance, & targeting (ISRT) development & support
+- Intelligence analysis
+- Intelligence archiving
+- Intelligence cataloging
+- Intelligence retrieval
+- Intelligence management
+- Measurement and signature intelligence (MASINT)
+- Mission command, planning & application
+- Network visualization
+- Night vision, electronic, & optical surveillance
+- Offensive & defensive cyber operations 
+- Open source intelligence (OSINT)
+- Power/energy generation & management 
+- Product realization engineering 
+- Secure correspondence management
+- Signals intelligence (SIGINT)
+- Software development (for IT services involving 40 USC § 11103 (a) activities)
+- Standardized software framework implementation
+- Space & terrestrial communications
+- Specialized functional training
+- Tactical & strategic network support
+- Tactical cyberspace operations
+- Technical Intelligence (TECHINT)
+- Threat modeling & simulation
+- Unmanned systems
+
+|CLIN<br/>XX = UR, SB, 8A, VO, WO, HZ|Intelligence Services Domain NAICS Codes & Titles|Size Standards|
+|------------------------------------|----------------------------------------------------|--------------|
+|INT-541330-XX|541330 Engineering Services|$25.5 Million|
+|INT-541330E1-XX|541330 (Exception 1) Military and Aerospace Equipment and Military Weapons|$47.0 Million|
+|INT-541330E2-XX|541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992|$47.0 Million|
+|INT-541330E3-XX|541330 (Exception 3) Marine Engineering and Naval Architecture|$47.0 Million|
+|INT-541611-XX|541611 Administrative Management and General Management Consulting Services|$24.5 Million|
+|INT-541614-XX|541614 Process, Physical Distribution and Logistics Consulting Services|$20.0 Million|
+|INT-541618-XX|541618 Other Management Consulting Services|$19.0 Million|
+|INT-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|INT-541715-XX|541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)|1,000 employees|
+|INT-541715E1-XX|541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts|1,500 employees|
+|INT-541715E2-XX|541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment|1,250 employees|
+|INT-541715E3-XX|541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts|1,300 employees|
+|INT-541720-XX|541720 Research and Development in the Social Sciences and Humanities|$28.0 Million|
+|INT-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|INT-561499-XX|561499 All Other Business Support Services|$21.5 Million|
+|INT-561611-XX|561611 Investigation Services|$25.0 Million|
+
+### Environmental Domain
+
+This Domain supports agencies in meeting their environmental requirements and streamlining the contracting process by providing a faster, more cost-efficient means to meet environmental objectives. Requirements typically involve multi disciplined teams of scientists, engineers, and other technicians with expertise in areas, such as air and water quality, climate change, asbestos contamination, remediation, ecological restoration, and environmental law. Environmental consulting could consist of support such as Planning and Documentation Services for the development, facilitation, and coordination of and/or for environmental initiatives or mandates in areas of chemical, radiological, and/or hazardous materials. Environmental Domain scope areas include, but are not limited to:
+
+- Air monitoring
+- Air toxicology, criteria pollutants & greenhouse gas (GHG) emissions strategy & analyses
+- Archeological/cultural resource management plans
+- Archaeological site consulting & preservation
+- Biomass & biofuel energy strategy & analyses
+- Carbon capture, utilization & storage
+- Cleanup and assessment of emerging contaminants (PFAS)
+- Climate change studies, planning, policy analysis, & mitigation strategies
+- Consulting on endangered species, wetland & watershed protection
+- Crop & tree migration
+- Cultural resource geographic information services
+- Emissions reduction strategy & analyses (locomotives, marine vessels, aircraft, etc.)
+- Environmental consulting
+- Environmental education
+- Environmental emergency response
+- Environmental engineering
+- Environmental information management
+- Environmental impact assessment
+- Environmental justice & equity
+- Environmental management & monitoring
+- Environmental remediation
+- Environmental risk assessment 
+- Environmental, social, & governance (ESG) data & reporting
+- Environmental toxicology
+- Forest land fire management planning
+- Geographical information systems (GIS) support
+- Hazardous material management, planning, disposal & remediation
+- Human migration due to climate change
+- Laboratory (environmental) testing
+- Land use planning
+- Mapping, cartography & integrated mapping from various data sources
+- Migration pattern analysis
+- Munitions / unexploded ordnance cleanup
+- Natural resource management & planning
+- Pollutant contamination planning, assessment & mitigation
+- Reclamation services
+- Regulatory development and compliance
+- Remote sensing for environmental studies
+- Terrestrial, marine, atmospheric measuring & management
+- Thermal mapping
+- Sea-level rise analysis & response
+- Sediment management
+- Storage tank (above & below ground) removal
+- Stormwater management
+- Sustainability & decarbonization strategy & reporting
+- Vegetation & topography mapping
+- Vehicle fleet electrification support
+- Water and/or wastewater and/or groundwater monitoring
+- Water and/or wastewater infrastructure
+- Water conservation and/or pollution prevention
+- Watershed characterization & assessment
+
+|CLIN<br />XX = UR, SB, 8A, VO, WO, HZ|Environmental Domain NAICS Codes & Titles|Size Standard|
+|------------------------------------|------------------------------------------|-------------|
+|ENV-541330-XX|541330 Engineering Services|$25.5 Million|
+|ENV-541360-XX|541360 Geophysical Surveying and Mapping Services|$28.5 Million|
+|ENV-541380-XX|541380 Testing Laboratories|$19.0 Million|
+|ENV-541620-XX|541620 Environmental Consulting Services|$19.0 Million|
+|ENV-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|ENV-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|ENV-561210-XX|561210 Facilities Support Services|$47.0 Million|
+|ENV-562112-XX|562112 Hazardous Waste Collection|$47.0 Million|
+|ENV-562211-XX|562211 Hazardous Waste Treatment and Disposal|$47.0 Million|
+|ENV-562910-XX|562910 Remediation Services|$25.0 Million|
+|ENV-562910E-XX|562910 (Exception) Environmental Remediation Services|1,000 employees|
+
+### Facilities Domain
+
+Services in this Domain include any and all services required to maintain and operate buildings, paved services, utilities infrastructure, and real property assets and equipment. This could include major facilities support such as DoD installations, hospitals, cemeteries, and other Federal or industrial real property, but does not include major/primary purpose construction. GSA has included a wide range of services found in facilities contracts because of their historical use to support total facilities solutions. Facilities Domain scope areas include, but are not limited to:
+
+- Airfield lighting services
+- Airport security services & surveillance
+- Alarm and security system maintenance
+- Architectural & framework building maintenance services
+- Base operation support services
+- Building inspection services (including OSHA) 
+- Building management services 
+- Cathodic protection & corrosion control
+- Cemetery maintenance
+- Civil engineering services 
+- Commissioning services
+- Communication services - general
+- Communication services - telecommunications
+- Community center management
+- Conference center support
+- Custodial services 
+- Electrical services (electrical maintenance) 
+- Elevator services (elevator maintenance)
+- Elevator inspection services
+- Emergency management services 
+- Energy management control systems (EMCS)
+- Energy and water conservation management and reporting
+- Engineering management services
+- Engineering to support installation of facility resource & optimization (R&O) decisions to distribute limited & scarce future funding 
+- Engineering to support construction cost estimates
+- Engineering services to provide general management over current & future maintenance
+- Environmental compliance & conservation
+- Environmental pollution prevention
+- Equipment and electronics maintenance 
+- Facility & installation maintenance services 
+- Fire alarm/fire suppression (fire suppression system preventative maintenance & repair) 
+- Fire alarm system maintenance & repair
+- Fire protection and emergency services
+- Fitness / Sport Center Management
+- Force protection assets & entry control points
+- Fuels management
+- Grounds maintenance 
+- HVAC services (HVAC maintenance)
+- Infrastructure planning
+- Insect & pest control
+- Integrated waste management services 
+- Janitorial services
+- Landscaping/grounds maintenance
+- Locksmiths
+- Logistics planning
+- Ground transportation services
+- Installation deployment readiness center (IDRC)
+- Mailroom services
+- Maintenance of fuel distribution & grounding systems
+- Material management
+- Operations & maintenance (O/M) of facilities
+- O/M of aerospace facilities & equipment
+- O/M of airfields
+- O/M of electrical distribution & HVAC systems
+- O/M engineering
+- O/M of fresh water system
+- O/M of historic facilities
+- O/M of utility & sanitation systems 
+- Plumbing & pipefitting services
+- Pollution prevention & remediation programs.
+- Real property management
+- Refuse collection and disposal 
+- Renewable energy systems
+- Repair & restoration projects 
+- Roofing services
+- Security forces services
+- Sensitive Compartmented Information Facilities (SCIF)
+- Septic services
+- Snow removal
+- Street sweeping & maintenance
+- Traffic management
+- Vehicle management
+- Water distribution
+- Water tanks
+- Waste management & recycling services
+
+|CLIN<br />XX = UR, SB, 8A, VO, WO, HZ|Facilities Domain NAICS Codes & Titles|Size Standard|
+|------------------------------------|------------------------------------------|-------------|
+|FAC-238160-XX|238160 Roofing Contractors|$19.0 Million|
+|FAC-238210-XX|238210 Electrical Contractors and Other Wiring Installation Contractors|$19.0 Million|
+|FAC-238220-XX|238220 Plumbing, Heating, and Air Conditioning Contractors|$19.0 Million|
+|FAC-238290-XX|238290 Other Building Equipment Contractors|$22.0 Million|
+|FAC-238320-XX|238320 Painting and Wall Covering Contractors|$19.0 Million|
+|FAC-238990-XX|238990 All Other Specialty Trade Contractors|$19.0 Million|
+|FAC-485999-XX|485999 All Other Transit and Ground Passenger transportation|$19.0 Million|
+|FAC-488190-XX|488190 Other Support Activities for Air Transportation|$40.0 Million|
+|FAC-488490-XX|488490 Other Support Activities for Road Transportation|$18.0 Million|
+|FAC-488999-XX|488999 All Other Support Activities for Transportation|$25.0 Million|
+|FAC-531311-XX|531311 Residential Property Managers|$12.5 Million|
+|FAC-531312-XX|531312 Nonresidential Property Managers|$19.5 Million|
+|FAC-541320-XX|541320 Landscape Architectural Services|$9.0 Million|
+|FAC-541330-XX|541330 Engineering Services|$25.5 Million|
+|FAC-541350-XX|541350 Building Inspection Services|$11.5 Million|
+|FAC-541611-XX|541611 Administrative Management and General Management Consulting Services|$24.5 Million|
+|FAC-541614-XX|541614 Process, Physical Distribution and Logistics Consulting Services|$20.0 Million|
+|FAC-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|FAC-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|FAC-561210-XX|561210 Facilities Support Services|$47.0 Million
+|FAC-561621-XX|561621 Security Systems Services (except Locksmiths)|$25.0 Million|
+|FAC-561710-XX|561710 Exterminating and Pest Control Services|$17.5 Million|
+|FAC-561720-XX|561720 Janitorial Services|$22.0 Million|
+|FAC-561730-XX|561730 Landscaping Services|$9.5 Million|
+|FAC-561990-XX|561990 All Other Support Services|$16.5 Million|
+|FAC-562111-XX|562111 Solid Waste Collection|$47.0 Million|
+|FAC-562112-XX|562112 Hazardous Waste Collection|$47.0 Million|
+|FAC-562211-XX|562211 Hazardous Waste Treatment and Disposal|$47.0 Million|
+|FAC-811310-XX|811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance|$12.5 Million|
+
+### Logistics Domain
+
+Services on this Domain include comprehensive logistics solutions, including planning and designing, implementing, or operating systems or facilities for the movement of supplies, equipment or people by road, air, water, rail, or pipeline. Logistics Domain scope areas include, but are not limited to:
+
+- Analysis & recommendation of support equipment
+- Cold chain medical supply services
+- Deployment logistics
+- Disaster management/contingency operations
+- Distribution & transportation
+- Food & perishable goods supply services
+- Industrial relocation/expansion services
+- Infrastructure services (including transportation & delivery)
+- Integrated Product Support (IPS) technical requirement creation
+- Integrating public & private resources
+- IPS system design, risk assessment, schedules creation & performance tracking
+- Inventory management
+- Life cycle sustainment
+- Logistical studies & evaluation
+- Analysis & recommendation of support equipment
+- Cold chain medical supply services
+- Deployment logistics
+- Disaster management/contingency operations
+- Distribution & transportation
+- Food & perishable goods supply services
+- Industrial relocation/expansion services
+- Infrastructure services (including transportation & delivery)
+- Integrated Product Support (IPS) technical requirement creation
+- Integrating public & private resources
+- IPS system design, risk assessment, schedules creation & performance tracking
+- Inventory management
+- Life cycle sustainment
+- Logistical studies & evaluation
+- Logistics design
+- Logistics management & support services
+- Logistics operations support & maintenance
+- Logistics optimization
+- Logistics services
+- Logistics training services
+- Rapid deployment of supplies & equipment through communication & logistics systems
+- Repair & alteration
+- Resource sourcing - global, regional, local, etc.
+- Specialized cargo management
+- Supply chain management & provisioning
+- Supportability analysis & implementation
+- Technology & industrial base
+- Test range support
+- Value chain management
+
+
+|CLIN<br />XX = UR, SB, 8A, VO, WO, HZ|Logistics Domain NAICS Codes & Titles|Size Standard|
+|------------------------------------|------------------------------------------|-------------|
+|LOG-336611-XX|336611 Ship Building and Repairing|1,300 employees|
+|LOG-481211-XX|481211 Nonscheduled Chartered Passenger Air Transportation|1,500 employees|
+|LOG-485991-XX|485991 Special Needs Transportation|$19.0 Million|
+|LOG-485999-XX|485999 All Other Transit and Ground Passenger Transportation|$19.0 Million|
+|LOG-488111-XX|488111 Air Traffic Control|$40.0 Million|
+|LOG-488190-XX|488190 Other Support Activities for Air Transportation|$40.0 Million|
+|LOG-488999-XX|488999 All Other Support Activities for Transportation|$25.0 Million|
+|LOG-492110-XX|492110 Couriers and Express Delivery Services|1,500 employees|
+|LOG-493110-XX|493110 General Warehousing and Storage|$34.0 Million|
+|LOG-493120-XX|493120 Refrigerated Warehousing and Storage|$36.5 Million|
+|LOG-493190-XX|493190 Other Warehousing and Storage|$36.5 Million|
+|LOG-541330-XX|541330 Engineering Services|$25.5 Million|
+|LOG-541614-XX|541614 Process, Physical Distribution and Logistics Consulting Services|$20.0 Million|
+|LOG-541690-XX|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|LOG-541990-XX|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|LOG-561210-XX|561210 Facilities Support Services|$47.0 Million|
+|LOG-811114-XX|811114 Specialized Automotive Repair|$9.0 Million|
+|LOG-811121-XX|811121 Automotive Body, Paint and Interior Repair and Maintenance|$9.0 Million|
+|LOG-811198-XX|811198 All Other Automotive Repair and Maintenance|$10.0 Million|
+
+### Enterprise Solutions Domain
+
+This Domain is for the procurement of highly technical, new and emerging and/or specialized mission objectives that require special management attention, and oversight because of the importance to the agency mission; high-level development, operating, or maintenance costs; high risk; high return; or their significant role in the administration of agency-wide programs, systems, finances, property, or other resources. This Domain also includes non-IT services in support of national security systems in accordance with 40 USC § 11103(a). 
+
+The Enterprise Solutions Domain is focused on requirements that are large-dollar, wide-reaching (e.g., across one organization, agency or multiple organizations and/or agencies) and highly complex in scope. By design, this Domain shares overlapping NAICS with other Domains within OASIS+. This Domain includes contractors who are able to manage vast projects with the potential of (but not limited to) the following highly specialized project requirements: 
+
+- Multi-layered subcontracting teams
+- High touch/high accountability in the areas of contractor acquired or contractor managed government Property
+- Vast accounting system, estimating system, and invoicing demands
+- Stringent quality control and government quality assurance oversight and accountability
+- Geographically dispersed project offices (on the government site, or the contractor site)
+- Requirements for extensive upfront capital to launch, transition into, and/or sustain for long periods of time due to the high-capital-demand value to launch and sustain business operations in support of an agency mission requirement(s). 
+
+The minimum order threshold for future task orders issued through this Domain is $250 Million total estimated value (including the base and all option periods).
+
+|CLIN|*Enterprise Solutions Domain NAICS Codes & Titles|Size Standard|
+|------------------------------------|------------------------------------------|-------------|
+|ENT-336611-UR|336611 Ship Building and Repairing|1,300 employees|
+|ENT-541330-UR|541330 Engineering Services|$25.5 Million|
+|ENT-541330E1-UR|541330 (Exception 1) Military and Aerospace Equipment and Military Weapons|$47.0 Million|
+|ENT-541330E2-UR|541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992|$47.0 Million|
+|ENT-541330E3-UR|541330 (Exception 3) Marine Engineering and Naval Architecture|$47.0 Million|
+|ENT-541611-UR|541611 Administrative Management and General Management Consulting Services|$24.5 Million|
+|ENT-541614-UR|541614 Process, Physical Distribution, and Logistics Consulting Services|$20.0 Million|
+|ENT-541620-UR|541620 Environmental Consulting Services|$19.0 Million|
+|ENT-541690-UR|541690 Other Scientific and Technical Consulting Services|$19.0 Million|
+|ENT-541715-UR|541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)|1,000 employees|
+|ENT-541715E1-UR|541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts|1,500 employees|
+|ENT-541715E2-UR|541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment|1,250 employees|
+|ENT-541715E3-UR|541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts|1,300 employees|
+|ENT-541990-UR|541990 All Other Professional, Scientific and Technical Services|$19.5 Million|
+|ENT-561210-UR|561210 Facilities Support Services|$47.0 Million|
+|ENT-562910-UR|562910 Remediation Services|$25.0 Million|
+|ENT-562910E-UR|562910 (Exception) Environmental Remediation Services|1,000 employees|
+
+## Appendix B: Task Order Solicitation Methodology 
+
+OCOs are required to use Symphony to issue their solicitation. (Symphony User Guide and Training Video, coming soon). Symphony will indicate what information is required versus optional when issuing a solicitation. The system will lead the OCO through the process of selecting a contract, ordering Domain, and ordering NAICS, before prompting for the following mandatory information:
+
+- Task Order Request for Proposal (RFP) Number
+- Solicitation Title
+- Issuing Agency
+- Issuing Bureau
+- Funding Agency (If different from issuing agency)
+- Funding Bureau (If different from issuing bureau)
+- OCO Name
+- OCO Email
+- OCO Phone Number
+- Product Service Code
+- Type of Contract
+- Type of Services
+- Extent of Competition (Fair Opportunity Procedures vs Exception to Fair Opportunity)
+- Security Clearances
+- Place of Performance
+    * OCONUS, CONUS, or both
+    * Contractor site, government site, or both
+- Place(s) of performance
+- Country, State, City
+- Period of Performance
+- CLINs
+- Description of Services
+- Delivery and Performance Information
+- Labor Categories and Descriptions
+- Invoicing Instructions
+- Task Order Solicitation Provisions and  Clauses
+- Evaluation Factors
+- Basis of Award
+
+Task Order Request for Proposal (RFP) No.: [Insert solicitation number]
+
+Issued Under OASIS+ IDIQ No.: [Insert OASIS+ IDIQ contract number and Domain/NAICS]
+
+Solicitation Title: [Insert brief description of work]
+
+Issuing Office: [Insert agency name and address]
+
+Agency Contact(s): [Insert name(s), telephone number(s), email address(es) of OCO and/or contract specialist]
+
+RFP Issue Date: [Insert date RFP was issued]
+
+Questions Due Date: [Insert time, time zone, date questions are due, and where to send/email questions]
+
+Proposal Due Date: [Insert time, time zone, date proposals are due, and where to send/email proposals]
+
+### Task order information
+
+#### OASIS+ Domain/NAICS Being Solicited/Awarded: [Insert the Domain/NAICS]
+
+NAICS Code and Small Business Size Standard: The principal nature of the requirements described in this solicitation is consistent with services performed by industries in the [Insert the NAICS code and title] with a small business size standard of [Insert small business size standard.]
+
+#### Product Service Code (PSC): 
+The services in this solicitation are best represented by PSC [Insert the applicable PSC code and title (see PSC Manual.)]
+
+#### Type of Contract: 
+The primary type of contract resulting from this solicitation is: [Insert the predominant contract type (Cost Plus Fixed Fee, Firm Fixed Price, Time and Materials, etc.)
+
+Note: If a hybrid contract type results from this solicitation identify Contract Type by CLIN in Section 2.0.]
+
+#### Type of Services: [Check the box that applies]
+ <input type="checkbox" id="commercial"  /> <label for="commercial">Commercial </label>
+<input type="checkbox" id="non-commercial"  /> <label for="non-commercial"> Non-Commercial </label>
+
+#### Extent of Competition: [Check the box that applies]
+<input type="checkbox" id="fair-Opportunity"  /> <label for="fair-Opportunity">Fair Opportunity procedures ([FAR 16.505(b)(1)](https://www.acquisition.gov/far/16.505))</label> <br />
+
+<input type="checkbox" id="exception-fair-Opportunity"  /><label for="exception-fair-Opportunity">Exception to Fair Opportunity procedures as designated below ([FAR 16.505(b)(2)](https://www.acquisition.gov/far/16.505)) </label>
+
+[Check only one exception below]
+
+ <input type="checkbox" id="FAR-16.505-A"  /> <label for="FAR-16.505-A"> [FAR 16.505(b)(2)(A)](https://www.acquisition.gov/far/16.505) The agency's need for the supplies or services is so urgent that providing a fair opportunity would result in unacceptable delays.</label><br />
+ 
+ <input type="checkbox" id="FAR-16.505-B"  /> <label for="FAR-16.505-B"> [FAR 16.505(b)(2)(B)](https://www.acquisition.gov/far/16.505) Only one awardee is capable of providing the supplies or services required at the level of quality required because the supplies or services ordered are unique or highly specialized.</label><br />
+ 
+ <input type="checkbox" id="FAR-16.505-C"  /> <label for="FAR-16.505-C">  [FAR 16.505(b)(2)(C)](https://www.acquisition.gov/far/16.505) The order must be issued on a sole-source basis in the interest of economy and efficiency because it is a logical follow-on to an order already issued under the contract, provided that all awardees were given a fair opportunity to be considered for the original order.</label><br />
+ 
+ <input type="checkbox" id="FAR-16.505-E"  /> <label for="FAR-16.505-E">  [FAR 16.505(b)(2)(E)](https://www.acquisition.gov/far/16.505) For orders exceeding the simplified acquisition threshold, a statute expressly authorizes or requires that the purchase be made from a specified source.</label><br />
+ 
+<input type="checkbox" id="sole-source"  /> <label for="sole-source">  Sole Source [Add details, i.e. offer/acceptance process with SBA]</label><br />
+
+#### Security Clearances: [Check the box that applies]
+
+The clearance level is:   <input type="checkbox" id="Unclassified"  /> <label for="Unclassified"> Unclassified </label>  <input type="checkbox" id="classified"  /> <label for="classified">Classified </label> 
+
+The Facility Clearance Level (FCL) is:  <input type="checkbox" id="clearance-unclassified"  /> <label for="clearance-unclassified"> Unclassified </label> 
+ <input type="checkbox" id="clearance-secret"  /><label for="clearance-secret"> Secret</label> 
+ <input type="checkbox" id="clearance-top-secret"  /><label for="clearance-top-secret">Top Secret </label>  
+
+[If N/A delete 1.7.2.
+
+Note: For individual security clearance levels and instructions, please identify in the PWS/SOW or labor category section of the solicitation.]
+
+#### Performance Location(s): [Check the box that applies]
+
+The performance locations for this PWS/SOW are: <input type="checkbox" id="CONUS"  /><label for="CONUS">CONUS </label>  <input type="checkbox" id="OCONUS"  /><label for="OCONUS">OCONUS </label>   <input type="checkbox" id="both"  /><label for="both">Mix of Both </label>  
+
+The labor will be performed at: <input type="checkbox" id="government-site"  /><label for="government-site">Government Site(s)</label>     <input type="checkbox" id="contractor-site"  /> <label for="contractor-site">Contractor Site(s)</label><input type="checkbox" id="both-site"  /><label for="both-site"> Mix of Both </label>  
+
+Place(s) of Performance: The places of performance(s) for this PWS/SOW are:
+
+[Identify city(ies), state(s), and/or country(ies) where services will be performed. 
+
+If performance will be in multiple locations and/or a mix of CONUS, OCONUS, government and contractor sites, then also identify these within the solicitation’s Section 3.0, Description of Services, which services are performed where. Also, identify if performance is at government or contractor sites.]
+
+#### Period of Performance: The period of performance for this PWS/SOW is:
+
+[Identify the Period of Performance for the task order. 
+
+Ex. “The period of performance for this task order is from date of award through 1 year thereafter, with 5 (1-year) options that may extend the cumulative term of this task order to 5 years” If the period of performance and options are different by CLIN, address the period of performance for each CLIN in Section 2.0 below.]
+
+### Contract Line Items (CLINs) and Contract Type by CLIN
+[List the CLINs with their descriptions and pricing information. Use of separate, distinct CLINs for work with different pricing types is required. Use of a separate, Cost Reimbursement CLIN, by period (Base, OY1, OY2. etc.) for the Contract Access Fee (CAF) is required. 
+
+See example CLINs below. Tailor CLINs as necessary to meet the requirement.]
+
+CLIN 0001 (Firm Fixed-Price): Provide program management and oversight support services for the Citizens Assistance and Response to Emergencies (CARE) Program. The services are performed in CONUS, on a government site in Washington, D.C. Sections 3.1, 3.2, 3.3, 3.4, and 3.5 apply.
+
+Total Firm Fixed Price: $XX.XX
+
+CLIN 0002 (Cost Plus Fixed Fee): Provide engineering and logistics support services to the CARE Operations Centers in Washington, D.C., New York, NY, San Francisco, CA, and Chicago, IL. The services are performed in a mix of both government and contractor sites as delineated in Sections 3.0. 3.1, 3.6, 3.7, 3.8, and 3.9.
+
+Total Estimated Cost: $XX.XX
+
+Fixed Fee: $XX.XX
+
+Total Estimated Cost Plus Fixed Fee: $XX.XX
+
+CLIN 0003 Contract Access Fee (CAF): (Cost-Reimbursable) 
+
+[Note #1: The CAF CLIN must be a standalone CLIN by year (ex. base year (0003) and any option years (i.e. 1003, 2003, …)).]
+
+[Note #2: The CAF Percentage applies to all Price/Cost objectives, i.e. ALL: labor, other direct costs, materials/equipment, travel, and subcontractor price/cost.]
+
+[Note #3: For additional CLINs, identify any ancillary support by CLIN and contract type, such as, any labor subject to construction wage rates or service contract labor standards, travel, materials, equipment, and subcontracting.]
+
+The total CAF Percentage for this task order is:  0.15%  CAF% (Fill in percent if different from shown)
+
+Total Not-To-Exceed CAF: 
+
+### Description of Services
+[Use the agency preferred format for the PWS/SOW/SOO; performance-based is preferred, for example:
+- Background
+- Scope
+- Performance Work Statement/Statement of Work
+- Places of performance and work conditions/hours ETC.]
+
+### Delivery and Performance Information
+
+[Enter a table of deliverables, if applicable, and/or other applicable service delivery terms. Include performance standards and metrics that will apply to the performance-based statement of work, or performance measurements that will be used to verify non-performance-based services. Address quantity and quality considerations, due dates, deliverable submittal instructions, and similar information related to the basis for contractor performance evaluations.]
+
+### Labor Categories and Descriptions
+[Identify the labor categories, definitions and skill requirements necessary for successful completion if applicable to the requirement. Identify security clearance levels, if applicable.]
+
+###  Invoicing instructions
+[Identify invoice instructions and procedures.] 
+
+[Note #1: The billing instructions must include for CAF to be billed on every invoice.] 
+
+[Note #2: Additionally, it is an OCO responsibility to ensure every invoice includes CAF billing commensurate to the CAF percentage (0.15%).] 
+
+[The OASIS+ Ordering Guide includes an example at Section 3.2.3 Contract Access Fee. The OASIS+ contract(s) Section G.3.2.6 Contract Access Fee Remittance further details how CAF must be remitted.]
+
+###  Required/Agency-Specific Task Order Solicitation Provisions and Clauses 
+(Including fill in provisions/clauses)
+
+The following additional provisions and clauses apply to this task order: 
+
+[Insert any FAR optional and agency-specific provisions/clauses that will apply to the task order solicitation and resultant task order award. Remember to provide any fill ins to any flow down clauses or optional/agency specific clauses.]
+
+[When preparing solicitations for T&M and/or LH task orders only, the OCO must identify one of the following provisions in the task order solicitation.
+- FAR 52.216-29 Time-and-Materials/Labor-Hour Proposal Requirements—Non- Commercial Item Acquisition With Adequate Price Competition
+- FAR 52.216-30 Time-and-Materials/Labor-Hour Proposal Requirements—Non- Commercial Item Acquisition Without Adequate Price Competition
+- FAR 52.216-31 Time-and-Materials/Labor-Hour Proposal Requirements—Commercial Item Acquisition]
+
+### Proposal Preparation and Submission
+[Insert instructions for preparation and submission of proposals. Keep submission requirements to a minimum]
+
+### Evaluation Factors and Basis of Award
+Identify the evaluation factors to be considered in selecting a proposal for award. Identify if a trade-off is going to be considered. Tailor this section based on the dollar value and complexity of the task order.
+
+
+
 

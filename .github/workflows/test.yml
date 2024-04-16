@@ -61,7 +61,6 @@ jobs:
   broken_links:
     runs-on: ubuntu-latest
     needs: setup
-    if: false
     steps:
       - name: Checkout code from ${{ github.repository }}
         uses: actions/checkout@v3

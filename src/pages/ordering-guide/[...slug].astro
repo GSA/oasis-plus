@@ -13,30 +13,30 @@ export async function getStaticPaths() {
   })
 }
 const { entry, pages } = Astro.props;
-const { Content, headings} = await entry.render();
+const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await entry.render(); 
 ---
 <!-- Cover Page Section -->
-<div class="cover-page" id="print-cover-page">
-  <img src={oasisLogo.src} alt="OASIS Plus Logo" class="margin-top-1"  />
-  <h1>Ordering Guide</h1>
-  <p>
-   <strong>Consolidated for: </strong> 
-   <ul>
-    <li>Small Business</li>
-    <li>Unrestricted</li>
-    <li> Women-Owned Small Business</li>
-    <li>HubZone Small Business</li>
-    <li>8(a) Small Business and Service-Disabled Veteran-Owned Small Business  </li>
-    <li>Task Order Procurements</li>
-   </ul>
-    
-  </p>
-  <p><strong>Initial Release Date:</strong> 03/19/2024 </p>
-  <p><strong>Revision Date:</strong> Not Applicable </p>
-  <p>Contact the OASIS+ Program: <a href="mailto:oasisplus@gsa.gov">oasisplus@gsa.gov</a></p>
-   
-</div>
-<PageLayout title={entry.data.title} description={entry.data.description} }>
+
+<PageLayout title={entry.data.title} description={entry.data.description} last_modified={last_modified}>
+  <div class="cover-page" id="print-cover-page">
+    <img src={oasisLogo.src} alt="OASIS Plus Logo" class="margin-top-1"  />
+    <h1>Ordering Guide</h1>
+    <p>
+     <strong>Consolidated for: </strong> 
+     <ul>
+      <li>Small Business</li>
+      <li>Unrestricted</li>
+      <li> Women-Owned Small Business</li>
+      <li>HubZone Small Business</li>
+      <li>8(a) Small Business and Service-Disabled Veteran-Owned Small Business  </li>
+      <li>Task Order Procurements</li>
+     </ul>
+      
+    </p>
+    <p><strong>Initial Release Date:</strong> 03/19/2024 </p>
+    <p><strong>Revision Date:</strong> Not Applicable </p>
+    <p>Contact the OASIS+ Program: <a href="mailto:oasisplus@gsa.gov">oasisplus@gsa.gov</a></p>
+  </div>
     
     <SideNav 
     title="Ordering Guide"

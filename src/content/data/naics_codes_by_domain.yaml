@@ -218,9 +218,6 @@
       sizeStandard: $47.0 Million
     - codeAndTitle: 811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance
       sizeStandard: $12.5 Million
-      
-  
-      
 
 - name: Logistics
   shortName: LOG
@@ -301,8 +298,3 @@
       sizeStandard: $25.0 Million
     - codeAndTitle: 562910 (Exception) Environmental Remediation Services
       sizeStandard: 1,000 employees
-
-
-
-
-

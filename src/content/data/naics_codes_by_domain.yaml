@@ -35,6 +35,25 @@
       sizeStandard: $47.0 Million
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
+    - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 541350 Building Inspection Services
+      sizeStandard: $11.5 Million
+    - codeAndTitle: 541360 Geophysical Surveying and Mapping Services
+      sizeStandard: $28.5 Million
+    - codeAndTitle: 541370 Surveying and Mapping (except Geophysical) Services
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 541380 Testing Laboratories
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
+      sizeStandard: $24.5 Million
+    - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
+      sizeStandard: $19.5 Million
+    - codeAndTitle: 611512 Flight Training
+      sizeStandard: $34.0 Million
+      
 
 - name: Research & Development
   shortName: R&D
@@ -151,7 +170,7 @@
       sizeStandard: $22.0 Million
     - codeAndTitle: 238320 Painting and Wall Covering Contractors
       sizeStandard: $19.0 Million
-    - codeAndTitle: 238320 All Other Specialty Trade Contractors
+    - codeAndTitle: 238990 All Other Specialty Trade Contractors
       sizeStandard: $19.0 Million
     - codeAndTitle: 485999 All Other Transit and Ground Passenger transportation
       sizeStandard: $19.0 Million
@@ -159,14 +178,52 @@
       sizeStandard: $40.0 Million
     - codeAndTitle: 488490 Other Support Activities for Road Transportation
       sizeStandard: $18.0 Million
-    - codeAndTitle: 488490 Other Support Activities for Road Transportation
-      sizeStandard: $18.0 Million
+    - codeAndTitle: 531311 Residential Property Managers
+      sizeStandard: $12.5 Million
+    - codeAndTitle: 531312 Nonresidential Property Managers
+      sizeStandard: $19.5 Million
+    - codeAndTitle: 541320 Landscape Architectural Services
+      sizeStandard: $9.0 Million
+    - codeAndTitle: 541330 Engineering Services
+      sizeStandard: $25.5 Million
+    - codeAndTitle: 541350 Building Inspection Services
+      sizeStandard: $11.5 Million
+    - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
+      sizeStandard: $24.5 Million
+    - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
+      sizeStandard: $20.0 Million
+    - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
+      sizeStandard: $19.5 Million
+    - codeAndTitle: 561210 Facilities Support Services
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 561621 Security Systems Services (except Locksmiths)
+      sizeStandard: $25.0 Million
+    - codeAndTitle: 561710 Exterminating and Pest Control Services
+      sizeStandard: $17.5 Million
+    - codeAndTitle: 561720 Janitorial Services
+      sizeStandard: $22.0 Million
+    - codeAndTitle: 561730 Landscaping Services
+      sizeStandard: $9.5 Million
+    - codeAndTitle: 561730 Landscaping Services
+      sizeStandard: $9.5 Million
+    - codeAndTitle: 561990 All Other Support Services
+      sizeStandard: $16.5 Million
+    - codeAndTitle: 562111 Solid Waste Collection
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 562112 Hazardous Waste Collection
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 562211 Hazardous Waste Treatment and Disposal
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance
+      sizeStandard: $12.5 Million
 
 - name: Logistics
   shortName: LOG
   icon: images/domain-icons/logistics.svg
   naics:
-    - codeAndTitle: 336611S Ship Building and Repairing
+    - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
     - codeAndTitle: 481211 Nonscheduled Chartered Passenger Air Transportation
       sizeStandard: 1,500 employees
@@ -176,3 +233,68 @@
       sizeStandard: $19.0 Million
     - codeAndTitle: 488111 Air Traffic Control
       sizeStandard: $40.0 Million
+    - codeAndTitle: 488190 Other Support Activities for Air Transportation
+      sizeStandard: $40.0 Million
+    - codeAndTitle: 488999 All Other Support Activities for Transportation
+      sizeStandard: $25.0 Million
+    - codeAndTitle: 492110 Couriers and Express Delivery Services
+      sizeStandard: 1,500 employees
+    - codeAndTitle: 493110 General Warehousing and Storage
+      sizeStandard: $34.0 Million
+    - codeAndTitle: 493120 Refrigerated Warehousing and Storage
+      sizeStandard: $36.5 Million
+    - codeAndTitle: 493190 Other Warehousing and Storage
+      sizeStandard: $36.5 Million
+    - codeAndTitle: 541330 Engineering Services
+      sizeStandard: $25.5 Million
+    - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
+      sizeStandard: $20.0 Million
+    - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
+      sizeStandard: $19.5 Million
+    - codeAndTitle: 561210 Facilities Support Services
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 811114 Specialized Automotive Repair
+      sizeStandard: $9.0 Million
+    - codeAndTitle: 811121 Automotive Body, Paint and Interior Repair and Maintenance
+      sizeStandard: $9.0 Million
+    - codeAndTitle: 811198 All Other Automotive Repair and Maintenance
+      sizeStandard: $10.0 Million
+
+- name: Enterprise Solutions (UR Only)
+  shortName: ENT
+  icon: images/domain-icons/enterprise.svg
+  naics:
+    - codeAndTitle: 336611 Ship Building and Repairing
+      sizeStandard: 1,300 employees
+    - codeAndTitle: 541330 Engineering Services
+      sizeStandard: $25.5 Million
+    - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
+      sizeStandard: $24.5 Million
+    - codeAndTitle: 541614 Process, Physical Distribution, and Logistics Consulting Services
+      sizeStandard: $20.0 Million
+    - codeAndTitle: 541620 Environmental Consulting Services
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
+      sizeStandard: $19.0 Million
+    - codeAndTitle: 41715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
+      sizeStandard: 1,000 employees
+    - codeAndTitle: 541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts
+      sizeStandard: 1,500 employees
+    - codeAndTitle: 541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment
+      sizeStandard: 1,250 employees
+    - codeAndTitle: 541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts
+      sizeStandard: 1,300 employees
+    - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
+      sizeStandard: $19.5 Million
+    - codeAndTitle: 561210 Facilities Support Services
+      sizeStandard: $47.0 Million
+    - codeAndTitle: 562910 Remediation Services
+      sizeStandard: $25.0 Million
+    - codeAndTitle: 562910 (Exception) Environmental Remediation Services
+      sizeStandard: 1,000 employees

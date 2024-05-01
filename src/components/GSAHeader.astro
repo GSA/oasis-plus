@@ -21,109 +21,114 @@ show_site_link = show_site_link==='true';
 
 
 <header class="usa-header usa-header--extended">
-    <div class="usa-navbar oasis-navbar">
-      <div class="usa-logo" id="header-logo">
-        <a href="https://www.gsa.gov/">
-            <img class="usa-logo-img" src={GSALogo.src} alt="GSA Logo" title="U.S. General Services Administration" />
-            <em class="usa-logo__text text-base-dark">
-                U.S. General Services Administration
-            </em>
-        </a>
-      </div>
-      <button type="button" id="oasis-menu-button" class="oasis-menu-button usa-menu-btn cursor-pointer"><span>Menu</span></button>
+  <div class="usa-navbar oasis-navbar">
+    <div class="usa-logo" id="header-logo">
+      <a href="https://www.gsa.gov/">
+        <img class="usa-logo-img" src={GSALogo.src} alt="GSA Logo" title="U.S. General Services Administration" />
+        <em class="usa-logo__text text-base-dark">
+          U.S. General Services Administration
+        </em>
+      </a>
     </div>
-    
-    <!-- This is the main horizontal navigation bar. It will be hidden at tablet and smaller sizes -->
-    <nav aria-label="Primary navigation" class="usa-nav oasis-main-nav">
-      <div class="usa-nav__inner">
-        <div class:list={["usa-nav__secondary", {show_site_link: show_site_link}]}>
-          <ul class="usa-nav__secondary-links flex-align-baseline">
-            <li class="usa-nav__secondary-item">
-              <a href={`${import.meta.env.BASE_URL}contact/`}>
-                Contact
-              </a>
-            </li>
-            <li class="usa-nav__secondary-item text-base">
-              Follow us
-              <a href="https://www.linkedin.com/company/gsa-professional-services" class="text-middle" style="font-size:1.125em">
-                <svg class="usa-icon" aria-hidden="false" focusable="true" role="img">
-                  <title id="linkedin-title">OASIS Plus LinkedIn account</title>
-                  <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#linkedin`></use>
-                </svg>
-              </a>
-              <a href="https://twitter.com/GSAProfServices" class="text-middle" style="display:inline; vertical-align:bottom; font-size:1.125em">
-                <svg class="usa-icon" aria-hidden="false" focusable="true" role="img">
-                  <title id="twitter-title">OASIS Plus Twitter account</title>
-                  <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#twitter`></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <section aria-label="Search component">
-            <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
-              <input type="hidden" name="affiliate" id="affiliate" value="oasis-plus" autocomplete="off" />
-              <label class="usa-sr-only" for="query1">Search</label>
-              <input
-                class="usa-input"
-                id="query1" 
-                autocomplete="off"
-                type="search"
-                name="query"
-              />
-              <button class="usa-button" type="submit" name="commit" value="Search" data-disable-with="Search">
-                <img
-                  src={searchIcon.src}
-                  class="usa-search__submit-icon"
-                  alt="Search"
-                />
-              </button>
-            </form>
-          </section>
-        </div>
-        {show_site_link && (<a href={import.meta.env.BASE_URL} title="OASIS plus">
-          <img src={oasisLogo.src} alt="OASIS Plus Logo" class="margin-top-1" width="140px" height="58.79px"/>
-          </a>
-        )}
-        
-        <PrimaryMenu />
-        
-      </div>
-    </nav>
-    
-    <!-- The pull-out drawer. Unlike traditional USWDS designs, this will always be visible -->
-    <nav aria-label="GSA navigation" class="oasis-nav-drawer usa-nav">
-      <button type="button" class="usa-nav__close">
-        <img src={ closeIcon.src } alt="Close" />
-      </button>
-      
-      <div class="usa-nav__inner">
-       <div class="usa-nav__secondary oasis-nav__secondary">
-          <a class="oasis-perdiem-link" href="https://www.gsa.gov/#perdiem-section">
-            Per Diem Lookup
-          </a>
-          <section aria-label="Search component" class="desktop:display-none">
-            <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
-              <input type="hidden" name="affiliate" id="affiliate1"  value="oasis-plus"  autocomplete="off" />
-              <label class="usa-sr-only" for="query">Search</label>
-              <input
-                class="usa-input"
-                id="query" 
-                autocomplete="off"
-                type="search"
-                name="query"
-              />
-              <button class="usa-button" type="submit" name="commit" value="Search" data-disable-with="Search">
-                <img
-                  src={searchIcon.src}
-                  class="usa-search__submit-icon"
-                  alt="Search"
-                />
-              </button>
-            </form>
-          </section>
-        </div>
-        <PrimaryMenuDrawer />
-      </div>
-    </nav>
-  </header>
+    <div class="oasis-navbar-oasis-logo">
+      <a href={import.meta.env.BASE_URL} title="OASIS plus">
+        <img src={oasisLogo.src} alt="OASIS Plus Logo"/>
+      </a>
+    </div>
+    <button type="button" id="oasis-menu-button" class="oasis-menu-button usa-menu-btn cursor-pointer"><span>Menu</span></button>
+  </div>
   
+  <!-- This is the main horizontal navigation bar. It will be hidden at tablet and smaller sizes -->
+  <nav aria-label="Primary navigation" class="usa-nav oasis-main-nav">
+    <div class="usa-nav__inner">
+      <div class:list={["usa-nav__secondary", {show_site_link: show_site_link}]}>
+        <ul class="usa-nav__secondary-links flex-align-baseline">
+          <li class="usa-nav__secondary-item">
+            <a href={`${import.meta.env.BASE_URL}contact/`}>
+              Contact
+            </a>
+          </li>
+          <li class="usa-nav__secondary-item text-base">
+            Follow us
+            <a href="https://www.linkedin.com/company/gsa-professional-services" class="text-middle" style="font-size:1.125em">
+              <svg class="usa-icon" aria-hidden="false" focusable="true" role="img">
+                <title id="linkedin-title">OASIS Plus LinkedIn account</title>
+                <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#linkedin`></use>
+              </svg>
+            </a>
+            <a href="https://twitter.com/GSAProfServices" class="text-middle" style="display:inline; vertical-align:bottom; font-size:1.125em">
+              <svg class="usa-icon" aria-hidden="false" focusable="true" role="img">
+                <title id="twitter-title">OASIS Plus Twitter account</title>
+                <use xlink:href=`${import.meta.env.BASE_URL}images/sprite.svg#twitter`></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <section aria-label="Search component">
+          <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+            <input type="hidden" name="affiliate" id="affiliate" value="oasis-plus" autocomplete="off" />
+            <label class="usa-sr-only" for="query1">Search</label>
+            <input
+              class="usa-input"
+              id="query1" 
+              autocomplete="off"
+              type="search"
+              name="query"
+            />
+            <button class="usa-button" type="submit" name="commit" value="Search" data-disable-with="Search">
+              <img
+                src={searchIcon.src}
+                class="usa-search__submit-icon"
+                alt="Search"
+              />
+            </button>
+          </form>
+        </section>
+      </div>
+      {show_site_link && (<a href={import.meta.env.BASE_URL} title="OASIS plus">
+        <img src={oasisLogo.src} alt="OASIS Plus Logo" class="margin-top-1" width="140px" height="58.79px"/>
+        </a>
+      )}
+      
+      <PrimaryMenu />
+      
+    </div>
+  </nav>
+  
+  <!-- The pull-out drawer. Unlike traditional USWDS designs, this will always be visible -->
+  <nav aria-label="GSA navigation" class="oasis-nav-drawer usa-nav">
+    <button type="button" class="usa-nav__close">
+      <img src={ closeIcon.src } alt="Close" />
+    </button>
+    
+    <div class="usa-nav__inner">
+      <div class="usa-nav__secondary oasis-nav__secondary">
+        <a class="oasis-perdiem-link" href="https://www.gsa.gov/#perdiem-section">
+          Per Diem Lookup
+        </a>
+        <section aria-label="Search component" class="desktop:display-none">
+          <form class="usa-search usa-search--small" role="search" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+            <input type="hidden" name="affiliate" id="affiliate1"  value="oasis-plus"  autocomplete="off" />
+            <label class="usa-sr-only" for="query">Search</label>
+            <input
+              class="usa-input"
+              id="query" 
+              autocomplete="off"
+              type="search"
+              name="query"
+            />
+            <button class="usa-button" type="submit" name="commit" value="Search" data-disable-with="Search">
+              <img
+                src={searchIcon.src}
+                class="usa-search__submit-icon"
+                alt="Search"
+              />
+            </button>
+          </form>
+        </section>
+      </div>
+      <PrimaryMenuDrawer />
+    </div>
+  </nav>
+</header>
+

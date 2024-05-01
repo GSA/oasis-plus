@@ -72,6 +72,23 @@
 }
 .oasis-navbar {
     position: relative;
+    justify-content: space-between;
+}
+
+.usa-logo {
+    flex: revert;
+}
+
+.oasis-navbar-oasis-logo {
+    margin-top: 10px;
+
+    img {
+        height: 40px;
+    }
+
+    @include at-media($theme-header-min-width) {
+        display: none;
+    }
 }
 
 .usa-js-mobile-nav--active {
@@ -82,11 +99,11 @@
 }
 .oasis-menu-button.usa-menu-btn {
     display: block; // override display: none to show on desktop
-    position:absolute;
     @include at-media($theme-header-min-width) {
+        position:absolute;
+        right:1.5em;
         bottom:.75em;
     }
-    right:1.5em;
     background-color: transparent;
     color:#71767a;
     font-weight: 700;

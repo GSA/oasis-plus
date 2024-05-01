@@ -29,6 +29,7 @@ import intelligence_icon from "@assets/images/domain-icons/intelligence.svg";
 import r_d_icon from "@assets/images/domain-icons/research.svg";
 import environmental_icon from "@assets/images/domain-icons/sustainability.svg";
 import enterprise_icon from "@assets/images/domain-icons/enterprise.svg";
+import oasis_cta_manage from "@assets/images/oasis-cta-manage.png";
 
 const base_url = import.meta.env.BASE_URL;
 ---
@@ -86,7 +87,20 @@ const base_url = import.meta.env.BASE_URL;
       </IconList>
 
     </CTAHeroSection>
-    
+
+    <CTAHeroSection hero_image={oasis_cta_manage} hero_alt="Person standing while touching two different bar charts.">
+      <h2>Manage your OASIS+ contract</h2>
+      <IconList>
+        {
+          [
+            `View <a href="${base_url}/sellers-guide/reporting/" class="usa-link">reporting requirements</a>`,
+            `Learn more about managing your contract (coming soon)`,
+            `Learn how to <a href="${base_url}sellers-guide/compete-for-task-orders/" class="usa-link">compete for task orders</a>`,
+          ].map(s => <ArrowListItem set:html={s}/>)
+        }
+      </IconList>
+    </CTAHeroSection>
+
     <CTAHeroSection hero_image={oasis_cta_plan} hero_alt="Browser window displaying a progress indicator in front of a person giving a thumbs-up.">
       <h2>Plan to get on OASIS+</h2>
       <IconList>

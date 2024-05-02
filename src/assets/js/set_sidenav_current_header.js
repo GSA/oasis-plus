@@ -2,7 +2,7 @@
 export function setCurrentHeader(){
    
     // get all the side nav links that leads to h2 headers
-    const sidenav_links = document.querySelectorAll('#usa-sidenav__sublist_header a')
+    const sidenav_links = document.querySelectorAll('.usa-sidenav__sublist a')
     // Add click event listener to each sub menu link
     sidenav_links.forEach(link => {
         link.addEventListener('click', () => {

@@ -5,15 +5,16 @@
 import path from "path"
 
 const redirects = {
-  "/ordering-guide/": "/buyers-guide/ordering-guide/",
+  "/ordering-guide/": "/oasis-plus/buyers-guide/ordering-guide/",
   
 }
 
 
 export default function generateRedirects(basePath = "/") {
   Object.keys(redirects).forEach((key) => {
-   
+    
     redirects[key] = path.posix.join(basePath, redirects[key])
+    console.log(basePath, redirects[key])
   })
   return redirects
 }

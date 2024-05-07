@@ -4,6 +4,7 @@ import { slug } from 'github-slugger';
 
 const domains = await getEntry('data', 'naics_codes_by_domain');
 ---
+<div style="overflow-x: scroll;">
 
 {
   domains.data.map(domain => (
@@ -31,7 +32,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
     </table>
   ))
 }
-
+</div>
 <style>
   h2 {
     display: flex;

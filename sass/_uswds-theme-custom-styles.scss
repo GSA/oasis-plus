@@ -31,6 +31,12 @@ i.e.
 @import '_components/oasis-tables.scss';
 @import '_components/oasis-site-menu.scss';
 
+// mobile overflows scale the screen making the body width shrink. Make sure the body at least fits content
+body {
+   min-width: fit-content;
+}
+
+
 // below is to make usa-prose max-width to fits content for pages without sidenav (wide screen)
 .wide-screen-content {
    .usa-prose>p{

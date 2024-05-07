@@ -43,11 +43,15 @@ const base_url = import.meta.env.BASE_URL;
     <Hero>
       <img src={oasis_logo_white.src} id="oasis-homepage-logo" alt="OASIS-plus, one acquisition solution for integrated services plus" />
       <Fragment slot="stars">
-        <div class="oasis-banner__highlight">★ Governmentwide</div>
-        <div class="oasis-banner__highlight">★ Multiple award IDIQ</div>
-        <div class="oasis-banner__highlight">★ Continuous on-ramping</div>
+        <div class="oasis-banner__highlight">
+          <div>★ Governmentwide</div>
+          <div>★ Multiple award IDIQ</div>
+        </div>
+        <div class="oasis-banner__highlight">
+          <div>★ Continuous on-ramping</div>
+          <div>★ Best-In-Class</div>
+        </div>
       </Fragment>
-      
       <Fragment slot="callout">
         <p>
           We are the largest governmentwide, multi-agency contracting program that provides professional services via six Indefinite Delivery, Indefinite Quantity (IDIQ) contract families.

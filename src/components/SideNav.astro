@@ -9,7 +9,7 @@ For page that is a child, use is_child flag in front matter to skip the menu bul
 const { id, pages, headings = null, parent_path } = Astro.props;
 pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
 ---
-<div class="usa-layout-docs__sidenav desktop:grid-col-4" id="oasis-side-nav">
+
   <nav class="sticky_site_nav" aria-label="Secondary navigation">
     <ul class="usa-sidenav">
       {pages.map(page => (
@@ -40,7 +40,7 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
           }
           <!--Sub menus for long page that needs in page navigation to H2 -->
           {page.data.in_page_nav &&
-            <ul class="usa-sidenav__sublist" id="usa-sidenav__sublist_header">
+            <ul class="usa-sidenav__sublist usa-sidenav__sublist_header">
               {id === page.id && headings
                 .filter(h => h.depth == 2)
                 .map(h => (
@@ -57,4 +57,4 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
         </li>))}
     </ul>
   </nav>
-</div>
+

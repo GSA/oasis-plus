@@ -10,7 +10,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
   domains.data.map(domain => (
     <h2 id={ slug(domain.name) }><img src={`${import.meta.env.BASE_URL}${domain.icon}`} aria-hidden="true" alt="" />{ domain.name } ({ domain.shortName })</h2>
 
-    <table class="usa-table usa-table--borderless margin-x-neg-1 tablet:margin-x-0">
+    <table class="usa-table usa-table--borderless margin-x-neg-1 tablet:margin-x-0 width-full">
       <thead>
         <tr>
           <th>Domain</th>
@@ -41,7 +41,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
   h2 img {
     margin-right: .5em;
   }
-  td {
+  td th{
     padding: .5rem .5rem !important;
   }
   @media screen and (max-width: 768px) {

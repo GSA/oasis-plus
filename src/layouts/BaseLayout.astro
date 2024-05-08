@@ -3,6 +3,15 @@ import GSAHeader from '@components/GSAHeader.astro';
 import USAIdentifier from '@components/USAIdentifier.astro';
 import Banner from '@components/Banner.astro';
 import LastModified from "@components/LastModified.astro"
+import oasisLogo from '@assets/images/oasis-logo.svg';
+
+const google_schema = {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "OASIS+",
+        "url": "https://www.gsa.gov/oasis-plus/",
+        "logo": oasisLogo.src
+      }
 
 const { title, description, show_site_link, last_modified} = Astro.props;
 ---
@@ -23,7 +32,7 @@ const { title, description, show_site_link, last_modified} = Astro.props;
     <meta property="og:url" content={Astro.url} />
     <meta property="og:image" content="https://www.gsa.gov/sites/gsa.gov/themes/custom/gsa/custom_assets/images/open_graph_image.jpeg">
     <title>{title}</title>
-
+    <script type="application/ld+json" set:html={JSON.stringify(google_schema)}></script>
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
   </head>
   <body>

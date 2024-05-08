@@ -37,7 +37,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
     <p><strong>Revision Date:</strong> Not Applicable </p>
     <p>Contact the OASIS+ Program: <a href="mailto:oasisplus@gsa.gov">oasisplus@gsa.gov</a></p>
   </div>
-    
+  <div class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-4">
     <SideNav 
     title="Ordering Guide"
     parent_path="ordering-guide"
@@ -45,6 +45,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
     headings={headings}
     id={entry.id}
     />
+  </div>
     <PageContentLayout
       title={entry.data.title}
       id="header-hidden-for-print"
@@ -59,6 +60,16 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
        
       <Content />
     </PageContentLayout>
+    <!-- New duplicate section only shown on mobile. -->
+    <div class="usa-layout-docs__sidenav desktop:display-none">
+      <SideNav 
+      title="Ordering Guide"
+      parent_path="ordering-guide"
+      pages={pages}
+      headings={headings}
+      id={entry.id}
+      />
+    </div>
   </PageLayout>
 
   <style is:global>
@@ -76,7 +87,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
 
     @media print {
       #print_button {display: none;}
-      #oasis-side-nav{display:none;}
+      .usa-layout-docs__sidenav{display:none;}
       #oasis-menu-button {display:none;}
       #oasis-footer{display:none;}
       #print-cover-page{display:block;}

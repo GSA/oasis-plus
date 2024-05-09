@@ -1,18 +1,18 @@
 //header section
-.usa-header--extended {  
+.usa-header--extended {
   .usa-logo {
     margin: 1rem 0 0.5rem;
   }
 }
-.usa-header {  
+.usa-header {
     .usa-logo {
       display: flex;
       flex-wrap: wrap;
       align-items: self-end;
       font-size: 1.125rem;
-      line-height: 1.7;  
+      line-height: 1.7;
       margin: 1rem 0 0.5rem;
-      
+
 
       @include at-media($theme-header-min-width)  {
         line-height: 1;
@@ -31,10 +31,13 @@
           margin-top: 0;
           height: 5rem;
           + .usa-logo__text {
-            display: inline;
+            font-weight: normal;
+            display: inline-block;
+            padding-bottom: 13px;
+            vertical-align: bottom;
           }
         }
-       
+
       }
       // address mobile view logo too big issue
        @media screen and (max-width:1023px) {
@@ -43,7 +46,7 @@
           }
         }
     }
-  
+
     &.usa-header--extended .usa-logo-img {
       @include at-media($theme-header-min-width) {
         height: 5rem;

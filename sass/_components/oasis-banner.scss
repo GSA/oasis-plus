@@ -45,6 +45,7 @@
   .oasis-banner__highlight {
     @include at-media(mobile-lg) {
       @include u-margin-right(3);
+      @include u-margin-left(4);
     }
   }
   

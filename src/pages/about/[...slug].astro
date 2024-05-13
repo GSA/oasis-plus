@@ -18,6 +18,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
 
 ---
 <PageLayout title={entry.data.title} description={entry.data.description} last_modified={last_modified}>
+  <div class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-4">
     <SideNav 
       title="About the GSA SmartPay Program"
       parent_path="about"
@@ -25,11 +26,22 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
       headings={headings}
       id={entry.id}
     />
+  </div>
     <PageContentLayout
       title={entry.data.title}
       intro={entry.data.intro}
     >
       <Content />
     </PageContentLayout>
+    <!-- New duplicate section only shown on mobile. -->
+   <div class="usa-layout-docs__sidenav desktop:display-none">
+    <SideNav 
+    title="About the GSA SmartPay Program"
+    parent_path="about"
+    pages={pages}
+    headings={headings}
+    id={entry.id}
+    />
+   </div>
   </PageLayout>
       

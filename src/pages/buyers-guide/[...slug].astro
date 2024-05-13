@@ -23,6 +23,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
       </PageContentLayoutWideScreen>
     ): 
     (
+    <div class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-4">
       <SideNav 
         title="Buyers"
         parent_path="buyers-guide"
@@ -30,12 +31,23 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
         headings={headings}
         id={entry.id}
       />
+    </div>
       <PageContentLayout
       title={entry.data.title}
       intro={entry.data.intro}
       >
         <Content />
       </PageContentLayout>
+     <!-- New duplicate section only shown on mobile. -->
+   <div class="usa-layout-docs__sidenav desktop:display-none">
+      <SideNav 
+        title="Buyers"
+        parent_path="buyers-guide"
+        pages={pages}
+        headings={headings}
+        id={entry.id}
+      />
+   </div>
     )
   }
 </PageLayout>

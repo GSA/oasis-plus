@@ -2,12 +2,12 @@
   submenu:
   - title: "About OASIS+"
     href: about/
+  - title: "Government roles and responsibilities"
+    href: about/government-roles-responsibilities/
   - title: "Contract families"
     href: about/contract-families/
   - title: "Domains and labor categories"
     href: about/domains-labor-categories/
-  - title: "Government roles and responsibilities"
-    href: about/government-roles-responsibilities/
   - title: "How OASIS+ compares to legacy OASIS"
     href: about/oasis-plus-comparison/
 - title: Buyers

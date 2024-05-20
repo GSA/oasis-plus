@@ -4,7 +4,6 @@ import PageLayout from '@layouts/PageLayout.astro';
 import PageContentLayout from '@layouts/PageContentLayout.astro';
 import PageContentLayoutWideScreen from '@layouts/PageContentLayoutWideScreen.astro';
 import SideNav from '@components/SideNav.astro'
-import TableOfContents from '@components/TableOfContents.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('buyers-guide');
@@ -37,7 +36,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
       title={entry.data.title}
       intro={entry.data.intro}
       >
-        <Content has_toc={entry.data.has_toc} headings={headings} />
+        <Content />
       </PageContentLayout>
      <!-- New duplicate section only shown on mobile. -->
    <div class="usa-layout-docs__sidenav desktop:display-none">

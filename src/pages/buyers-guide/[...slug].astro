@@ -37,8 +37,7 @@ const { Content, headings, remarkPluginFrontmatter:{last_modified} } = await ent
       title={entry.data.title}
       intro={entry.data.intro}
       >
-        <TableOfContents headings={headings} /> 
-        <Content />
+        <Content has_toc={entry.data.has_toc} headings={headings} />
       </PageContentLayout>
      <!-- New duplicate section only shown on mobile. -->
    <div class="usa-layout-docs__sidenav desktop:display-none">

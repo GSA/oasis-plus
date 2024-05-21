@@ -5,11 +5,11 @@
   - title: "Contract families"
     href: about/contract-families/
   - title: "Domains and labor categories"
-    href: about/domains-labor-categories/
+    href: about/domains-naicscodes-scope-labor-categories/
   - title: "How OASIS+ compares to legacy OASIS"
     href: about/oasis-plus-comparison/
 - title: Buyers
-  submenu: 
+  submenu:
   - title: "Buyers’ guide"
     href: buyers-guide/
   - title: "Research the OASIS+ contract features"

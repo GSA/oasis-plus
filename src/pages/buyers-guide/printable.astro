@@ -5,18 +5,51 @@ import PageLayout from '@layouts/PageLayout.astro'
 import oasisLogo from '@assets/images/logo-ordering-guide.png';
 import PageContentLayoutWideScreen from '@layouts/PageContentLayoutWideScreen.astro';
 
-const pages = await getCollection('buyers-guide');
-const content_components = pages.map(async entry => (
+// get about section pages that for print
+let about_pages = await getCollection('about');
+about_pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
+
+const about_content_components = about_pages.map(async entry => (
   {...entry, Content: (await entry.render()).Content}
 ))
+const about_entries = await Promise.all(about_content_components)
 
-const entries = await Promise.all(content_components)
-const page_title="Buyer's ordering guide"
+// get buyer's guide section pages that for print
+
+let buyers_pages = await getCollection('buyers-guide');
+buyers_pages = buyers_pages.filter(h => h.slug != './');
+buyers_pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
+
+const buyers_content_components = buyers_pages.map(async entry => (
+  {...entry, Content: (await entry.render()).Content}
+))
+const buyers_entries = await Promise.all(buyers_content_components)
+const page_title="OASIS+ buyers' ordering guide (printable)"
 
 ---
 
 <PageLayout title={page_title} description="to-do">
-    <PageContentLayoutWideScreen title={page_title}>
+  <div class="cover-page" id="print-cover-page">
+    <img src={oasisLogo.src} alt="OASIS Plus Logo" class="margin-top-1"  />
+    <h1>Buyers' ordering guide (printable)</h1>
+    <p>
+     <strong>Consolidated for: </strong> 
+     <ul>
+      <li>Small Business</li>
+      <li>Unrestricted</li>
+      <li> Women-Owned Small Business</li>
+      <li>HubZone Small Business</li>
+      <li>8(a) Small Business and Service-Disabled Veteran-Owned Small Business  </li>
+      <li>Task Order Procurements</li>
+     </ul>
+      
+    </p>
+    <p><strong>Initial Release Date:</strong> 03/19/2024 </p>
+    <p><strong>Revision Date:</strong> Not Applicable </p>
+    <p>Contact the OASIS+ Program: <a href="mailto:oasisplus@gsa.gov">oasisplus@gsa.gov</a></p>
+  </div>
+    <PageContentLayoutWideScreen title={page_title} id="header-hidden-for-print">
+      <div>
         <button id="print_button" class="usa-button usa-button--outline" onclick="window.print()">
             <span class="display-block" aria-hidden="true">
               <svg class="usa-icon text-primary text-middle" aria-hidden="true" role="img">
@@ -24,13 +57,20 @@ const page_title="Buyer's ordering guide"
               </svg> Print
             </span>
           </button>
+      </div>
+      {about_entries.map(item => (  
+        <div class="usa-prose" style="page-break-after: auto;">
+          <h1 class="page_title">{item.data.title}</h1> 
+          <item.Content />
+        </div>
+      ))}
 
-        {entries.map(item => (  
+      {buyers_entries.map(item => (  
             <div class="usa-prose" style="page-break-after: auto;">
-              <h1 class="text-primary">{item.data.title}</h1> 
+              <h1 class="page_title">{item.data.title}</h1> 
               <item.Content />
             </div>
-          ))}
+      ))}
     </PageContentLayoutWideScreen>
 </PageLayout>
 
@@ -45,6 +85,11 @@ const page_title="Buyer's ordering guide"
 
     .cover-page ul {
     list-style-type: none;
+    }
+
+    .page_title{
+      
+      padding-top: 1em;
     }
 
     @media print {
@@ -63,7 +108,7 @@ const page_title="Buyer's ordering guide"
       
       button.usa-menu-btn {display: none;}
       main {margin-top: 33%}
-      div h1.text-primary{
+      div h2.page_title{
         padding-top: 1em;
         page-break-after: auto;
       }
@@ -88,4 +133,8 @@ const page_title="Buyer's ordering guide"
     
   }
   </style>
+  <script>
+      import {increaseHeadingLevels} from "../../assets/js/ordering_guide_helper.js"
+      increaseHeadingLevels();
+  </script>
 

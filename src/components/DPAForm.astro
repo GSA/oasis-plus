@@ -1,0 +1,849 @@
+---
+
+---
+
+<form
+    action="https://preview.gsa.gov/api/verify-recaptcha"
+    class="usa-form usa-form--large validate-form"
+    method="post"
+    validate="true"
+    novalidate="true"
+>
+    <p>
+        Required fields are marked with an asterisk ( <abbr
+            class="usa-hint usa-hint--required"
+            title="required">*</abbr
+        >).
+    </p>
+    <input name="target" type="hidden" value="https://preview.gsa.gov/form-submission/dpa-oasisplus" />
+    <input name="recipient" type="hidden" value="delegations@gsa.gov" />
+    <input
+        name="subject"
+        type="hidden"
+        value="OASIS+ Delegation of Procurement Authority Request"
+    />
+    <fieldset class="usa-fieldset">
+        <legend class="usa-sr-only"
+            >OASIS+ Delegation of Procurement Authority Request
+        </legend>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="First_Name">
+                First name
+                <abbr class="usa-hint usa-hint--required" title="required"
+                    >*
+                </abbr>
+            </label>
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid first name"
+                id="First_Name"
+                maxlength="100"
+                name="First_Name"
+                pattern="^(?! )[a-zA-Z\-. ]+$"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="Middle_Name">Middle initial</label>
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="Please enter a valid middle initial"
+                id="Middle_Name"
+                maxlength="2"
+                name="Middle_Name"
+                pattern="^(?! )([a-zA-Z](\.| )?)?$"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="Last_Name"
+                >Last name <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid last name"
+                id="Last_Name"
+                maxlength="100"
+                name="Last_Name"
+                pattern="^(?! )[a-zA-Z\-. ]+$"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="Work_Address"
+                >Work address <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr><span class="usa-hint">(no P.O. boxes)</span>
+            </label>
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid work address"
+                id="Work_Address"
+                maxlength="255"
+                name="Work_Address"
+                pattern="^(?! )[a-zA-Z\d .\-\$]+$"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="city"
+                >City <abbr class="usa-hint usa-hint--required" title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid city"
+                id="city"
+                maxlength="100"
+                name="city"
+                pattern="^(?! )[a-zA-Z ]+$"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="state"
+                >State <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <select
+                class="usa-select validate-input"
+                data-error-msg="This field is required; please select a state from the pull-down list"
+                id="state"
+                name="state"
+                required="true"
+            >
+                <option value="">- Select -</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+                <option value="AA">AA - Armed Forces Americas</option>
+                <option value="AE">AE - Armed Forces Africa</option>
+                <option value="AE">AE - Armed Forces Canada</option>
+                <option value="AE">AE - Armed Forces Europe</option>
+                <option value="AE">AE - Armed Forces Middle East</option>
+                <option value="AP">AP - Armed Forces Pacific</option>
+            </select>
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="zip"
+                >ZIP code <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid ZIP code"
+                id="zip"
+                maxlength="10"
+                name="zip"
+                pattern="^[\d]{5}((-|\+)[\d]{4})?$"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="email"
+                >Work email <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr><span class="usa-hint" id="emailHint"
+                    >(.gov or .mil only)</span
+                >
+            </label>
+            <span class="usa-error-message"></span>
+            <input
+                aria-describedby="emailHint"
+                autocapitalize="off"
+                autocorrect="off"
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid email"
+                id="email"
+                maxlength="255"
+                name="email"
+                pattern="[a-zA-Z\d]+(?:(\.|-|_)?[a-zA-Z\d]+)*@[a-zA-Z\-._]+(\.gov|\.mil|\.GOV|\.MIL)"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="phone"
+                >Work phone number <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr><span class="usa-hint" id="workPhoneHint"
+                    >(xxx-xxx-xxxx)
+                </span></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                aria-describedby="workPhoneHint"
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a valid phone number"
+                id="phone"
+                maxlength="12"
+                name="phone"
+                pattern="^(\d{3}-){2}\d{4}$"
+                required="true"
+                type="tel"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="fax"
+                >Fax number <span class="usa-hint" id="faxHint"
+                    >(xxx-xxx-xxxx)</span
+                ></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                aria-describedby="faxHint"
+                class="usa-input validate-input"
+                data-error-msg="Please enter a valid fax number"
+                id="fax"
+                maxlength="12"
+                name="fax"
+                pattern="^((\d{3}-){2}\d{4})?$"
+                type="tel"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="agency"
+                >Agency <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <select
+                class="usa-select validate-input"
+                data-error-msg="This field is required; please select an agency from the pull-down list"
+                id="agency"
+                name="agency"
+                required="true"
+            >
+                <option value="">- Select -</option>
+                <option value="American Battle Monuments Commission"
+                    >American Battle Monuments Commission</option
+                >
+                <option value="Architect of the Capitol"
+                    >Architect of the Capitol</option
+                >
+                <option value="Consumer Product Safety Commission"
+                    >Consumer Product Safety Commission</option
+                >
+                <option value="Corps of Civil Engineers"
+                    >Corps of Civil Engineers</option
+                >
+                <option value="Department of Agriculture"
+                    >Department of Agriculture</option
+                >
+                <option value="Department of Commerce"
+                    >Department of Commerce</option
+                >
+                <option value="Department of Defense"
+                    >Department of Defense</option
+                >
+                <option value="Department of Education"
+                    >Department of Education</option
+                >
+                <option value="Department of Energy"
+                    >Department of Energy</option
+                >
+                <option value="Department of Health and Human Services"
+                    >Department of Health and Human Services</option
+                >
+                <option value="Department of Homeland Security"
+                    >Department of Homeland Security</option
+                >
+                <option value="Department of Housing and Urban Development"
+                    >Department of Housing and Urban Development
+                </option>
+                <option value="Department of the Interior"
+                    >Department of the Interior</option
+                >
+                <option value="Department of Justice"
+                    >Department of Justice</option
+                >
+                <option value="Department of Labor">Department of Labor</option>
+                <option value="Department of State">Department of State</option>
+                <option value="Department of the Army"
+                    >Department of the Army</option
+                >
+                <option value="Department of the Air Force"
+                    >Department of the Air Force</option
+                >
+                <option value="Department of the Navy"
+                    >Department of the Navy</option
+                >
+                <option value="Department of the Treasury"
+                    >Department of the Treasury</option
+                >
+                <option value="Department of Transportation"
+                    >Department of Transportation</option
+                >
+                <option value="Department of Veterans Affairs"
+                    >Department of Veterans Affairs</option
+                >
+                <option value="Environmental Protection Agency"
+                    >Environmental Protection Agency</option
+                >
+                <option value="Executive Office of the President"
+                    >Executive Office of the President</option
+                >
+                <option value="Federal Communications Commission"
+                    >Federal Communications Commission</option
+                >
+                <option value="Government Accountability Office"
+                    >Government Accountability Office</option
+                >
+                <option value="General Services Administration"
+                    >General Services Administration</option
+                >
+                <option value="Independent US Government Offices"
+                    >Independent US Government Offices</option
+                >
+                <option value="Library of Congress">Library of Congress</option>
+                <option value="National Aeronautics and Space Administration"
+                    >National Aeronautics and Space Administration</option
+                >
+                <option value="National Labor Relations Board"
+                    >National Labor Relations Board</option
+                >
+                <option value="National Science Foundation"
+                    >National Science Foundation</option
+                >
+                <option value="Nuclear Regulatory Commission"
+                    >Nuclear Regulatory Commission</option
+                >
+                <option value="Office of Personnel Management"
+                    >Office of Personnel Management</option
+                >
+                <option value="Railroad Retirement Board"
+                    >Railroad Retirement Board</option
+                >
+                <option value="Securities and Exchange Commission"
+                    >Securities and Exchange Commission</option
+                >
+                <option value="Selective Service System"
+                    >Selective Service System</option
+                >
+                <option value="Small Business Administration"
+                    >Small Business Administration</option
+                >
+                <option value="Social Security Administration"
+                    >Social Security Administration</option
+                >
+                <option value="State or Local Government"
+                    >State or Local Government</option
+                >
+                <option value="The Judicial Branch">The Judicial Branch</option>
+                <option value="Government Agency Not Otherwise Specified"
+                    >Government Agency Not Otherwise Specified
+                </option>
+            </select>
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="bureau">Bureau</label>
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="Please enter a valid bureau"
+                id="bureau"
+                maxlength="100"
+                name="bureau"
+                pattern="^(?! )([a-zA-Z\-. ]*)?$"
+                type="text"
+            />
+        </div>
+        <input
+            name="category[oasisplus][checked]"
+            type="hidden"
+            value="OASISPLUS"
+        />
+        <div class="usa-form-group">
+            <label class="usa-label" for="oasis-training"
+                >Select your OASIS+ training method
+                <abbr class="usa-hint usa-hint--required" title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <select
+                class="if-other usa-select validate-input"
+                data-error-msg="This field is required; please select from the pull-down list"
+                id="oasis-training"
+                name="category[oasisplus][ContractTrainingMethod]"
+                required="true"
+            >
+                <option value="">- Select -</option>
+                <option value="Webinar">Webinar</option>
+                <option value="DAU Course">DAU Course</option>
+                <option value="Teleconference">Teleconference</option>
+                <option value="In person/On-site training"
+                    >In person/On-site training</option
+                >
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="usa-form-group hidden otherInput">
+            <label for="oasis-Other"
+                >Other training method (if applicable)</label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input"
+                data-error-msg="This field is required; please enter a training method"
+                id="oasis-Other"
+                maxlength="255"
+                name="category[oasisplus][Othertrainingmethod]"
+                pattern="^(?! )[\x20-\x7e]{0,255}$"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label for="oasis-Date"
+                >Date you completed delegation training <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a date in MM/DD/YYYY format"
+                id="oasis-Date"
+                maxlength="10"
+                name="category[oasisplus][DateTrainingCompleted]"
+                pattern="(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d\d"
+                placeholder="MM/DD/YYYY"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="Warrent_Level"
+                >Warrant Level (include $ limitation) Provide any limiting
+                language on your warrant Example: $10M, Unlimited, or NA if you
+                do not have a warrant <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            ><span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="Please enter a valid Warrant Level"
+                id="Warrent_Level"
+                maxlength="100"
+                name="Warrent_Level"
+                pattern="^(?! )[a-zA-Z\d\$\., ]{1,100}$"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <div class="usa-form-group">
+            <label class="usa-label" for="warrent_issue_date"
+                >Warrant Issue Date <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr></label
+            >
+            <span class="usa-error-message"></span>
+            <input
+                class="usa-input validate-input"
+                data-error-msg="This field is required; please enter a date in MM/DD/YYYY format"
+                id="warrent_issue_date"
+                maxlength="10"
+                name="warrent_issue_date"
+                pattern="(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d\d"
+                placeholder="MM/DD/YYYY"
+                required="true"
+                type="text"
+            />
+        </div>
+
+        <fieldset class="usa-fieldset">
+            <legend class="usa-legend font-body-md text-normal padding-top-3"
+                >By completing and submitting this request, I accept and agree
+                to the terms identified in the OASIS+ Contract(s) and the
+                Ordering Guide. I will fulfill the roles and responsibilities
+                identified therein <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr>
+            </legend>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="accept_terms_yes"
+                    name="accept_terms"
+                    required="true"
+                    type="radio"
+                    value="Yes"
+                />
+                <label class="usa-radio__label" for="accept_terms_yes"
+                    >Yes</label>
+            </div>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="accept_terms_no"
+                    name="accept_terms"
+                    required="true"
+                    type="radio"
+                    value="No"
+                />
+                <label class="usa-radio__label" for="accept_terms_no">No</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="usa-fieldset fieldset-radio">
+            <legend class="usa-legend font-sans-md padding-top-3"
+                >Have you reviewed the OASIS+ Delegation of Procurement
+                Authority Memorandum of Agreement (MOA)? <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr>
+            </legend>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="oasis_moa_doc_review_yes"
+                    name="oasis_plus_moa_document_review"
+                    required="true"
+                    type="radio"
+                    value="Yes"
+                />
+                <label class="usa-radio__label" for="oasis_moa_doc_review_yes"
+                    >Yes</label>
+            </div>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="oasis_moa_doc_review_no"
+                    name="oasis_plus_moa_document_review"
+                    required="true"
+                    type="radio"
+                    value="No"
+                />
+                <label class="usa-radio__label" for="oasis_moa_doc_review_no"
+                    >No</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="usa-fieldset fieldset-radio">
+            <legend class="usa-legend font-sans-md padding-top-3"
+                >Do you need assistance with a current or future professional
+                service requirement? <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr>
+            </legend>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="assistanceYes"
+                    name="Assistancequestion"
+                    required="true"
+                    type="radio"
+                    value="Yes"
+                /><label class="usa-radio__label" for="assistanceYes"
+                    >Yes</label>
+            </div>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="assistanceNo"
+                    name="Assistancequestion"
+                    required="true"
+                    type="radio"
+                    value="No"
+                /><label class="usa-radio__label" for="assistanceNo">No</label>
+            </div>
+
+            <div class="usa-form-group other-text disabled hidden">
+                <label class="usa-label" for="Need_Assistance"
+                    >If yes, please specify:</label
+                ><span class="usa-error-message"></span>
+                <input
+                    class="usa-input validate-input"
+                    data-error-msg="Please enter a valid specification"
+                    id="Need_Assistance"
+                    maxlength="255"
+                    name="Need_Assistance"
+                    pattern="^(?! )[\x20-\x7e]{0,255}$"
+                    type="text"
+                    disabled="disabled"
+                />
+            </div>
+        </fieldset>
+
+        <fieldset class="usa-fieldset fieldset-radio">
+            <legend class="usa-legend font-body-md text-normal padding-top-3"
+                >I represent that I am the individual whose information appears
+                above. <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr>
+            </legend>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="Individual-above-yes"
+                    name="I_represent_that_I_am_the_individual_whose_information_appears_above"
+                    required="true"
+                    type="radio"
+                    value="Yes"
+                />
+                <label class="usa-radio__label" for="Individual-above-yes"
+                    >Yes</label
+                >
+            </div>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="Individual-above-no"
+                    name="I_represent_that_I_am_the_individual_whose_information_appears_above"
+                    required="true"
+                    type="radio"
+                    value="No"
+                />
+                <label class="usa-radio__label" for="Individual-above-no"
+                    >No</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="usa-fieldset fieldset-radio">
+            <legend class="usa-legend font-body-md text-normal padding-top-3"
+                >By completing and submitting this request, I accept and agree
+                to the terms of the delegation of procurement authority found in
+                the applicable Delegation of Procurement Authority Letter and
+                will fulfill the roles and responsibilities identified therein. <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr>
+            </legend>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="Agree-to-MOA-terms-yes"
+                    name="rep_acceptance"
+                    required="true"
+                    type="radio"
+                    value="Yes"
+                />
+                <label class="usa-radio__label" for="Agree-to-MOA-terms-yes"
+                    >Yes</label>
+            </div>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="Agree-to-MOA-terms-no"
+                    name="rep_acceptance"
+                    required="true"
+                    type="radio"
+                    value="No"
+                />
+                <label class="usa-radio__label" for="Agree-to-MOA-terms-no"
+                    >No</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="usa-fieldset fieldset-radio">
+            <legend class="usa-legend font-body-md text-normal padding-top-3"
+                >I represent that I am a duly appointed contracting officer per
+                FAR Part 1.603 or authorized official with authority to obligate
+                funds for the agency (or tribe, or other entity authorized to
+                use the contract per GSA Order OGP 4800.2I). <abbr
+                    class="usa-hint usa-hint--required"
+                    title="required"
+                    >*
+                </abbr>
+            </legend>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="Warranted-contracting-officer-yes"
+                    name="rep_warranted"
+                    required="true"
+                    type="radio"
+                    value="Yes"
+                />
+                <label
+                    class="usa-radio__label"
+                    for="Warranted-contracting-officer-yes">Yes</label>
+            </div>
+
+            <div class="usa-radio">
+                <input
+                    class="usa-radio usa-radio__input"
+                    id="Warranted-contracting-officer-no"
+                    name="rep_warranted"
+                    required="true"
+                    type="radio"
+                    value="No"
+                />
+                <label
+                    class="usa-radio__label"
+                    for="Warranted-contracting-officer-no">No</label>
+            </div>
+        </fieldset>
+
+        <div class="usa-form-group">
+            <input checked="checked" name="debug" type="checkbox" /> Tick this checkbox
+            to view debug-information upon form submission.
+        </div>
+        <input
+            class="g-recaptcha"
+            id="g-token"
+            name="g-token"
+            type="hidden"
+            value="03AFcWeA6WlXSjAlfn6e6CXDIhL7qqDVAgAI4oxZ9eI3Qot_La77onB74YPqbRmS4cICpwSZ1pu99nrU52jwPVItGWEpIU2OU7CvftlnZoI2WkWS0nDx0V6a3JBsuK8buXYmg0GBs9gWzoSZI2LgkDQVKYwjkZcCQ5dVSkZhkJNJs2MszJMRRzl9TJqW7H7iVbWdJRaPmaTyWWwTCcfUKYFaU2185wui0H_pnBbx9b9_LtuSXfKgKhBUF4Ort1w8nndGPYoM5gcx3MiraR_Vh57deEjP7mFoMPBoEtarA1b_ufIct4nJTm4Wm0oStHju32COLlJEylaw90Y0TarbwXkiklS7IVLA4KeZMV6KV50MtkjGSabxbyVsld7TDmfIFE8s4jmUUgOs_M3FKINC3zbTo4AjKVb0oHCgUMiTM8YAHwlz3yWvDmo4SXfYAk4AW1QZ0nRVFlr8FF1u8qDpVrZyySD6RlhGMHN3v11VmR18MBFEH1-IWropcbFO8EQJhmA84-WWQJSqY0cJps6op1VGjYUSJFGEqYnYn3YazpMZnpADic_B3UCYWsFdg0OPG7ls-TNG6tsiejQ1_4deph1MN2x7SNP_mBjN2UhKpPSnSlPGHKuxDa3xJeA1IWGHuouz4mx5KlS5nIjdWoRzwoJP41mZBfEhCeQPC_RjuaA_5GLzO_mftAaDfj1E7qYLnymTBtfZVy2uRZLK6QlzuAzoZQl5sAdo6TKQ"
+        />
+        <input name="redirect" type="hidden" value="/node/84486" />
+        <input
+            class="usa-button"
+            name="submit"
+            type="submit"
+            value="Submit to Dev"
+        />
+        <input
+            class="usa-button"
+            name="submit"
+            type="submit"
+            value="Submit to Dev (see debug info)"
+        /><br />
+        <input
+            class="usa-button"
+            name="submit"
+            type="submit"
+            value="Submit to Test"
+        />
+        <input
+            class="usa-button"
+            name="submit"
+            type="submit"
+            value="Submit to Test (see debug info)"
+        /><br />
+        <input
+            class="usa-button"
+            name="submit"
+            type="submit"
+            value="Submit to Stage"
+        />
+        <input
+            class="usa-button"
+            name="submit"
+            type="submit"
+            value="Submit to Stage (see debug info)"
+        />&nbsp;
+    </fieldset>
+</form>
+

@@ -2,6 +2,8 @@
   submenu:
   - title: "About OASIS+"
     href: about/
+  - title: "Government roles and responsibilities"
+    href: about/government-roles-responsibilities/
   - title: "Contract families"
     href: about/contract-families/
   - title: "Domains and labor categories"

@@ -2,6 +2,26 @@
 jQuery(document).ready(function ($) {
     console.log("running")
 // Check and execute only for GWAC Form
+    function initRecaptcha() {
+      if (typeof grecaptcha == "undefined") {
+        console.log("no captcha")
+        return;
+      }
+      console.log("captcha!")
+      grecaptcha.ready(function() {
+        grecaptcha.execute(recaptcha_site_key, {
+          action: 'submit'
+        }).then(function(token) {
+          if (token.length > 0) {
+            document.getElementById('g-token').value = token;
+          }
+        });
+      });
+    }
+
+    initRecaptcha();
+    setInterval(initRecaptcha, 30000);
+
           if ($("input[value='/form-submission/dpa-gwac']").length) {
             $("input[name=Need_Assistance]").change(function () {
               if ($("#assistanceYes").is(':checked')) {

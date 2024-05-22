@@ -11,15 +11,17 @@ const { title, description, show_site_link, last_modified} = Astro.props;
     <meta charset="utf-8" />
     <script is:inline src={`${import.meta.env.BASE_URL}js/uswds-init.min.js`}></script>
     <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/styles.css`} />
-    <script is:inline type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/8k85QBI-qzxmenDv318AZH30/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-YaLdSXMqm9CEKTpOkSnpu5vAhzVfmtaskI7GboiAj0dVtvfpzmGU1XBINZ7hs6ET"></script>
-    <link rel="stylesheet" href="https://preview.gsa.gov/sites/gsa.gov/files/css/css_uobucBB5zpyklXCh05sSREJN8bD3FQVRstP1c2PimQ0.css?delta=0&language=en&theme=gsa&include=eJx9U1ty6yAM3RAxH3dBjIwVWw0YRpLdpqsvj8R1eqf9sNHRE-mICRQC3JHtiAvslFiMkCLFzGlHe5KH8nHx_c1u5C6K0Y4gaDZ5n8S2_0OeeMsQjA8gcu9ODzmiCMwoxidGuyaOEOgTzSxgJ8hOGfyN1rkpMtOqyEZTJu9yiXN-E02RPkEprWJpJXXimbK2iDmkEcKla0qRmG0ECpqu9NFL9qsN4JV2vARab-f015RKQdsPF2hk4LuZU5oDOoXZzhpfIcw_8QBv8GEy8kQYnaYU3BiSv9mnqqelMoQ_nCJkqS25gFd1K-z2DLrzKZNomYgo-efwh2-NWcqZuAwf-HYBuTDC1HJTrE1jHHGyP7Bh9JDVL-D2f_YMWuShsC-okUBr3tTthdip0WQyMMwMeTku960ZtuI9BpKl1MyMO-G7axpvnxArh65y1fs2OrqIM0Rct75dZ4XoPZSJTFRuVUm2h-Te-kivZe3KnesO1CX6X9W8FMaSp1lLH9Ch81KsnLZsK2kj8K9P6GnfpGzUo-8qD-RrifJTXNU1In-s9TMUpkire6B2HraWxciSWP2mB-kP_Bp5xCgj_mEalvrsqd3LlH7FLilifxl1-l9OJa0X" />
-    <script is:inline src="https://preview.gsa.gov/sites/gsa.gov/files/js/js_nVBZegdp8pGi54GoU-N2iBf1u-UGDivAPbPqygOIeBs.js?scope=footer&delta=1&language=en&theme=gsa&include=eJx9U1ty6yAM3RAxH3dBjIwVrAYMI8lu09UXQ-I6vdN-2Ojo_ZxAIcId2Y44w0aZxQgpUiqcN7QneqgfV93f5EbuopjsCIJmlfdJbPs_6InXAtH4CCL3rvSgE4pAQDE-M9olc4JIn2iCgJ2gOGXwN1pCYxSmRZGN5kLelWrn_CqaE32CUl7E0kLqxDMVbRYh5hHipXNqkFRsAoqar_TRQ_bUBvBKG14iLbez-2vONaDtj4s0MvDdhJxDRKcQbND0CiH8xAO8wYcpyBNhcppzdGPM_mafrO6WahP-UEpQZC_JRbyqW2CzZ9CVT55Ea0dEyT-bP3xzzFzfzLX5wLcLyIURpuab0l40phEn-wMbRg9F_Qxu-2fPoFkeDPuC2hBoKau6rQ52amMyBRgCQ5mP5L45w1q1x0gy15iFcSN8d43j7RPiPkO3z6rXbXR0CQMkXNa-XWeG6D3WjkxUs9qHbA_KvfWWXuva1Zz3HdiX6H9W01IYq58mrXVAh85LlXJei92HNgL_ekJP-Sp1ox517_RAfg9Rf4qLujbIH2v9NIUp0eIeqL2HrHkxMmdWv-ox9Ad-tTxslBH_EA3zfvbU8jK1XrFzTtgvo13KSMEVKmifxBe5VbPw" />
     <script is:inline type="text/javascript">
       var recaptcha_site_key = '6Ld9SegUAAAAAB-cac89z4iV1EzhN5va_TykKhAg';
-      </script>
+    </script>
+    <!-- <script async src="https://www.google.com/recaptcha/api.js?render=6Ld9SegUAAAAAB-cac89z4iV1EzhN5va_TykKhAg"></script> -->
+    <script is:inline type="text/javascript"  src="https://www.gstatic.com/recaptcha/releases/8k85QBI-qzxmenDv318AZH30/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-YaLdSXMqm9CEKTpOkSnpu5vAhzVfmtaskI7GboiAj0dVtvfpzmGU1XBINZ7hs6ET"></script>
+    <!-- <link rel="stylesheet" href="https://preview.gsa.gov/sites/gsa.gov/files/css/css_uobucBB5zpyklXCh05sSREJN8bD3FQVRstP1c2PimQ0.css?delta=0&language=en&theme=gsa&include=eJx9U1ty6yAM3RAxH3dBjIwVWw0YRpLdpqsvj8R1eqf9sNHRE-mICRQC3JHtiAvslFiMkCLFzGlHe5KH8nHx_c1u5C6K0Y4gaDZ5n8S2_0OeeMsQjA8gcu9ODzmiCMwoxidGuyaOEOgTzSxgJ8hOGfyN1rkpMtOqyEZTJu9yiXN-E02RPkEprWJpJXXimbK2iDmkEcKla0qRmG0ECpqu9NFL9qsN4JV2vARab-f015RKQdsPF2hk4LuZU5oDOoXZzhpfIcw_8QBv8GEy8kQYnaYU3BiSv9mnqqelMoQ_nCJkqS25gFd1K-z2DLrzKZNomYgo-efwh2-NWcqZuAwf-HYBuTDC1HJTrE1jHHGyP7Bh9JDVL-D2f_YMWuShsC-okUBr3tTthdip0WQyMMwMeTku960ZtuI9BpKl1MyMO-G7axpvnxArh65y1fs2OrqIM0Rct75dZ4XoPZSJTFRuVUm2h-Te-kivZe3KnesO1CX6X9W8FMaSp1lLH9Ch81KsnLZsK2kj8K9P6GnfpGzUo-8qD-RrifJTXNU1In-s9TMUpkire6B2HraWxciSWP2mB-kP_Bp5xCgj_mEalvrsqd3LlH7FLilifxl1-l9OJa0X" /> -->
+    <script is:inline src="https://preview.gsa.gov/sites/gsa.gov/files/js/js_TgjZymOLumwsZF23eCp1TzRQiqqV_u1bTIkHIqUv6nQ.js?scope=footer&delta=1&language=en&theme=gsa&include=eJx9U1ty6yAM3RAxH3dBjIwVrAYMI8lu09UXQ-I6vdN-2Ojo_ZxAIcId2Y44w0aZxQgpUiqcN7QneqgfV93f5EbuopjsCIJmlfdJbPs_6InXAtH4CCL3rvSgE4pAQDE-M9olc4JIn2iCgJ2gOGXwN1pCYxSmRZGN5kLelWrn_CqaE32CUl7E0kLqxDMVbRYh5hHipXNqkFRsAoqar_TRQ_bUBvBKG14iLbez-2vONaDtj4s0MvDdhJxDRKcQbND0CiH8xAO8wYcpyBNhcppzdGPM_mafrO6WahP-UEpQZC_JRbyqW2CzZ9CVT55Ea0dEyT-bP3xzzFzfzLX5wLcLyIURpuab0l40phEn-wMbRg9F_Qxu-2fPoFkeDPuC2hBoKau6rQ52amMyBRgCQ5mP5L45w1q1x0gy15iFcSN8d43j7RPiPkO3z6rXbXR0CQMkXNa-XWeG6D3WjkxUs9qHbA_KvfWWXuva1Zz3HdiX6H9W01IYq58mrXVAh85LlXJei92HNgL_ekJP-Sp1ox517_RAfg9Rf4qLujbIH2v9NIUp0eIeqL2HrHkxMmdWv-ox9Ad-tTxslBH_EA3zfvbU8jK1XrFzTtgvo13KSMEVKmifxBe5VbPw" />
+    
     <link rel="icon" type="image/png" sizes="32x32" href={`${import.meta.env.BASE_URL}images/favicon-32x32.png`}>
     <link rel="icon" type="image/png" sizes="16x16" href={`${import.meta.env.BASE_URL}images/favicon-16x16.png`}>
-
+    <script is:inline src={`${import.meta.env.BASE_URL}js/dpa-form.js`}></script>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
@@ -32,6 +34,10 @@ const { title, description, show_site_link, last_modified} = Astro.props;
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
   </head>
   <body>
+    <script is:inline src="https://preview.gsa.gov/sites/gsa.gov/files/js/js_GkFm3MdzU-aoqzBylR1YkBNgkAGOoyHuOsrNYtnL1u0.js?scope=footer&delta=8&language=en&theme=gsa&include=eJx9U1ty6yAM3RAxH3dBjIwVrAYMI8lu09UXQ-I6vdN-2Ojo_ZxAIcId2Y44w0aZxQgpUiqcN7QneqgfV93f5EbuopjsCIJmlfdJbPs_6InXAtH4CCL3rvSgE4pAQDE-M9olc4JIn2iCgJ2gOGXwN1pCYxSmRZGN5kLelWrn_CqaE32CUl7E0kLqxDMVbRYh5hHipXNqkFRsAoqar_TRQ_bUBvBKG14iLbez-2vONaDtj4s0MvDdhJxDRKcQbND0CiH8xAO8wYcpyBNhcppzdGPM_mafrO6WahP-UEpQZC_JRbyqW2CzZ9CVT55Ea0dEyT-bP3xzzFzfzLX5wLcLyIURpuab0l40phEn-wMbRg9F_Qxu-2fPoFkeDPuC2hBoKau6rQ52amMyBRgCQ5mP5L45w1q1x0gy15iFcSN8d43j7RPiPkO3z6rXbXR0CQMkXNa-XWeG6D3WjkxUs9qHbA_KvfWWXuva1Zz3HdiX6H9W01IYq58mrXVAh85LlXJei92HNgL_ekJP-Sp1ox517_RAfg9Rf4qLujbIH2v9NIUp0eIeqL2HrHkxMmdWv-ox9Ad-tTxslBH_EA3zfvbU8jK1XrFzTtgvo13KSMEVKmifxBe5VbPw" />
+    <script is:inline src="https://www.google.com/recaptcha/api.js?render=6Ld9SegUAAAAAB-cac89z4iV1EzhN5va_TykKhAg" defer="" async=""></script>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/dpa-form.js`}></script>
+
     <div class="usa-overlay"></div>
     <div id="app">
       <a class="usa-skipnav" href="#main-content">Skip to main content</a>

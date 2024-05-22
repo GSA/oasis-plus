@@ -39,7 +39,7 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
            ) 
           }
           <!--Sub menus for long page that needs in page navigation to H2 -->
-          {page.data.in_page_nav &&
+          {page.data.in_page_nav && headings.some(h => h.depth ==2) &&
             <ul class="usa-sidenav__sublist usa-sidenav__sublist_header">
               {id === page.id && headings
                 .filter(h => h.depth == 2)

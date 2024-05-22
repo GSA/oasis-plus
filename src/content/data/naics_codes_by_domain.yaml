@@ -1,300 +1,778 @@
 - name: Management & Advisory
   shortName: M&A
   icon: images/domain-icons/management.svg
+  scopeAreas:
+    - Acquisition & grants management support
+    - Business case development/analysis support
+    - Business consulting
+    - Business intelligence support
+    - Business process improvement
+    - Business process reengineering
+    - Change management
+    - Concept development & requirements analysis
+    - Configuration management
+    - Cost/schedule/performance analysis & improvement
+    - Cost estimation & analysis
+    - Cost/performance trade-off analysis & studies
+    - Decision analysis
+    - Earned value management (EVM) analysis
+    - Ebusiness support
+    - Executive-level administrative support
+    - Governance
+    - Horizontal analysis & protection activities
+    - Information analytics
+    - Integration of support systems
+    - Interface management
+    - Investigative services
+    - Knowledge based acquisition
+    - Knowledge management
+    - Leadership & organizational assessments
+    - Long range planning, futures, & forecasting
+    - Manpower estimating
+    - Policy analysis
+    - Project management, program management, integrated program management
+    - Program documentation
+    - Coordination with law/policy making entities
+    - Regulatory compliance support
+    - Requirements management
+    - Risk assessment, mitigation, & management
+    - Stakeholder requirements analysis
+    - Strategy development
+    - Strategic forecasting & planning
+    - Technical & analytical support
+    - Vulnerability assessment
   naics:
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
+      clin: MA-541611-XX
     - codeAndTitle: 541612 Human Resources Consulting Services
       sizeStandard: $29.0 Million
+      clin: MA-541612-XX
     - codeAndTitle: 541613 Marketing Consulting Services
       sizeStandard: $19.0 Million
+      clin: MA-541613-XX
     - codeAndTitle: 541614 Process, Physical Distribution, and Logistics Consulting Services
       sizeStandard: $20.0 Million
+      clin: MA-541614-XX
     - codeAndTitle: 541618 Other Management Consulting Services
       sizeStandard: $19.0 Million
+      clin: MA-541618-XX
     - codeAndTitle: 541620 Environmental Consulting Services
       sizeStandard: $19.0 Million
+      clin: MA-541620-XX
+    - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
+      sizeStandard: $19.0 Million
+      clin: MA-541690-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: MA-541990-XX
 
 - name: Technical & Engineering
   shortName: T&E
   icon: images/domain-icons/tech.svg
+  scopeAreas:
+    - Advanced technology pilot & trials
+    - Alternative energy sources & engineering
+    - Capabilities integration & development
+    - Communications engineering
+    - Configuration management
+    - Concept development
+    - Data analytics & management
+    - Design documentation & technical data
+    - Energy services to include management planning & strategies, audit services & metering
+    - Engineering (aeronautical, astronomical, chemical, civil, electrical, materials, mechanical, Etc.)
+    - Engineering process improvement
+    - Environmental engineering
+    - Human factors/usability engineering
+    - Human systems integration
+    - Independent verification & validation
+    - Integration support
+    - Interoperability
+    - Life cycle management
+    - Mission assurance
+    - Modeling & simulation
+    - Operational test & evaluation
+    - Optical engineering
+    - Program analysis
+    - Quality assurance
+    - Radar engineering
+    - Red teaming & wargaming
+    - Requirements analysis (technical)
+    - Operation & maintenance or direct support of an existing weapon system or major system
+    - Risk management
+    - Scientific (non-R&D) analysis & support
+    - Software development (for IT services involving 40 USC § 11103 (a) activities)
+    - Surveying and mapping (except Geophysical) services
+    - System design & integration
+    - System effectiveness & analysis
+    - System engineering
+    - System safety engineering
+    - System security & information assurance
+    - System verification & validation
+    - Technical assessment, data management, & planning
+    - Technical documentation
   naics:
     - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
+      clin: TE-336611-XX
     - codeAndTitle: 488190 Other Support Activities for Air Transportation
       sizeStandard: $40.0 Million
+      clin: TE-488190-XX
     - codeAndTitle: 488999 All Other Support Activities for Transportation
       sizeStandard: $25.0 Million
+      clin: TE-488999-XX
     - codeAndTitle: 541310 Architectural Services
       sizeStandard: $12.5 Million
+      clin: TE-541310-XX
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: TE-541330-XX
     - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
       sizeStandard: $47.0 Million
+      clin: TE-541330E1-XX
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
+      clin: TE-541330E2-XX
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
+      clin: TE-541330E3-XX
     - codeAndTitle: 541350 Building Inspection Services
       sizeStandard: $11.5 Million
+      clin: TE-541350-XX
     - codeAndTitle: 541360 Geophysical Surveying and Mapping Services
       sizeStandard: $28.5 Million
+      clin: TE-541360-XX
     - codeAndTitle: 541370 Surveying and Mapping (except Geophysical) Services
       sizeStandard: $19.0 Million
+      clin: TE-541370-XX
     - codeAndTitle: 541380 Testing Laboratories
       sizeStandard: $19.0 Million
+      clin: TE-541380-XX
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
+      clin: TE-541611-XX
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
+      clin: TE-541690-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: TE-541990-XX
     - codeAndTitle: 611512 Flight Training
       sizeStandard: $34.0 Million
-      
+      clin: TE-611512-XX      
 
 - name: Research & Development
   shortName: R&D
   icon: images/domain-icons/research.svg
+  scopeAreas:
+  - Cell & tissue culture & engineering
+  - Conceptual design & modification of product or process alternatives
+  - Design & specification development
+  - Conducting clinical tests to satisfy requirements prior to commercialization
+  - Decision support sciences
+  - Design & improvement of manufacturing or production technologies, processes, techniques
+  - Design, construction, & testing of preproduction prototypes & models
+  - Design, development & implementation of new reagents, testing methods or protocols
+  - Design of tools & materials involving new technology
+  - Development of new experimental therapeutic drugs, compounds, or molecules
+  - Development of tools, resources & procedures relating to advanced biologics, assays & testing
+  - Development of new methods for drug delivery
+  - 'DNA: genomics, gene probes, DNA sequencing, genetic engineering'
+  - Environmental science research
+  - Experimental development
+  - Laboratory & clinical research
+  - Life science research
+  - Mathematical science research
+  - Physical science research
+  - Biotechnology research & process development
+  - Product experimentation & modification
+  - Psychological science research
+  - R&D advanced training
+  - R&D of automated processes or robotics
+  - Protein/peptide sequencing & synthesis
+  - Research of new applications for existing products
+  - Software development or I.T. initiatives related to experimental product or process improvements
+  - Social science research
+  - Special studies & analysis
+  - Technical research consulting, development, and facilitation services
+  - Technology transfer/insertion, training & consulting
+  - Test & evaluation (non-routine) services
+  - Regulatory requirements compliance testing
+
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: RD-541330-XX
     - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
       sizeStandard: $47.0 Million
+      clin: RD-541330E1-XX
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
+      clin: RD-541330E2-XX
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
+      clin: RD-541330E3-XX
     - codeAndTitle: 541380 Testing Laboratories
       sizeStandard: $19.0 Million
+      clin: RD-541380-XX
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
+      clin: RD-541611-XX
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
+      clin: RD-541690-XX
     - codeAndTitle: 541713 Research and Technology in Nanotechnology
       sizeStandard: 1,000 employees
+      clin: RD-541713-XX
     - codeAndTitle: 541714 Research and Technology in Biotechnology (except Nanobiotechnology)
       sizeStandard: 1,000 employees
+      clin: RD-541714-XX
     - codeAndTitle: 541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
       sizeStandard: 1,000 employees
+      clin: RD-541715-XX
     - codeAndTitle: 541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts
       sizeStandard: 1,500 employees
+      clin: RD-541715E1-XX
     - codeAndTitle: 541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment
       sizeStandard: 1,250 employees
+      clin: RD-541715E2-XX
     - codeAndTitle: 541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts
       sizeStandard: 1,300 employees
+      clin: RD-541715E3-XX
     - codeAndTitle: 541720 Research and Development in the Social Sciences and Humanities
       sizeStandard: $28.0 Million
+      clin: RD-541720-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: RD-541990-XX
     - codeAndTitle: 621511 Medical Laboratories
       sizeStandard: $41.5 Million
+      clin: RD-621511-XX
 
 - name: Intelligence Services
   shortName: INTEL
   icon: images/domain-icons/intelligence.svg
+  scopeAreas:
+    - Assured positioning, navigation & timing capabilities support
+    - Prototyping, integrating & testing
+    - Command, power & integration support
+    - Counter-IED & minefield detection & neutralization
+    - Counterintelligence (CI)
+    - Cyberspace operational support
+    - Cyber & tactical network science
+    - Detection & neutralization of explosive hazards
+    - Electro-optical/infrared surveillance
+    - Electronic countermeasures
+    - Information superiority support
+    - Electromagnetic spectrum operations
+    - Field & enterprise intelligence support
+    - Geospatial intelligence (GEOINT)
+    - Human intelligence (HUMINT)
+    - Imagery intelligence (IMINT)
+    - Integrated power support services
+    - Intelligence, information and electronic warfare
+    - Intelligence production, collection, analysis, exploitation & dissemination
+    - Intelligence, surveillance, reconnaissance, & targeting (ISRT) development & support
+    - Intelligence analysis
+    - Intelligence archiving
+    - Intelligence cataloging
+    - Intelligence retrieval
+    - Intelligence management
+    - Measurement and signature intelligence (MASINT)
+    - Mission command, planning & application
+    - Network visualization
+    - Night vision, electronic, & optical surveillance
+    - Offensive & defensive cyber operations
+    - Open source intelligence (OSINT)
+    - Power/energy generation & management
+    - Product realization engineering
+    - Secure correspondence management
+    - Signals intelligence (SIGINT)
+    - Software development (for IT services involving 40 USC § 11103 (a) activities)
+    - Standardized software framework implementation
+    - Space & terrestrial communications
+    - Specialized functional training
+    - Tactical & strategic network support
+    - Tactical cyberspace operations
+    - Technical Intelligence (TECHINT)
+    - Threat modeling & simulation
+    - Unmanned systems
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: INT-541330-XX
     - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
       sizeStandard: $47.0 Million
+      clin: INT-541330E1-XX
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
+      clin: INT-541330E2-XX
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
+      clin: INT-541330E3-XX
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
+      clin: INT-541611-XX
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
+      clin: INT-541614-XX
     - codeAndTitle: 541618 Other Management Consulting Services
       sizeStandard: $19.0 Million
+      clin: INT-541618-XX
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
+      clin: INT-541690-XX
     - codeAndTitle: 541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
       sizeStandard: 1,000 employees
+      clin: INT-541715-XX
     - codeAndTitle: 541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts
       sizeStandard: 1,500 employees
+      clin: INT-541715E1-XX
     - codeAndTitle: 541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment
       sizeStandard: 1,250 employees
+      clin: INT-541715E2-XX
     - codeAndTitle: 541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts
       sizeStandard: 1,300 employees
+      clin: INT-541715E3-XX
     - codeAndTitle: 541720 Research and Development in the Social Sciences and Humanities
       sizeStandard: $28.0 Million
+      clin: INT-541720-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: INT-541990-XX
     - codeAndTitle: 561499 All Other Business Support Services
       sizeStandard: $21.5 Million
+      clin: INT-561499-XX
     - codeAndTitle: 561611 Investigation Services
       sizeStandard: $25.0 Million
+      clin: INT-561611-XX
 
 - name: Environmental
   shortName: ENV
   icon: images/domain-icons/sustainability.svg
+  scopeAreas:
+    - Air monitoring
+    - Air toxicology, criteria pollutants & greenhouse gas (GHG) emissions strategy & analyses
+    - Archeological/cultural resource management plans
+    - Archaeological site consulting & preservation
+    - Biomass & biofuel energy strategy & analyses
+    - Carbon capture, utilization & storage
+    - Cleanup and assessment of emerging contaminants (PFAS)
+    - Climate change studies, planning, policy analysis, & mitigation strategies
+    - Consulting on endangered species, wetland & watershed protection
+    - Crop & tree migration
+    - Cultural resource geographic information services
+    - Emissions reduction strategy & analyses (locomotives, marine vessels, aircraft, etc.)
+    - Environmental consulting
+    - Environmental education
+    - Environmental emergency response
+    - Environmental engineering
+    - Environmental information management
+    - Environmental impact assessment
+    - Environmental justice & equity
+    - Environmental management & monitoring
+    - Environmental remediation
+    - Environmental risk assessment
+    - Environmental, social, & governance (ESG) data & reporting
+    - Environmental toxicology
+    - Forest land fire management planning
+    - Geographical information systems (GIS) support
+    - Hazardous material management, planning, disposal & remediation
+    - Human migration due to climate change
+    - Laboratory (environmental) testing
+    - Land use planning
+    - Mapping, cartography & integrated mapping from various data sources
+    - Migration pattern analysis
+    - Munitions / unexploded ordnance cleanup
+    - Natural resource management & planning
+    - Pollutant contamination planning, assessment & mitigation
+    - Reclamation services
+    - Regulatory development and compliance
+    - Remote sensing for environmental studies
+    - Terrestrial, marine, atmospheric measuring & management
+    - Thermal mapping
+    - Sea-level rise analysis & response
+    - Sediment management
+    - Storage tank (above & below ground) removal
+    - Stormwater management
+    - Sustainability & decarbonization strategy & reporting
+    - Vegetation & topography mapping
+    - Vehicle fleet electrification support
+    - Water and/or wastewater and/or groundwater monitoring
+    - Water and/or wastewater infrastructure
+    - Water conservation and/or pollution prevention
+    - Watershed characterization & assessment
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: ENV-541330-XX
     - codeAndTitle: 541360 Geophysical Surveying and Mapping Services
       sizeStandard: $28.5 Million
+      clin: ENV-541360-XX
     - codeAndTitle: 541380 Testing Laboratories
       sizeStandard: $19.0 Million
+      clin: ENV-541380-XX
     - codeAndTitle: 541620 Environmental Consulting Services
       sizeStandard: $19.0 Million
+      clin: ENV-541620-XX
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
+      clin: ENV-541690-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: ENV-541990-XX
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
+      clin: ENV-561210-XX
     - codeAndTitle: 562112 Hazardous Waste Collection
       sizeStandard: $47.0 Million
+      clin: ENV-562112-XX
     - codeAndTitle: 562211 Hazardous Waste Treatment and Disposal
       sizeStandard: $47.0 Million
+      clin: ENV-562211-XX
     - codeAndTitle: 562910 Remediation Services
       sizeStandard: $25.0 Million
+      clin: ENV-562910-XX
     - codeAndTitle: 562910 (Exception) Environmental Remediation Services
       sizeStandard: 1,000 employees
+      clin: ENV-562910E-XX
 
 - name: Facilities
   shortName: FAC
   icon: images/domain-icons/facilities.svg
+  scopeAreas:
+    - Airfield lighting services
+    - Airport security services & surveillance
+    - Alarm and security system maintenance
+    - Architectural & framework building maintenance services
+    - Base operation support services
+    - Building inspection services (including OSHA)
+    - Building management services
+    - Cathodic protection & corrosion control
+    - Cemetery maintenance
+    - Civil engineering services
+    - Commissioning services
+    - Communication services - general
+    - Communication services - telecommunications
+    - Community center management
+    - Conference center support
+    - Custodial services
+    - Electrical services (electrical maintenance)
+    - Elevator services (elevator maintenance)
+    - Elevator inspection services
+    - Emergency management services
+    - Energy management control systems (EMCS)
+    - Energy and water conservation management and reporting
+    - Engineering management services
+    - Engineering to support installation of facility resource & optimization (R&O) decisions to distribute limited & scarce future funding
+    - Engineering to support construction cost estimates
+    - Engineering services to provide general management over current & future maintenance
+    - Environmental compliance & conservation
+    - Environmental pollution prevention
+    - Equipment and electronics maintenance
+    - Facility & installation maintenance services
+    - Fire alarm/fire suppression (fire suppression system preventative maintenance & repair)
+    - Fire alarm system maintenance & repair
+    - Fire protection and emergency services
+    - Fitness / Sport Center Management
+    - Force protection assets & entry control points
+    - Fuels management
+    - Grounds maintenance
+    - HVAC services (HVAC maintenance)
+    - Infrastructure planning
+    - Insect & pest control
+    - Integrated waste management services
+    - Janitorial services
+    - Landscaping/grounds maintenance
+    - Locksmiths
+    - Logistics planning
+    - Ground transportation services
+    - Installation deployment readiness center (IDRC)
+    - Mailroom services
+    - Maintenance of fuel distribution & grounding systems
+    - Material management
+    - Operations & maintenance (O/M) of facilities
+    - O/M of aerospace facilities & equipment
+    - O/M of airfields
+    - O/M of electrical distribution & HVAC systems
+    - O/M engineering
+    - O/M of fresh water system
+    - O/M of historic facilities
+    - O/M of utility & sanitation systems
+    - Plumbing & pipefitting services
+    - Pollution prevention & remediation programs.
+    - Real property management
+    - Refuse collection and disposal
+    - Renewable energy systems
+    - Repair & restoration projects
+    - Roofing services
+    - Security forces services
+    - Sensitive Compartmented Information Facilities (SCIF)
+    - Septic services
+    - Snow removal
+    - Street sweeping & maintenance
+    - Traffic management
+    - Vehicle management
+    - Water distribution
+    - Water tanks
+    - Waste management & recycling services
   naics:
     - codeAndTitle: 238160 Roofing Contractors
       sizeStandard: $19.0 Million
+      clin: FAC-238160-XX
     - codeAndTitle: 238210 Electrical Contractors and Other Wiring Installation Contractors
       sizeStandard: $19.0 Million
-    - codeAndTitle: 238220 Plumbing, Heating and Air Conditioning Contractors
+      clin: FAC-238210-XX
+    - codeAndTitle: 238220 Plumbing, Heating, and Air Conditioning Contractors
       sizeStandard: $19.0 Million
+      clin: FAC-238220-XX
     - codeAndTitle: 238290 Other Building Equipment Contractors
       sizeStandard: $22.0 Million
+      clin: FAC-238290-XX
     - codeAndTitle: 238320 Painting and Wall Covering Contractors
       sizeStandard: $19.0 Million
+      clin: FAC-238320-XX
     - codeAndTitle: 238990 All Other Specialty Trade Contractors
       sizeStandard: $19.0 Million
+      clin: FAC-238990-XX
     - codeAndTitle: 485999 All Other Transit and Ground Passenger transportation
       sizeStandard: $19.0 Million
+      clin: FAC-485999-XX
     - codeAndTitle: 488190 Other Support Activities for Air Transportation
       sizeStandard: $40.0 Million
+      clin: FAC-488190-XX
     - codeAndTitle: 488490 Other Support Activities for Road Transportation
       sizeStandard: $18.0 Million
+      clin: FAC-488490-XX
+    - codeAndTitle: 488999 All Other Support Activities for Transportation
+      sizeStandard: $25.0 Million
+      clin: FAC-488999-XX
     - codeAndTitle: 531311 Residential Property Managers
       sizeStandard: $12.5 Million
+      clin: FAC-531311-XX
     - codeAndTitle: 531312 Nonresidential Property Managers
       sizeStandard: $19.5 Million
+      clin: FAC-531312-XX
     - codeAndTitle: 541320 Landscape Architectural Services
       sizeStandard: $9.0 Million
+      clin: FAC-541320-XX
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: FAC-541330-XX
     - codeAndTitle: 541350 Building Inspection Services
       sizeStandard: $11.5 Million
+      clin: FAC-541350-XX
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
+      clin: FAC-541611-XX
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
+      clin: FAC-541614-XX
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
+      clin: FAC-541690-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: FAC-541990-XX
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
+      clin: FAC-561210-XX
     - codeAndTitle: 561621 Security Systems Services (except Locksmiths)
       sizeStandard: $25.0 Million
+      clin: FAC-561621-XX
     - codeAndTitle: 561710 Exterminating and Pest Control Services
       sizeStandard: $17.5 Million
+      clin: FAC-561710-XX
     - codeAndTitle: 561720 Janitorial Services
       sizeStandard: $22.0 Million
+      clin: FAC-561720-XX
     - codeAndTitle: 561730 Landscaping Services
       sizeStandard: $9.5 Million
-    - codeAndTitle: 561730 Landscaping Services
-      sizeStandard: $9.5 Million
+      clin: FAC-561730-XX
     - codeAndTitle: 561990 All Other Support Services
       sizeStandard: $16.5 Million
+      clin: FAC-561990-XX
     - codeAndTitle: 562111 Solid Waste Collection
       sizeStandard: $47.0 Million
+      clin: FAC-562111-XX
     - codeAndTitle: 562112 Hazardous Waste Collection
       sizeStandard: $47.0 Million
+      clin: FAC-562112-XX
     - codeAndTitle: 562211 Hazardous Waste Treatment and Disposal
       sizeStandard: $47.0 Million
+      clin: FAC-562211-XX
     - codeAndTitle: 811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance
       sizeStandard: $12.5 Million
+      clin: FAC-811310-XX
 
 - name: Logistics
   shortName: LOG
   icon: images/domain-icons/logistics.svg
+  scopeAreas:
+    - Analysis & recommendation of support equipment
+    - Cold chain medical supply services
+    - Deployment logistics
+    - Disaster management/contingency operations
+    - Distribution & transportation
+    - Food & perishable goods supply services
+    - Industrial relocation/expansion services
+    - Infrastructure services (including transportation & delivery)
+    - Integrated Product Support (IPS) technical requirement creation
+    - Integrating public & private resources
+    - IPS system design, risk assessment, schedules creation & performance tracking
+    - Inventory management
+    - Life cycle sustainment
+    - Logistical studies & evaluation
+    - Analysis & recommendation of support equipment
+    - Cold chain medical supply services
+    - Deployment logistics
+    - Disaster management/contingency operations
+    - Distribution & transportation
+    - Food & perishable goods supply services
+    - Industrial relocation/expansion services
+    - Infrastructure services (including transportation & delivery)
+    - Integrated Product Support (IPS) technical requirement creation
+    - Integrating public & private resources
+    - IPS system design, risk assessment, schedules creation & performance tracking
+    - Inventory management
+    - Life cycle sustainment
+    - Logistical studies & evaluation
+    - Logistics design
+    - Logistics management & support services
+    - Logistics operations support & maintenance
+    - Logistics optimization
+    - Logistics services
+    - Logistics training services
+    - Rapid deployment of supplies & equipment through communication & logistics systems
+    - Repair & alteration
+    - Resource sourcing - global, regional, local, etc.
+    - Specialized cargo management
+    - Supply chain management & provisioning
+    - Supportability analysis & implementation
+    - Technology & industrial base
+    - Test range support
+    - Value chain management
   naics:
     - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
+      clin: LOG-336611-XX
     - codeAndTitle: 481211 Nonscheduled Chartered Passenger Air Transportation
       sizeStandard: 1,500 employees
+      clin: LOG-481211-XX
     - codeAndTitle: 485991 Special Needs Transportation
       sizeStandard: $19.0 Million
+      clin: LOG-485991-XX
     - codeAndTitle: 485999 All Other Transit and Ground Passenger Transportation
       sizeStandard: $19.0 Million
+      clin: LOG-485999-XX
     - codeAndTitle: 488111 Air Traffic Control
       sizeStandard: $40.0 Million
+      clin: LOG-488111-XX
     - codeAndTitle: 488190 Other Support Activities for Air Transportation
       sizeStandard: $40.0 Million
+      clin: LOG-488190-XX
     - codeAndTitle: 488999 All Other Support Activities for Transportation
       sizeStandard: $25.0 Million
+      clin: LOG-488999-XX
     - codeAndTitle: 492110 Couriers and Express Delivery Services
       sizeStandard: 1,500 employees
+      clin: LOG-492110-XX
     - codeAndTitle: 493110 General Warehousing and Storage
       sizeStandard: $34.0 Million
+      clin: LOG-493110-XX
     - codeAndTitle: 493120 Refrigerated Warehousing and Storage
       sizeStandard: $36.5 Million
+      clin: LOG-493120-XX
     - codeAndTitle: 493190 Other Warehousing and Storage
       sizeStandard: $36.5 Million
+      clin: LOG-493190-XX
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: LOG-541330-XX
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
+      clin: LOG-541614-XX
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
+      clin: LOG-541690-XX
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: LOG-541990-XX
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
+      clin: LOG-561210-XX
     - codeAndTitle: 811114 Specialized Automotive Repair
       sizeStandard: $9.0 Million
+      clin: LOG-811114-XX
     - codeAndTitle: 811121 Automotive Body, Paint and Interior Repair and Maintenance
       sizeStandard: $9.0 Million
+      clin: LOG-811121-XX
     - codeAndTitle: 811198 All Other Automotive Repair and Maintenance
       sizeStandard: $10.0 Million
+      clin: LOG-811198-XX
+
 
 - name: Enterprise Solutions (UR Only)
   shortName: ENT
   icon: images/domain-icons/enterprise.svg
+  description: "This Domain is for the procurement of highly technical, new and emerging and/or specialized mission objectives that require special management attention, and oversight because of the importance to the agency mission; high-level development, operating, or maintenance costs; high risk; high return; or their significant role in the administration of agency-wide programs, systems, finances, property, or other resources. This Domain also includes non-IT services in support of national security systems in accordance with 40 USC § 11103(a).<p>The Enterprise Solutions Domain is focused on requirements that are large-dollar, wide-reaching (e.g., across one organization, agency or multiple organizations and/or agencies) and highly complex in scope. By design, this Domain shares overlapping NAICS with other Domains within OASIS+. This Domain includes contractors who are able to manage vast projects with the potential of (but not limited to) the following highly specialized project requirements:</p>"
+  scopeAreas:
+    - Multi-layered subcontracting teams
+    - High touch/high accountability in the areas of contractor acquired or contractor managed government Property
+    - Vast accounting system, estimating system, and invoicing demands
+    - Stringent quality control and government quality assurance oversight and accountability
+    - Geographically dispersed project offices (on the government site, or the contractor site)
+    - Requirements for extensive upfront capital to launch, transition into, and/or sustain for long periods of time due to the high-capital-demand value to launch and sustain business operations in support of an agency mission requirement(s).
+    - The minimum order threshold for future task orders issued through this Domain is $250 Million total estimated value (including the base and all option periods).
   naics:
     - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
+      clin: ENT-336611-UR
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
+      clin: ENT-541330-UR
+    - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
+      sizeStandard: $47.0 Million
+      clin: ENT-541330E1-UR
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
+      clin: ENT-541330E2-UR
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
+      clin: ENT-541330E3-UR
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
+      clin: ENT-541611-UR
     - codeAndTitle: 541614 Process, Physical Distribution, and Logistics Consulting Services
       sizeStandard: $20.0 Million
+      clin: ENT-541614-UR
     - codeAndTitle: 541620 Environmental Consulting Services
       sizeStandard: $19.0 Million
+      clin: ENT-541620-UR
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-    - codeAndTitle: 41715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
+      clin: ENT-541690-UR
+    - codeAndTitle: 541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
       sizeStandard: 1,000 employees
+      clin: ENT-541715-UR
     - codeAndTitle: 541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts
       sizeStandard: 1,500 employees
+      clin: ENT-541715E1-UR
     - codeAndTitle: 541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment
       sizeStandard: 1,250 employees
+      clin: ENT-541715E2-UR
     - codeAndTitle: 541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts
       sizeStandard: 1,300 employees
+      clin: ENT-541715E3-UR
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
+      clin: ENT-541990-UR
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
+      clin: ENT-561210-UR
     - codeAndTitle: 562910 Remediation Services
       sizeStandard: $25.0 Million
+      clin: ENT-562910-UR
     - codeAndTitle: 562910 (Exception) Environmental Remediation Services
       sizeStandard: 1,000 employees
+      clin: ENT-562910E-UR

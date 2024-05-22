@@ -1,20 +1,25 @@
 ---
 import { getEntry } from 'astro:content';
 import { slug } from 'github-slugger';
-
+const {shortName} = Astro.props;
 const domains = await getEntry('data', 'naics_codes_by_domain');
 ---
 <div style="overflow-x: scroll;">
 
 {
-  domains.data.map(domain => (
+  domains.data.filter(domain => domain.shortName == shortName).map(domain => (
     <h2 id={ slug(domain.name) }><img src={`${import.meta.env.BASE_URL}${domain.icon}`} aria-hidden="true" alt="" />{ domain.name } ({ domain.shortName })</h2>
-
-    <table class="usa-table usa-table--borderless margin-x-neg-1 tablet:margin-x-0 width-full">
+    <slot />
+    <ul>
+      {domain.scopeAreas && domain.scopeAreas.map(area => (<li>{area}</li>))}
+    </ul>
+    <table class="usa-table  margin-x-neg-1 tablet:margin-x-0 width-full">
       <thead>
         <tr>
-          <th>Domain</th>
-          <th>NAICS code and title</th>
+          <th class="text-no-wrap">CLIN <br/>
+            <span class="text-light">XX = UR, SB, 8A, VO, WO, HZ</span>
+          </th>
+          <th>{domain.name} NAICS code & title</th>
           <th>Size standard</th>
         </tr>
       </thead>
@@ -22,7 +27,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
         {
           domain.naics.map(naics => (
             <tr>
-              <td>{ domain.shortName }</td>
+              <td class="text-no-wrap">{ naics.clin }</td>
               <td>{ naics.codeAndTitle }</td>
               <td>{ naics.sizeStandard }</td>
             </tr>
@@ -41,8 +46,14 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
   h2 img {
     margin-right: .5em;
   }
-  td th{
-    padding: .5rem .5rem !important;
+  td, th{
+    padding: .75rem .75rem !important;
+  }
+  th {
+    vertical-align: bottom;
+  }
+  th span {
+    font-size: 10px;
   }
   @media screen and (max-width: 768px) {
     td {

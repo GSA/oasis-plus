@@ -6,7 +6,7 @@ import process_anchors from "./src/plugins/process_anchors";
 import process_image_urls from './src/plugins/process_image_urls';
 import table_row_headers from './src/plugins/table_row_headers';
 import { remarkModifiedTime } from './src/plugins/remark-modified-time.mjs';
-import generateRedirects from './src/config/redirects'
+import generateRedirects from './src/config/redirects';
 
 const base = process.env.BASEURL ? process.env.BASEURL + '/oasis-plus' : '/oasis-plus'
 // https://astro.build/config

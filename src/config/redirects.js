@@ -5,7 +5,7 @@
 import path from "path"
 
 const redirects = {
-  "/oasis-plus/ordering-guide/": "/oasis-plus/buyers-guide/printable/",
+  "/ordering-guide/": "/oasis-plus/buyers-guide/printable/",
   
 }
 

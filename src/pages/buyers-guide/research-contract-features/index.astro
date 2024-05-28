@@ -3,7 +3,7 @@
     This creates an auto-generated table of contents
     for the "research contract features" page. 
     This other pages in this section will be rendered
-    by the regulat [...slug].astro file in the parent directory.
+    by the regular [...slug].astro file in the parent directory.
 */
 import {getCollection} from 'astro:content';
 import PageLayout from '@layouts/PageLayout.astro';
@@ -51,9 +51,9 @@ const rendered_posts = await Promise.all(guide_posts.map(async item =>  {
       >
         <Content />
         {rendered_posts.slice(1).map(post => (
-            <h2><a href={`/oasis-plus/buyers-guide/${post.parent.slug}/`} class='usa-link'>{post.category}</a></h2>
+            <h2><a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/`} class='usa-link'>{post.category}</a></h2>
             <ul>
-            {post.headings.map(h => <li><a href={`/oasis-plus/buyers-guide/${post.parent.slug}/#${h.slug}`} class='usa-link'>{h.text}</li></a>)}
+            {post.headings.map(h => <li><a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/#${h.slug}`} class='usa-link'>{h.text}</li></a>)}
             </ul>
             )
         )}

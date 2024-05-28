@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         action: 'submit'
       }).then(function(token) {
         if (token.length > 0) {
+          console.log("token: ", token)
           document.getElementById('g-token').value = token;
         }
       });

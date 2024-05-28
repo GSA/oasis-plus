@@ -12,7 +12,7 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
 
   <nav class="sticky_site_nav" aria-label="Secondary navigation">
     <ul class="usa-sidenav">
-      {pages.map(page => (
+      {pages.filter(page => !page.data.is_child).map(page => (
         <li class="usa-sidenav__item">
           <!--single menu or parent menu -->
           {!page.data.is_child &&

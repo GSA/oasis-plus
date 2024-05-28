@@ -1,6 +1,7 @@
 - name: Management & Advisory
   shortName: M&A
   icon: images/domain-icons/management.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
     - Acquisition & grants management support
     - Business case development/analysis support
@@ -70,6 +71,7 @@
 - name: Technical & Engineering
   shortName: T&E
   icon: images/domain-icons/tech.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
     - Advanced technology pilot & trials
     - Alternative energy sources & engineering
@@ -164,6 +166,7 @@
 - name: Research & Development
   shortName: R&D
   icon: images/domain-icons/research.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
   - Cell & tissue culture & engineering
   - Conceptual design & modification of product or process alternatives
@@ -252,6 +255,7 @@
 - name: Intelligence Services
   shortName: INTEL
   icon: images/domain-icons/intelligence.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
     - Assured positioning, navigation & timing capabilities support
     - Prototyping, integrating & testing
@@ -350,6 +354,7 @@
 - name: Environmental
   shortName: ENV
   icon: images/domain-icons/sustainability.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
     - Air monitoring
     - Air toxicology, criteria pollutants & greenhouse gas (GHG) emissions strategy & analyses
@@ -440,6 +445,7 @@
 - name: Facilities
   shortName: FAC
   icon: images/domain-icons/facilities.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
     - Airfield lighting services
     - Airport security services & surveillance
@@ -608,6 +614,7 @@
 - name: Logistics
   shortName: LOG
   icon: images/domain-icons/logistics.svg
+  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
     - Analysis & recommendation of support equipment
     - Cold chain medical supply services

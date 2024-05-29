@@ -68,17 +68,19 @@ const rendered_posts = await Promise.all(guide_posts.map(async item =>  {
         {rendered_posts.slice(1).map(post => (
             <h2><a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/`} class='usa-link'>{post.category}</a></h2>
             <ul>
-            {post.headings.map(h => 
+            {post.headings.map(h => (
                 <li>
                     <a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/#${h.slug}`} class='usa-link'>{h.text}</a>
-                    {h.children.length > 0 && <ul>{h.children.map(c => 
-                    <li>
-                        <a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/#${c.slug}`} class='usa-link'>{c.text}</a>
-                    </li>)}</ul>}
+                    {h.children.length > 0 && (
+                        <ul>
+                            {h.children.map(c => 
+                                <li>
+                                    <a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/#${c.slug}`} class='usa-link'>{c.text}</a>
+                                </li>
+                            )}
+                        </ul>)}
                 </li>
-            )
-            }
-
+            ))}
             </ul>
             )
         )}

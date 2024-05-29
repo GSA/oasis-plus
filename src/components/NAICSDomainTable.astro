@@ -5,15 +5,16 @@ const {shortName} = Astro.props;
 const domains = await getEntry('data', 'naics_codes_by_domain');
 ---
 <div style="overflow-x: scroll;">
-
 {
   domains.data.filter(domain => domain.shortName == shortName).map(domain => (
-    <h2 id={ slug(domain.name) }><img src={`${import.meta.env.BASE_URL}${domain.icon}`} aria-hidden="true" alt="" />{ domain.name } ({ domain.shortName })</h2>
+    <h2 id={ slug(domain.name) }>
+      <img src={`${import.meta.env.BASE_URL}${domain.icon}`} aria-hidden="true" alt="" />{ domain.name } ({ domain.shortName })
+    </h2>
     <slot />
     <ul>
       {domain.scopeAreas && domain.scopeAreas.map(area => (<li>{area}</li>))}
     </ul>
-    <h3>{domain.shortName} NAICS codes</h3>
+    <h3 id={ slug(domain.shortName) }>{domain.shortName} NAICS codes</h3>
     <>
     {domain.clinKey && (<p>CLIN key: {domain.clinKey}</p>)}
     </>
@@ -22,7 +23,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
         <tr>
           <th class="text-no-wrap">CLIN</th>
           <th>NAICS code and title</th>
-          <th class="text-no-wrap"></thclass>Size standard</th>
+          <th class="text-no-wrap">Size standard</th>
         </tr>
       </thead>
       <tbody>

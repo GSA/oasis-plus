@@ -29,7 +29,7 @@ const rendered_posts = await Promise.all(guide_posts.map(async item =>  {
     return {
         parent: item,
         category: rendered.remarkPluginFrontmatter.title,
-        headings: rendered.headings.filter(h => h.depth == 2),
+        headings: rendered.headings.filter(h => h.depth == 2 || h.depth == 3),
         slug: rendered.slug,
         text: rendered.text
     }

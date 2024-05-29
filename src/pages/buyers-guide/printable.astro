@@ -1,6 +1,5 @@
 ---
 import {getCollection} from 'astro:content';
-import PageContentLayout from '@layouts/PageContentLayout.astro';
 import PageLayout from '@layouts/PageLayout.astro'
 import oasisLogo from '@assets/images/logo-ordering-guide.png';
 import PageContentLayoutWideScreen from '@layouts/PageContentLayoutWideScreen.astro';
@@ -14,8 +13,11 @@ const about_content_components = about_pages.map(async entry => (
 ))
 const about_entries = await Promise.all(about_content_components)
 
-// get buyer's guide section pages that for print
+//  below is used to build the link for table of content section 
+const toc_about_parent_title = about_entries.filter(h => h.slug == './')[0].data.title;
+const toc_about = about_entries.filter(h => h.slug != './');
 
+// get buyer's guide section pages that for print
 let buyers_pages = await getCollection('buyers-guide');
 buyers_pages = buyers_pages.filter(h => h.slug != './');
 buyers_pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
@@ -25,6 +27,14 @@ const buyers_content_components = buyers_pages.map(async entry => (
 ))
 const buyers_entries = await Promise.all(buyers_content_components)
 const page_title="OASIS+ buyers' ordering guide (printable)"
+
+// below is used for buyers TOC part
+let toc_research_pages= buyers_pages.filter(h =>h.slug.startsWith('research-contract-features'));
+const toc_research_parent_title = toc_research_pages[0].data.title
+const toc_research_child_pages = toc_research_pages.filter(h=>h.slug !='research-contract-features')
+
+// the rest TOC section of buyers (exclude research_contract_features)
+const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('research-contract-features'));
 
 ---
 
@@ -58,16 +68,40 @@ const page_title="OASIS+ buyers' ordering guide (printable)"
             </span>
           </button>
       </div>
+      <div>
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href={`#${toc_about_parent_title.replace(/\s+/g, '-')}`}>{toc_about_parent_title}</a>
+            <ul>
+              {toc_about.map(item => (  
+                <li><a  href={`#${item.data.title.replace(/\s+/g, '-')}`}>{item.data.title}</a></li>
+              ))}
+            </ul>
+          </li>
+          <li><a href={`#${toc_research_parent_title.replace(/\s+/g, '-')}`}>{toc_research_parent_title}</a>
+            {toc_research_child_pages.length >0 &&
+            <ul>
+              {toc_research_child_pages.map(item => (  
+                <li><a  href={`#${item.data.title.replace(/\s+/g, '-')}`}>{item.data.title}</a></li>
+              ))}
+            </ul>
+            }
+          </li>
+          {toc_buyers_other_pages.map(item => (  
+            <li><a  href={`#${item.data.title.replace(/\s+/g, '-')}`}>{item.data.title}</a></li>
+          ))}
+        </ul>
+      </div>
       {about_entries.map(item => (  
         <div class="usa-prose" style="page-break-after: auto;">
-          <h1 class="page_title">{item.data.title}</h1> 
+          <h1 class="page_title" id={item.data.title.replace(/\s+/g, '-')}>{item.data.title}</h1> 
           <item.Content />
         </div>
       ))}
 
       {buyers_entries.map(item => (  
             <div class="usa-prose" style="page-break-after: auto;">
-              <h1 class="page_title">{item.data.title}</h1> 
+              <h1 class="page_title" id={item.data.title.replace(/\s+/g, '-')}>{item.data.title}</h1> 
               <item.Content />
             </div>
       ))}
@@ -90,6 +124,18 @@ const page_title="OASIS+ buyers' ordering guide (printable)"
     .page_title{
       
       padding-top: 1em;
+    }
+
+
+    h4 {
+    display: flex;
+    align-items: center; 
+    }
+    h4 img {
+      margin-right: .5em;
+    }
+    h3 img {
+      margin-right: .5em;
     }
 
     @media print {

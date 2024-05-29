@@ -2,7 +2,7 @@ export function increaseHeadingLevels(){
     const headings = document.querySelectorAll('h1, h2, h3, h4,h5');
     headings.forEach(heading =>{
     
-        if(heading.innerHTML !="OASIS+ buyers' ordering guide (printable)" && heading.innerHTML !="Table of Content")
+        if(heading.innerHTML !="OASIS+ buyers' ordering guide (printable)" && heading.innerHTML !="Table of Contents")
         {
             const currentTagName = heading.tagName;
             const currentLevel = parseInt(currentTagName.substring(1))

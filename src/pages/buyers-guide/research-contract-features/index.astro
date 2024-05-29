@@ -9,7 +9,6 @@ import {getCollection} from 'astro:content';
 import PageLayout from '@layouts/PageLayout.astro';
 import PageContentLayout from '@layouts/PageContentLayout.astro';
 import SideNav from '@components/SideNav.astro'
-import { Picture } from 'astro:assets';
 
 // We need all the buyers guide posts for the side nav
 const buyers_guide_posts = await getCollection('buyers-guide')
@@ -21,7 +20,7 @@ guide_posts.sort((a,b) => parseInt(a.data.order) - parseInt(b.data.order));
 // The index page to get the content from markdown 
 // so text content of intro paragraph can still be edited in content folder
 const entry = guide_posts[0]
-const { Content, headings, remarkPluginFrontmatter:{last_modified}} = await guide_posts[0].render();
+const { Content, remarkPluginFrontmatter:{last_modified}} = await guide_posts[0].render();
 
 // Get headings of subpages by rendering content
 // Nest h3 headings as children of h2 to support indented TOC

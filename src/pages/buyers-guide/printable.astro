@@ -27,7 +27,7 @@ const buyers_content_components = buyers_pages.map(async entry => (
   {...entry, Content: (await entry.render()).Content}
 ))
 const buyers_entries = await Promise.all(buyers_content_components)
-const page_title="OASIS+ buyers' ordering guide (printable)"
+const page_title="OASIS+ buyers’ ordering guide (printable)"
 
 // below is used for buyers TOC part
 let toc_research_pages= buyers_pages.filter(h =>h.slug.startsWith('research-contract-features'));

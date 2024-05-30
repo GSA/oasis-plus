@@ -4,7 +4,7 @@ import { slug } from 'github-slugger';
 const {shortName} = Astro.props;
 const domains = await getEntry('data', 'naics_codes_by_domain');
 ---
-<div style="overflow-x: scroll;">
+<div>
 {
   domains.data.filter(domain => domain.shortName == shortName).map(domain => (
     <h2 id={ slug(domain.name) }>

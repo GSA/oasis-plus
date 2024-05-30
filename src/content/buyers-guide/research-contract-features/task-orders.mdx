@@ -1,0 +1,95 @@
+---
+title: "Task orders"
+description: "Research contract features related to task orders; contract and task order types, order limitations, contract access fees, and AbilityOne."
+is_child: true
+order: 3
+---
+import TableBorderless from "@components/TableBorderless.astro"
+import TableHeaderBorderless from "@components/TableHeaderBorderless.astro"
+import TableCellBorderless from "@components/TableCellBorderless.astro"
+export const components = {table: TableBorderless, th: TableHeaderBorderless, td: TableCellBorderless}
+
+The following information is related to researching contract features that focus on task orders.
+
+## Minimum and maximum order limitations
+
+### Minimum order 
+
+- OASIS+ minimum order is the Simplified Acquisition Threshold, also known as the SAT.
+- When the government requires supplies or services covered by this contract in an amount of less than the SAT, as amended, the government is not obligated to purchase, nor is the contractor obligated to furnish, those supplies or services under the contract. 
+- In accordance with Section C.2.5.1 of the OASIS+ UR contract, the minimum order threshold for task orders issued through the Enterprise Solutions Domain is $250 million total estimated value (including the base and all option periods).
+
+### Maximum order
+
+- Except for any limitations that the FAR imposes, there is no maximum order limitation under OASIS+; the OASIS+ program has no ceiling on any OASIS+ Multiple Agency Contracts.
+
+## OASIS+ task order contract/CLIN types
+
+For OASIS+ task orders, allowable contract types include:
+- [FAR subpart 16.2 fixed-price contracts](https://www.acquisition.gov/far/subpart-16.2)
+- [FAR subpart 16.3 cost-reimbursement contracts](https://www.acquisition.gov/far/subpart-16.3)
+- [FAR subpart 16.4 incentive contracts](https://www.acquisition.gov/far/subpart-16.4)
+- [FAR 16.601 time-and-materials](https://www.acquisition.gov/far/16.601)
+- [FAR 16.602 labor-hour contracts](https://www.acquisition.gov/far/16.602)
+
+Task orders may also incorporate [FAR subpart 17.1 Multi-year Contracting](https://www.acquisition.gov/far/subpart-17.1) and [FAR subpart 17.2 Options](https://www.acquisition.gov/far/subpart-17.2). However, Service Contract Labor Standards (SCLS)-applicable orders CANNOT have a base period longer than five years. OASIS+ supports both commercial and non-commercial requirements. OASIS+ does not allow agreements identified in [FAR subpart 16.7](https://www.acquisition.gov/far/subpart-16.7).
+
+These contract types can be used individually or in combination within a single task order comprising multiple CLINs. If using multiple contract types, please use separate CLINs for the work under each contract type and annotate each CLIN with the associated contract type, as this is important for clause selection and implementation.
+
+For cost-reimbursement type task orders, the accounting system requirements at OASIS+ Contract Section G.3.1.9.1.1 Accounting System apply. OASIS+ contractors are NOT required to demonstrate that their accounting system is adequate for determining costs applicable to cost-reimbursement type contracts or orders in accordance with FAR 16.301-3(a)(3). Therefore, **prior to awarding a cost-reimbursement type task order, Ordering Contracting Officers (OCOs) must determine if the contractor’s accounting system is adequate for determining costs applicable to the task order.** 
+
+Although not required, many contractors demonstrated adequate accounting systems prior to OASIS+ contract award. Contractors are required to maintain and update the status of their accounting system. The status of a contractor’s accounting system is included in their Symphony contractor profile.
+
+Also, CAS are applicable at the task order level. Therefore, the OCO is responsible for determining the applicability of CAS to any given task order. The OCO must then ensure that the contractor has made the required solicitation certifications and that the required disclosure statement has been submitted. The OCO must not award a CAS covered task order until the Cognizant Federal Agency Official, also known as the CFAO, has made a written determination that a required disclosure statement is adequate. The contractor is required to notify the OCO in writing for any CAS covered task orders about any revisions to the CAS Disclosure Statement or cost accounting practices. For additional CAS-specific considerations, see [CAS-specific clauses and provisions](/buyers-guide/research-contract-features/labor/#cas-specific-clauses-and-provisions).
+
+## Task order period of performance duration
+A task order must be solicited and awarded prior to the OASIS+ IDIQ ordering period end date. A task order period of performance (base period and all option periods) may extend up to five years after the OASIS+ IDIQ contract ordering period end date. Task order option periods may be exercised after the OASIS+ ordering period end date, provided that no task order option period of performance occurs beyond five years after the OASIS+ IDIQ ordering period end date. No task order performance can occur after the period of performance end date for the OASIS+ IDIQ. The ordering period of performance for each contract will be finalized upon award and notice to proceed.
+
+The OASIS+ contracts will include the FAR 52.217-8. This clause does not flow down to task orders, as it requires fill-in information. The OASIS+ IDIQ’s performance must stop by the Period of Performance end date shown unless the GSA OASIS+ Contracting Officer extends the OASIS+ IDIQ. The (FAR 52.217-8) clause exercise is not guaranteed and is the sole decision of the GSA OASIS+ COs.
+
+After the OASIS+ IDIQ ordering period expires, the OASIS+ IDIQ contracts will remain active for administration only. The OASIS+ IDIQ contracts must govern the terms and conditions of active task orders to the same extent as if they were completed during the OASIS+ IDIQ active ordering period.
+
+## Contract access fee
+GSA’s operating costs are reimbursed through a CAF charged on all task orders placed against the master contract(s). The CAF is paid by the ordering agency, but remitted to GSA by the contractor. GSA maintains the unilateral right to establish and change the CAF rate. GSA will provide at least a 60-day notice prior to the effective date of any change to the CAF rate or payment process. 
+
+The OASIS+ CAF must be included in each task order under a separate CLIN (for example, a CAF CLIN for the base and a CAF CLIN for each option period). This CLIN should be established as a flexibly reimbursable no-fee CLIN. OCOs may use a different contract type for this CLIN; however, it’s NOT recommended.
+
+The CAF rate is a flat 0.15%, applied to the total amount billed on each invoice (including ancillary support, travel, and profit) for all task orders. 
+
+Due to the low CAF rate, there are no Memorandums of Understanding with federal agencies that discount the established CAF rate; additionally, there is no cap/ceiling applicable to the CAF.
+
+Using the established CAF rate, the contractor must include the estimated CAF in each task order proposal based on the total estimated order value, which helps avoid potential funding issues. **The contractor must include the CAF as a separate line item on all proposals and invoices to the government, regardless of contract type.** GSA establishes the CAF, and the CAF must never be treated as a negotiable element between the contractor and the ordering agency. If the contractor does not ensure a separate CAF CLIN is included in its task order proposal and resulting task order award, the contractor must still be liable to pay the owed CAF to the government. 
+
+OCOs must instruct contractors to bill for CAF on every invoice/voucher as a separate line item in accordance with the OASIS+ contract Section B.11 OASIS+ Contract Access Fee.
+
+Each invoice billed under the task order must include a separate CAF line item as in the following example:
+
+|CAF line item                      | Cost        |
+|-----------------------------------|------------:|
+| CLIN 0001 Labor                   | $100.00     |
+| CLIN 0002 Material                | $50.00      |
+| CLIN 0003 Travel                  | $50.00      |
+| **Subtotal**                      | **$200.00** |
+| CLIN 0004 CAF (0.15% of subtotal) | $0.30       |
+| **Total Invoice including CAF**   | **$200.30** |
+
+
+
+## Classified task order considerations
+
+The task order solicitation should clearly express all requirements for security clearances, both facility and personnel. Please adhere to all classified handling procedures at all times.
+
+Example for Classified work:
+
+1. Determine Contract Vehicle/Domain/NAICS code.
+2. Notify the applicable contract holders of an upcoming classified solicitation via the mandatory task order solicitation system (Symphony); request that interested contractors respond; include instructions for how the solicitation may be viewed;(for example, location may be Sensitive Compartmented Information Facility or Secret Internet Protocol Router email instructions.
+3. Post the solicitation in a secure location (for example, distribute via Secret Internet Protocol Router emails).
+4. Review the offer and award task order.
+5. Notify GSA of the task order award by emailing [OASISplus@gsa.gov](mailto:OASISplus@gsa.gov) that an award has been made (a copy of the task order IS NOT required to be attached to the email) and include the total amount of CAF applicable to the task order.
+
+## AbilityOne considerations
+The OASIS+ program does not include a Subcontracting Plan initiative for AbilityOne, an independent federal agency and program that provides employment opportunities to approximately 40,000 people who are blind or have significant disabilities. However in accordance with FAR 8.005, the OCO must, “Insert the clause at FAR 52.208-9, Contractor Use of Mandatory Sources of Supply and Services, in solicitations and contracts that require a contractor to provide supplies or services for Government use that are on the Procurement List maintained by the Committee for Purchase From People Who Are Blind or Severely Disabled.”
+
+For certain task orders where the government anticipates to offer supplies for use, the Procurement List maintained by the Government, the Procurement List maintained by the Committee for Purchase From People Who Are Blind or Severely Disabled is a mandatory source of supply and should be checked to see if these supplies are available from this source. 
+
+Note: Under Department of Defense regulations, prime contractors are allowed to receive credit toward their small business subcontracting goals if they subcontract with qualified nonprofit agencies participating in the AbilityOne Program. (See [10 U.S. Code 3903](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section3903&num=0&edition=prelim)).

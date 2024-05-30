@@ -73,29 +73,30 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
         <h2>Table of Contents</h2>
         <ul>
           <!--About TOC -->
-          <li><a href={`#${slug(toc_about_parent_title)}` } class="usa-link">{toc_about_parent_title}</a>
+          <li>{toc_about_parent_title}
             <ul>
               {toc_about.map(item => (  
-                <li><a  href={`#${slug(item.data.title)}`} class="usa-link">{item.data.title}</a></li>
+                <li>{item.data.title}</li>
               ))}
             </ul>
           </li>
           <!--Research Contract features TOC -->
-          <li><a href={`#${slug(toc_research_parent_title)}`} class="usa-link">{toc_research_parent_title}</a>
+          <li>{toc_research_parent_title}
             {toc_research_child_pages.length >0 &&
             <ul>
               {toc_research_child_pages.map(item => (  
-                <li><a  href={`#${slug(item.data.title)}`} class="usa-link">{item.data.title}</a></li>
+                <li>{item.data.title}</li>
               ))}
             </ul>
             }
           </li>
           <!--Rest of Buyers guide pages TOC -->
           {toc_buyers_other_pages.map(item => (  
-            <li><a  href={`#${slug(item.data.title)}`} class="usa-link">{item.data.title}</a></li>
+            <li>{item.data.title}</li>
           ))}
         </ul>
       </div>
+      
       {about_entries.map(item => (  
         <div class="usa-prose" style="page-break-after: auto;">
           <h1 class="page_title" id={slug(item.data.title) }>{item.data.title}</h1> 
@@ -109,6 +110,7 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
               <item.Content />
             </div>
       ))}
+      
     </PageContentLayoutWideScreen>
 </PageLayout>
 
@@ -141,6 +143,7 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
     h3 img {
       margin-right: .5em;
     }
+  
 
     @media print {
       #print_button {display: none;}
@@ -149,6 +152,7 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
       #oasis-footer{display:none;}
       #print-cover-page{display:block;}
       #header-hidden-for-print{display:none;}
+      #content_for_print{display:block;}
 
       .usa-logo-img {display:none}
       .usa-prose h1 { break-before: page; }

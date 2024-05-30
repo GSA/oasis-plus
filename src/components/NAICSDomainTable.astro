@@ -4,7 +4,7 @@ import { slug } from 'github-slugger';
 const {shortName} = Astro.props;
 const domains = await getEntry('data', 'naics_codes_by_domain');
 ---
-<div style="overflow-x: scroll;">
+<>
 {
   domains.data.filter(domain => domain.shortName == shortName).map(domain => (
     <h2 id={ slug(domain.name) }>
@@ -18,8 +18,8 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
     <>
     {domain.clinKey && (<p>CLIN key: {domain.clinKey}</p>)}
     </>
-    <table class="usa-table usa-table--borderless margin-x-neg-1 tablet:margin-x-0 width-full">
-      <thead class="bg-base-lightest">
+    <table class="usa-table usa-table--borderless tablet:margin-x-0 width-full">
+      <thead>
         <tr>
           <th class="text-no-wrap" scope="col">CLIN</th>
           <th scope="col">NAICS code and title</th>
@@ -40,7 +40,7 @@ const domains = await getEntry('data', 'naics_codes_by_domain');
     </table>
   ))
 }
-</div>
+</>
 <style>
   h2 {
     display: flex;

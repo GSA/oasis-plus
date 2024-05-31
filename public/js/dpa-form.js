@@ -90,12 +90,59 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })
 
-function beginValidation(event) {
-  const form = document.getElementById("dpa_form");
+const form = document.getElementById("dpa_form");
+
+function getFormDataAsUrlEncoded(form) {
+  const formData = new FormData(form);
+  const params = new URLSearchParams();
+
+  for (const [key, value] of formData.entries()) {
+      params.append(key, value);
+  }
+
+  return params.toString();
+}
+function getFormDataAsJsonString(form) {
+  const formData = new FormData(form);
+  const jsonObject = {};
+
+  for (const [key, value] of formData.entries()) {
+      jsonObject[key] = value;
+  }
+
+  return JSON.stringify(jsonObject);
+}
+
+const jsonString = getFormDataAsJsonString(form);
+console.log(jsonString);
+
+function beginValidation(form) {
   console.log("validating!", form)
   form.setAttribute('form-is-valid', 'true');
   return true;
 }
 
-const form = document.getElementById("dpa_form");
-form.addEventListener("submit", beginValidation);
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+
+  const form = event.currentTarget;
+  const formData = getFormDataAsUrlEncoded(form);
+  console.log("form data:", formData)
+  beginValidation(form)
+  fetch('https://preview.gsa.gov/api/verify-recaptcha', {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Success:', data);
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+
+});

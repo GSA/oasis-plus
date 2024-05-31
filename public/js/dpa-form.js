@@ -97,4 +97,5 @@ function beginValidation(event) {
   return true;
 }
 
+const form = document.getElementById("dpa_form");
 form.addEventListener("submit", beginValidation);

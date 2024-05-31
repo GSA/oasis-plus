@@ -89,3 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 })
+
+function beginValidation(event) {
+  const form = document.getElementById("dpa_form");
+  console.log("validating!", form)
+  form.setAttribute('form-is-valid', 'true');
+  return true;
+}
+
+form.addEventListener("submit", beginValidation);

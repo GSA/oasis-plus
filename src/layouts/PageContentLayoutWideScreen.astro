@@ -1,9 +1,9 @@
 ---
 /* Used as a wrapper for content pages that doesn't have side nav */
-const { title } = Astro.props;
+const { title, id =null } = Astro.props;
 ---
 <main id="main-content" class ="usa-layout-docs__main usa-prose usa-layout-docs">
-    <h1>{ title }</h1>
+    <h1  id={id}>{ title }</h1>
     <section class="wide-screen-content">
         <slot />
     </section>

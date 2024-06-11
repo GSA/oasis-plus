@@ -2,22 +2,34 @@
   submenu:
   - title: "About OASIS+"
     href: about/
+  - title: "Government roles and responsibilities"
+    href: about/government-roles-responsibilities/
   - title: "Contract families"
     href: about/contract-families/
   - title: "Domains and labor categories"
-    href: about/domains-labor-categories/
+    href: about/domains-naicscodes-scope-labor-categories/
   - title: "How OASIS+ compares to legacy OASIS"
     href: about/oasis-plus-comparison/
 - title: Buyers
-  submenu: 
+  submenu:
   - title: "Buyers’ guide"
     href: buyers-guide/
   - title: "Research the OASIS+ contract features"
     href: buyers-guide/research-contract-features/
+  - title: "Request a scope review"
+    href: buyers-guide/request-scope-review/
+  - title: "Complete market research"
+    href: buyers-guide/complete-market-research/
   - title: Obtain a Delegation of Procurement Authority
     href: buyers-guide/obtain-dpa/
   - title: Register in Symphony
     href: buyers-guide/register-in-symphony/
+  - title: "Develop and issue task order solicitation"
+    href: buyers-guide/develop-issue-task-order-solicitation/
+  - title: Award the task order
+    href: buyers-guide/award-task-order/
+  - title: Manage the task order
+    href: buyers-guide/manage-task-order/
 - title: Sellers
   submenu:
   - title: "Sellers’ guide"
@@ -28,8 +40,11 @@
     href: "sellers-guide/register-in-symphony/"
   - title: "Compete for task orders"
     href: "sellers-guide/compete-for-task-orders/"
+  - title: "Make changes to your contract"
+    href: "sellers-guide/make-changes-contract/"
   - title: "Reporting"
     href: "sellers-guide/reporting/"
+
 - title: Resources
   href: resources/
 - title: Events & Training

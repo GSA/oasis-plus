@@ -1,0 +1,87 @@
+---
+/*
+    This creates an auto-generated table of contents
+    for the "research contract features" page. 
+    This other pages in this section will be rendered
+    by the regular [...slug].astro file in the parent directory.
+*/
+import {getCollection} from 'astro:content';
+import PageLayout from '@layouts/PageLayout.astro';
+import PageContentLayout from '@layouts/PageContentLayout.astro';
+import SideNav from '@components/SideNav.astro'
+
+// We need all the buyers guide posts for the side nav
+const buyers_guide_posts = await getCollection('buyers-guide')
+
+// … but just the  research contract features subpages for the table of contents
+const guide_posts = buyers_guide_posts.filter(({ slug }) => slug.startsWith('research-contract-features'))
+guide_posts.sort((a,b) => parseInt(a.data.order) - parseInt(b.data.order));
+
+// The index page to get the content from markdown 
+// so text content of intro paragraph can still be edited in content folder
+const entry = guide_posts[0]
+const { Content, remarkPluginFrontmatter:{last_modified}} = await guide_posts[0].render();
+
+// Get headings of subpages by rendering content
+// Nest h3 headings as children of h2 to support indented TOC
+function nest_headings(headings) {
+    const nested_headings = []
+    headings.forEach(heading => {
+        if (heading.depth == 2) {
+            heading.children = []
+            nested_headings.push(heading)
+        }
+        else if (heading.depth == 3) {
+            nested_headings[nested_headings.length - 1].children.push(heading)
+        }
+    })
+    return nested_headings
+}
+
+const rendered_posts = await Promise.all(guide_posts.map(async item =>  {
+    const rendered = await item.render()
+    return {
+        parent: item,
+        category: rendered.remarkPluginFrontmatter.title,
+        headings: nest_headings(rendered.headings),
+        slug: rendered.slug,
+        text: rendered.text
+    }
+}))
+
+---
+<PageLayout title={entry.data.title} description={entry.data.description} last_modified={last_modified}>
+    <div class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-4">
+        <SideNav 
+            title="Buyers"
+            parent_path="buyers-guide"
+            pages={buyers_guide_posts}
+            id={entry.id}
+        />
+    </div>
+    <PageContentLayout
+      title={entry.data.title}
+      intro={entry.data.intro}
+      >
+        <Content />
+        {rendered_posts.slice(1).map(post => (
+            <h2><a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/`} class='usa-link'>{post.category}</a></h2>
+            <ul>
+            {post.headings.map(h => (
+                <li>
+                    <a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/#${h.slug}`} class='usa-link'>{h.text}</a>
+                    {h.children.length > 0 && (
+                        <ul>
+                            {h.children.map(c => 
+                                <li>
+                                    <a href={`${import.meta.env.BASE_URL}/buyers-guide/${post.parent.slug}/#${c.slug}`} class='usa-link'>{c.text}</a>
+                                </li>
+                            )}
+                        </ul>)}
+                </li>
+            ))}
+            </ul>
+            )
+        )}
+    </PageContentLayout>
+</PageLayout>

@@ -1,7 +1,7 @@
 ---
-const {scope='col'} = Astro.props;
+const {scope='col', style} = Astro.props;
 ---
 
-<th scope={scope}>
+<th scope={scope} style={style}>
     <slot />
 </th>

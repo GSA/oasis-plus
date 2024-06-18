@@ -82,7 +82,7 @@
                 id="Work_Address"
                 maxlength="255"
                 name="Work_Address"
-                pattern="^(?! )[a-zA-Z\d .\-\$]+$"
+                pattern="^(?! )[a-zA-Z\\d .\\-\\$]+$"
                 required="true"
                 type="text"
             />
@@ -183,7 +183,7 @@
                 id="zip"
                 maxlength="10"
                 name="zip"
-                pattern="^[\d]{5}((-|\+)[\d]{4})?$"
+                pattern="^[\\d]{5}((-|\+)[\\d]{4})?$"
                 required="true"
                 type="text"
             />
@@ -204,7 +204,7 @@
                 id="email"
                 maxlength="255"
                 name="email"
-                pattern="[a-zA-Z\d]+(?:(\.|-|_)?[a-zA-Z\d]+)*@[a-zA-Z\-._]+(\.gov|\.mil|\.GOV|\.MIL)"
+                pattern="[a-zA-Z\\d]+(?:(\\.|-|_)?[a-zA-Z\\d]+)*@[a-zA-Z\\-._]+(\\.gov|\\.mil|\\.GOV|\\.MIL)"
                 required="true"
                 type="text"
             />
@@ -223,7 +223,7 @@
                 id="phone"
                 maxlength="12"
                 name="phone"
-                pattern="^(\d{3}-){2}\d{4}$"
+                pattern="^(\\d{3}-){2}\\d{4}$"
                 required="true"
                 type="tel"
             />
@@ -455,7 +455,7 @@
                 id="oasis-Date"
                 maxlength="10"
                 name="category[oasisplus][DateTrainingCompleted]"
-                pattern="(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d\d"
+                pattern="(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\\d\\d"
                 placeholder="MM/DD/YYYY"
                 required="true"
                 type="text"
@@ -482,7 +482,7 @@
                 id="Warrent_Level"
                 maxlength="100"
                 name="Warrent_Level"
-                pattern="^(?! )[a-zA-Z\d\$\., ]{1,100}$"
+                pattern="^(?! )[a-zA-Z\\d\\$\\., ]{1,100}$"
                 required="true"
                 type="text"
             />
@@ -503,7 +503,7 @@
                 id="warrent_issue_date"
                 maxlength="10"
                 name="warrent_issue_date"
-                pattern="(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d\d"
+                pattern="(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\\d\\d"
                 placeholder="MM/DD/YYYY"
                 required="true"
                 type="text"

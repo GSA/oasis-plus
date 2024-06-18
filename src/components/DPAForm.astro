@@ -1,6 +1,10 @@
 ---
 
 ---
+<script is:inline type="text/javascript">
+    var recaptcha_site_key = '6Ld9SegUAAAAAB-cac89z4iV1EzhN5va_TykKhAg';
+</script>
+<script is:inline type="text/javascript"  src="https://www.gstatic.com/recaptcha/releases/8k85QBI-qzxmenDv318AZH30/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-YaLdSXMqm9CEKTpOkSnpu5vAhzVfmtaskI7GboiAj0dVtvfpzmGU1XBINZ7hs6ET"></script>
 
 <form
     id="dpa_form"
@@ -10,12 +14,6 @@
     validate="true"
     novalidate="true"
 >
-    <p>
-        Required fields are marked with an asterisk ( <abbr
-            class="usa-hint usa-hint--required"
-            title="required">*</abbr
-        >).
-    </p>
     <!-- https://preview.gsa.gov/form-submission/dpa-oasisplus -->
     <input name="target" type="hidden" value="/form-submission/dpa-oasisplus" />
     <input name="recipient" type="hidden" value="delegations@gsa.gov" />
@@ -25,16 +23,13 @@
         value="OASIS+ Delegation of Procurement Authority Request"
     />
     <fieldset class="usa-fieldset">
-        <legend class="usa-sr-only"
-            >OASIS+ Delegation of Procurement Authority Request
+        <legend class="usa-legend usa-legend--large"
+            >Contact Information
         </legend>
 
         <div class="usa-form-group">
             <label class="usa-label" for="First_Name">
                 First name
-                <abbr class="usa-hint usa-hint--required" title="required"
-                    >*
-                </abbr>
             </label>
             <span class="usa-error-message"></span>
             <input
@@ -49,7 +44,7 @@
             />
         </div>
 
-        <div class="usa-form-group">
+        <!-- <div class="usa-form-group">
             <label class="usa-label" for="Middle_Name">Middle initial</label>
             <span class="usa-error-message"></span>
             <input
@@ -61,16 +56,10 @@
                 pattern="^(?! )([a-zA-Z](\.| )?)?$"
                 type="text"
             />
-        </div>
+        </div> -->
 
         <div class="usa-form-group">
-            <label class="usa-label" for="Last_Name"
-                >Last name <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
-            >
+            <label class="usa-label" for="Last_Name">Last name</label>
             <span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -85,13 +74,7 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="Work_Address"
-                >Work address <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr><span class="usa-hint">(no P.O. boxes)</span>
-            </label>
+            <label class="usa-label" for="Work_Address">Work address</label>
             <span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -106,11 +89,7 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="city"
-                >City <abbr class="usa-hint usa-hint--required" title="required"
-                    >*
-                </abbr></label
-            >
+            <label class="usa-label" for="city">City</label>
             <span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -125,13 +104,7 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="state"
-                >State <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
-            >
+            <label class="usa-label" for="state">State</label>
             <span class="usa-error-message"></span>
             <select
                 class="usa-select validate-input"
@@ -202,13 +175,7 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="zip"
-                >ZIP code <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
-            >
+            <label class="usa-label" for="zip">ZIP code</label>
             <span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -223,14 +190,9 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="email"
-                >Work email <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr><span class="usa-hint" id="emailHint"
-                    >(.gov or .mil only)</span
-                >
+            <label class="usa-label" for="email">
+                Work email
+                <span class="usa-hint" id="emailHint">(.gov or .mil only)</span>
             </label>
             <span class="usa-error-message"></span>
             <input
@@ -249,15 +211,10 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="phone"
-                >Work phone number <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr><span class="usa-hint" id="workPhoneHint"
-                    >(xxx-xxx-xxxx)
-                </span></label
-            >
+            <label class="usa-label" for="phone">
+                Work phone number
+                <span class="usa-hint" id="workPhoneHint">(xxx-xxx-xxxx)</span>
+            </label>
             <span class="usa-error-message"></span>
             <input
                 aria-describedby="workPhoneHint"
@@ -272,7 +229,7 @@
             />
         </div>
 
-        <div class="usa-form-group">
+        <!-- <div class="usa-form-group">
             <label class="usa-label" for="fax"
                 >Fax number <span class="usa-hint" id="faxHint"
                     >(xxx-xxx-xxxx)</span
@@ -289,16 +246,10 @@
                 pattern="^((\d{3}-){2}\d{4})?$"
                 type="tel"
             />
-        </div>
+        </div> -->
 
-        <div class="usa-form-group">
-            <label class="usa-label" for="agency"
-                >Agency <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
-            >
+        <!-- <div class="usa-form-group">
+            <label class="usa-label" for="agency">Agency</label>
             <span class="usa-error-message"></span>
             <select
                 class="usa-select validate-input"
@@ -427,9 +378,9 @@
                     >Government Agency Not Otherwise Specified
                 </option>
             </select>
-        </div>
+        </div> -->
 
-        <div class="usa-form-group">
+        <!-- <div class="usa-form-group">
             <label class="usa-label" for="bureau">Bureau</label>
             <span class="usa-error-message"></span>
             <input
@@ -441,19 +392,19 @@
                 pattern="^(?! )([a-zA-Z\-. ]*)?$"
                 type="text"
             />
-        </div>
+        </div> -->
+        </fieldset>
+        <fieldset class="usa-fieldset margin-top-4">
+            <legend class="usa-legend usa-legend--large">
+                DPA Training
+            </legend>
         <input
             name="category[oasisplus][checked]"
             type="hidden"
             value="OASISPLUS"
         />
         <div class="usa-form-group">
-            <label class="usa-label" for="oasis-training"
-                >Select your OASIS+ training method
-                <abbr class="usa-hint usa-hint--required" title="required"
-                    >*
-                </abbr></label
-            >
+            <label class="usa-label" for="oasis-training">DPA training method</label>
             <span class="usa-error-message"></span>
             <select
                 class="if-other usa-select validate-input"
@@ -489,9 +440,9 @@
             />
         </div>
 
-        <div class="usa-form-group">
+        <div class="usa-form-group ">
             <label for="oasis-Date"
-                >Date you completed delegation training <abbr
+                >DPA training completion date <abbr
                     class="usa-hint usa-hint--required"
                     title="required"
                     >*
@@ -510,7 +461,11 @@
                 type="text"
             />
         </div>
-
+    </fieldset>
+    <fieldset class="usa-fieldset margin-top-4">
+        <legend class="usa-legend usa-legend--large">
+            Warrant information
+        </legend>
         <div class="usa-form-group">
             <label class="usa-label" for="Warrent_Level"
                 >Warrant Level (include $ limitation) Provide any limiting
@@ -554,82 +509,11 @@
                 type="text"
             />
         </div>
-
-        <fieldset class="usa-fieldset">
-            <legend class="usa-legend font-body-md text-normal padding-top-3"
-                >By completing and submitting this request, I accept and agree
-                to the terms identified in the OASIS+ Contract(s) and the
-                Ordering Guide. I will fulfill the roles and responsibilities
-                identified therein <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr>
-            </legend>
-
-            <div class="usa-radio">
-                <input
-                    class="usa-radio usa-radio__input"
-                    id="accept_terms_yes"
-                    name="accept_terms"
-                    required="true"
-                    type="radio"
-                    value="Yes"
-                />
-                <label class="usa-radio__label" for="accept_terms_yes"
-                    >Yes</label>
-            </div>
-
-            <div class="usa-radio">
-                <input
-                    class="usa-radio usa-radio__input"
-                    id="accept_terms_no"
-                    name="accept_terms"
-                    required="true"
-                    type="radio"
-                    value="No"
-                />
-                <label class="usa-radio__label" for="accept_terms_no">No</label>
-            </div>
-        </fieldset>
-
-        <fieldset class="usa-fieldset fieldset-radio">
-            <legend class="usa-legend font-sans-md padding-top-3"
-                >Have you reviewed the OASIS+ Delegation of Procurement
-                Authority Memorandum of Agreement (MOA)? <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr>
-            </legend>
-
-            <div class="usa-radio">
-                <input
-                    class="usa-radio usa-radio__input"
-                    id="oasis_moa_doc_review_yes"
-                    name="oasis_plus_moa_document_review"
-                    required="true"
-                    type="radio"
-                    value="Yes"
-                />
-                <label class="usa-radio__label" for="oasis_moa_doc_review_yes"
-                    >Yes</label>
-            </div>
-
-            <div class="usa-radio">
-                <input
-                    class="usa-radio usa-radio__input"
-                    id="oasis_moa_doc_review_no"
-                    name="oasis_plus_moa_document_review"
-                    required="true"
-                    type="radio"
-                    value="No"
-                />
-                <label class="usa-radio__label" for="oasis_moa_doc_review_no"
-                    >No</label>
-            </div>
-        </fieldset>
-
+    </fieldset>
+    <fieldset class="usa-fieldset margin-top-4">
+        <legend class="usa-legend usa-legend--large">
+            Service requirement request
+        </legend>
         <fieldset class="usa-fieldset fieldset-radio">
             <legend class="usa-legend font-sans-md padding-top-3"
                 >Do you need assistance with a current or future professional
@@ -679,125 +563,94 @@
                 />
             </div>
         </fieldset>
-
-        <fieldset class="usa-fieldset fieldset-radio">
-            <legend class="usa-legend font-body-md text-normal padding-top-3"
-                >I represent that I am the individual whose information appears
-                above. <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr>
+    </fieldset>
+    <fieldset class="usa-fieldset margin-top-4">
+        <legend class="usa-legend usa-legend--large">
+            Acknowledgements
+        </legend>
+        <fieldset class="usa-fieldset">
+            <legend class="usa-legend"
+                >By Completing and submitting this request:
             </legend>
 
-            <div class="usa-radio">
+            <div class="usa-checkbox">
                 <input
-                    class="usa-radio usa-radio__input"
+                    class="usa-checkbox__input validate-checkbox"
+                    id="oasis_moa_doc_review_yes"
+                    name="oasis_plus_moa_document_review"
+                    required="true"
+                    type="checkbox"
+                    value="Yes"
+                />
+                <label class="usa-checkbox__label" for="oasis_moa_doc_review_yes"
+                    >I have reviewed the OASIS+ Delegation of Procurment Authority Memorandum of Agreement (MOA)</label>
+            </div>
+
+            <div class="usa-checkbox">
+                <input
+                    class="usa-checkbox__input validate-checkbox"
                     id="Individual-above-yes"
                     name="I_represent_that_I_am_the_individual_whose_information_appears_above"
                     required="true"
-                    type="radio"
+                    type="checkbox"
                     value="Yes"
                 />
-                <label class="usa-radio__label" for="Individual-above-yes"
-                    >Yes</label
-                >
+                <label class="usa-checkbox__label" for="Individual-above-yes"
+                    >I represent that I am the individual whose information appears
+                    above.</label>
             </div>
 
-            <div class="usa-radio">
+            <div class="usa-checkbox">
                 <input
-                    class="usa-radio usa-radio__input"
-                    id="Individual-above-no"
-                    name="I_represent_that_I_am_the_individual_whose_information_appears_above"
-                    required="true"
-                    type="radio"
-                    value="No"
-                />
-                <label class="usa-radio__label" for="Individual-above-no"
-                    >No</label>
-            </div>
-        </fieldset>
-
-        <fieldset class="usa-fieldset fieldset-radio">
-            <legend class="usa-legend font-body-md text-normal padding-top-3"
-                >By completing and submitting this request, I accept and agree
-                to the terms of the delegation of procurement authority found in
-                the applicable Delegation of Procurement Authority Letter and
-                will fulfill the roles and responsibilities identified therein. <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr>
-            </legend>
-
-            <div class="usa-radio">
-                <input
-                    class="usa-radio usa-radio__input"
+                    class="usa-checkbox__input validate-checkbox"
                     id="Agree-to-MOA-terms-yes"
                     name="rep_acceptance"
                     required="true"
-                    type="radio"
+                    type="checkbox"
                     value="Yes"
                 />
-                <label class="usa-radio__label" for="Agree-to-MOA-terms-yes"
-                    >Yes</label>
+                <label class="usa-checkbox__label" for="Agree-to-MOA-terms-yes"
+                    >I accept and agree to the terms of the delegation of procurement authority 
+                    found in the applicable Delegation of Procurement Authority Letter and
+                    will fulfill the roles and responsibilities identified therein.</label>
             </div>
 
-            <div class="usa-radio">
+            <div class="usa-checkbox">
                 <input
-                    class="usa-radio usa-radio__input"
-                    id="Agree-to-MOA-terms-no"
-                    name="rep_acceptance"
+                    class="usa-checkbox__input validate-checkbox"
+                    id="accept_terms_yes"
+                    name="accept_terms"
                     required="true"
-                    type="radio"
-                    value="No"
+                    type="checkbox"
+                    value="Yes"
                 />
-                <label class="usa-radio__label" for="Agree-to-MOA-terms-no"
-                    >No</label>
+                <label class="usa-checkbox__label" for="accept_terms_yes"
+                    >I accept and agree to the terms identified in the OASIS+ Contract(s) and the
+                Ordering Guide. I will fulfill the roles and responsibilities
+                identified therein.</label>
             </div>
-        </fieldset>
 
-        <fieldset class="usa-fieldset fieldset-radio">
-            <legend class="usa-legend font-body-md text-normal padding-top-3"
-                >I represent that I am a duly appointed contracting officer per
-                FAR Part 1.603 or authorized official with authority to obligate
-                funds for the agency (or tribe, or other entity authorized to
-                use the contract per GSA Order OGP 4800.2I). <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr>
-            </legend>
-
-            <div class="usa-radio">
+            <div class="usa-checkbox">
                 <input
-                    class="usa-radio usa-radio__input"
+                    class="usa-checkbox__input validate-checkbox"
                     id="Warranted-contracting-officer-yes"
                     name="rep_warranted"
                     required="true"
-                    type="radio"
+                    type="checkbox"
                     value="Yes"
                 />
-                <label
-                    class="usa-radio__label"
-                    for="Warranted-contracting-officer-yes">Yes</label>
+                <label class="usa-checkbox__label" for="Warranted-contracting-officer-yes"
+                    >I represent that I am a duly appointed contracting officer per
+                    FAR Part 1.603 or authorized official with authority to obligate
+                    funds for the agency (or tribe, or other entity authorized to
+                    use the contract per GSA Order OGP 4800.2I).</label>
             </div>
 
-            <div class="usa-radio">
-                <input
-                    class="usa-radio usa-radio__input"
-                    id="Warranted-contracting-officer-no"
-                    name="rep_warranted"
-                    required="true"
-                    type="radio"
-                    value="No"
-                />
-                <label
-                    class="usa-radio__label"
-                    for="Warranted-contracting-officer-no">No</label>
-            </div>
         </fieldset>
 
+        
+
+    </fieldset>
         <div class="usa-form-group">
             <input checked="checked" name="debug" type="checkbox" /> Tick this checkbox
             to view debug-information upon form submission.
@@ -848,6 +701,9 @@
         />&nbsp;
     </fieldset>
 </form>
+<script is:inline src="https://www.google.com/recaptcha/api.js?render=6Ld9SegUAAAAAB-cac89z4iV1EzhN5va_TykKhAg" defer="" async=""></script>
+<script is:inline src={`${import.meta.env.BASE_URL}js/dpa-form.js`}></script>
+
 
 <style>
     .hidden {

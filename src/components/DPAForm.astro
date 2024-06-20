@@ -6,6 +6,10 @@
 </script>
 <script is:inline type="text/javascript"  src="https://www.gstatic.com/recaptcha/releases/8k85QBI-qzxmenDv318AZH30/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-YaLdSXMqm9CEKTpOkSnpu5vAhzVfmtaskI7GboiAj0dVtvfpzmGU1XBINZ7hs6ET"></script>
 
+<p class="margin-top-4">
+    <strong>All fields are required</strong>
+
+</p>
 <form
     id="dpa_form"
     action="https://www.gsa.gov/api/verify-recaptcha"
@@ -43,20 +47,6 @@
                 type="text"
             />
         </div>
-
-        <!-- <div class="usa-form-group">
-            <label class="usa-label" for="Middle_Name">Middle initial</label>
-            <span class="usa-error-message"></span>
-            <input
-                class="usa-input validate-input"
-                data-error-msg="Please enter a valid middle initial"
-                id="Middle_Name"
-                maxlength="2"
-                name="Middle_Name"
-                pattern="^(?! )([a-zA-Z](\.| )?)?$"
-                type="text"
-            />
-        </div> -->
 
         <div class="usa-form-group">
             <label class="usa-label" for="Last_Name">Last name</label>
@@ -229,170 +219,6 @@
             />
         </div>
 
-        <!-- <div class="usa-form-group">
-            <label class="usa-label" for="fax"
-                >Fax number <span class="usa-hint" id="faxHint"
-                    >(xxx-xxx-xxxx)</span
-                ></label
-            >
-            <span class="usa-error-message"></span>
-            <input
-                aria-describedby="faxHint"
-                class="usa-input validate-input"
-                data-error-msg="Please enter a valid fax number"
-                id="fax"
-                maxlength="12"
-                name="fax"
-                pattern="^((\d{3}-){2}\d{4})?$"
-                type="tel"
-            />
-        </div> -->
-
-        <!-- <div class="usa-form-group">
-            <label class="usa-label" for="agency">Agency</label>
-            <span class="usa-error-message"></span>
-            <select
-                class="usa-select validate-input"
-                data-error-msg="This field is required; please select an agency from the pull-down list"
-                id="agency"
-                name="agency"
-                required="true"
-            >
-                <option value="">- Select -</option>
-                <option value="American Battle Monuments Commission"
-                    >American Battle Monuments Commission</option
-                >
-                <option value="Architect of the Capitol"
-                    >Architect of the Capitol</option
-                >
-                <option value="Consumer Product Safety Commission"
-                    >Consumer Product Safety Commission</option
-                >
-                <option value="Corps of Civil Engineers"
-                    >Corps of Civil Engineers</option
-                >
-                <option value="Department of Agriculture"
-                    >Department of Agriculture</option
-                >
-                <option value="Department of Commerce"
-                    >Department of Commerce</option
-                >
-                <option value="Department of Defense"
-                    >Department of Defense</option
-                >
-                <option value="Department of Education"
-                    >Department of Education</option
-                >
-                <option value="Department of Energy"
-                    >Department of Energy</option
-                >
-                <option value="Department of Health and Human Services"
-                    >Department of Health and Human Services</option
-                >
-                <option value="Department of Homeland Security"
-                    >Department of Homeland Security</option
-                >
-                <option value="Department of Housing and Urban Development"
-                    >Department of Housing and Urban Development
-                </option>
-                <option value="Department of the Interior"
-                    >Department of the Interior</option
-                >
-                <option value="Department of Justice"
-                    >Department of Justice</option
-                >
-                <option value="Department of Labor">Department of Labor</option>
-                <option value="Department of State">Department of State</option>
-                <option value="Department of the Army"
-                    >Department of the Army</option
-                >
-                <option value="Department of the Air Force"
-                    >Department of the Air Force</option
-                >
-                <option value="Department of the Navy"
-                    >Department of the Navy</option
-                >
-                <option value="Department of the Treasury"
-                    >Department of the Treasury</option
-                >
-                <option value="Department of Transportation"
-                    >Department of Transportation</option
-                >
-                <option value="Department of Veterans Affairs"
-                    >Department of Veterans Affairs</option
-                >
-                <option value="Environmental Protection Agency"
-                    >Environmental Protection Agency</option
-                >
-                <option value="Executive Office of the President"
-                    >Executive Office of the President</option
-                >
-                <option value="Federal Communications Commission"
-                    >Federal Communications Commission</option
-                >
-                <option value="Government Accountability Office"
-                    >Government Accountability Office</option
-                >
-                <option value="General Services Administration"
-                    >General Services Administration</option
-                >
-                <option value="Independent US Government Offices"
-                    >Independent US Government Offices</option
-                >
-                <option value="Library of Congress">Library of Congress</option>
-                <option value="National Aeronautics and Space Administration"
-                    >National Aeronautics and Space Administration</option
-                >
-                <option value="National Labor Relations Board"
-                    >National Labor Relations Board</option
-                >
-                <option value="National Science Foundation"
-                    >National Science Foundation</option
-                >
-                <option value="Nuclear Regulatory Commission"
-                    >Nuclear Regulatory Commission</option
-                >
-                <option value="Office of Personnel Management"
-                    >Office of Personnel Management</option
-                >
-                <option value="Railroad Retirement Board"
-                    >Railroad Retirement Board</option
-                >
-                <option value="Securities and Exchange Commission"
-                    >Securities and Exchange Commission</option
-                >
-                <option value="Selective Service System"
-                    >Selective Service System</option
-                >
-                <option value="Small Business Administration"
-                    >Small Business Administration</option
-                >
-                <option value="Social Security Administration"
-                    >Social Security Administration</option
-                >
-                <option value="State or Local Government"
-                    >State or Local Government</option
-                >
-                <option value="The Judicial Branch">The Judicial Branch</option>
-                <option value="Government Agency Not Otherwise Specified"
-                    >Government Agency Not Otherwise Specified
-                </option>
-            </select>
-        </div> -->
-
-        <!-- <div class="usa-form-group">
-            <label class="usa-label" for="bureau">Bureau</label>
-            <span class="usa-error-message"></span>
-            <input
-                class="usa-input validate-input"
-                data-error-msg="Please enter a valid bureau"
-                id="bureau"
-                maxlength="100"
-                name="bureau"
-                pattern="^(?! )([a-zA-Z\-. ]*)?$"
-                type="text"
-            />
-        </div> -->
         </fieldset>
         <fieldset class="usa-fieldset margin-top-4">
             <legend class="usa-legend usa-legend--large">
@@ -441,13 +267,7 @@
         </div>
 
         <div class="usa-form-group ">
-            <label for="oasis-Date"
-                >DPA training completion date <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
-            >
+            <label for="oasis-Date">DPA training completion date </label>
             <span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -470,11 +290,7 @@
             <label class="usa-label" for="Warrent_Level"
                 >Warrant Level (include $ limitation) Provide any limiting
                 language on your warrant Example: $10M, Unlimited, or NA if you
-                do not have a warrant <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
+                do not have a warrant </label
             ><span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -489,13 +305,9 @@
         </div>
 
         <div class="usa-form-group">
-            <label class="usa-label" for="warrent_issue_date"
-                >Warrant Issue Date <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr></label
-            >
+            <label class="usa-label" for="warrent_issue_date">
+                Warrant Issue Date
+            </label>
             <span class="usa-error-message"></span>
             <input
                 class="usa-input validate-input"
@@ -517,11 +329,7 @@
         <fieldset class="usa-fieldset fieldset-radio">
             <legend class="usa-legend font-sans-md padding-top-3"
                 >Do you need assistance with a current or future professional
-                service requirement? <abbr
-                    class="usa-hint usa-hint--required"
-                    title="required"
-                    >*
-                </abbr>
+                service requirement?
             </legend>
 
             <div class="usa-radio">
@@ -568,87 +376,81 @@
         <legend class="usa-legend usa-legend--large">
             Acknowledgements
         </legend>
-        <fieldset class="usa-fieldset">
-            <legend class="usa-legend"
-                >By Completing and submitting this request:
-            </legend>
-
-            <div class="usa-checkbox">
-                <input
-                    class="usa-checkbox__input validate-checkbox"
-                    id="oasis_moa_doc_review_yes"
-                    name="oasis_plus_moa_document_review"
-                    required="true"
-                    type="checkbox"
-                    value="Yes"
-                />
-                <label class="usa-checkbox__label" for="oasis_moa_doc_review_yes"
-                    >I have reviewed the OASIS+ Delegation of Procurment Authority Memorandum of Agreement (MOA)</label>
-            </div>
-
-            <div class="usa-checkbox">
-                <input
-                    class="usa-checkbox__input validate-checkbox"
-                    id="Individual-above-yes"
-                    name="I_represent_that_I_am_the_individual_whose_information_appears_above"
-                    required="true"
-                    type="checkbox"
-                    value="Yes"
-                />
-                <label class="usa-checkbox__label" for="Individual-above-yes"
-                    >I represent that I am the individual whose information appears
-                    above.</label>
-            </div>
-
-            <div class="usa-checkbox">
-                <input
-                    class="usa-checkbox__input validate-checkbox"
-                    id="Agree-to-MOA-terms-yes"
-                    name="rep_acceptance"
-                    required="true"
-                    type="checkbox"
-                    value="Yes"
-                />
-                <label class="usa-checkbox__label" for="Agree-to-MOA-terms-yes"
-                    >I accept and agree to the terms of the delegation of procurement authority 
-                    found in the applicable Delegation of Procurement Authority Letter and
-                    will fulfill the roles and responsibilities identified therein.</label>
-            </div>
-
-            <div class="usa-checkbox">
-                <input
-                    class="usa-checkbox__input validate-checkbox"
-                    id="accept_terms_yes"
-                    name="accept_terms"
-                    required="true"
-                    type="checkbox"
-                    value="Yes"
-                />
-                <label class="usa-checkbox__label" for="accept_terms_yes"
-                    >I accept and agree to the terms identified in the OASIS+ Contract(s) and the
-                Ordering Guide. I will fulfill the roles and responsibilities
-                identified therein.</label>
-            </div>
-
-            <div class="usa-checkbox">
-                <input
-                    class="usa-checkbox__input validate-checkbox"
-                    id="Warranted-contracting-officer-yes"
-                    name="rep_warranted"
-                    required="true"
-                    type="checkbox"
-                    value="Yes"
-                />
-                <label class="usa-checkbox__label" for="Warranted-contracting-officer-yes"
-                    >I represent that I am a duly appointed contracting officer per
-                    FAR Part 1.603 or authorized official with authority to obligate
-                    funds for the agency (or tribe, or other entity authorized to
-                    use the contract per GSA Order OGP 4800.2I).</label>
-            </div>
-
-        </fieldset>
-
         
+         <p>By completing and submitting this request:</p>
+
+        <div class="usa-checkbox">
+            <input
+                class="usa-checkbox__input validate-checkbox"
+                id="oasis_moa_doc_review_yes"
+                name="oasis_plus_moa_document_review"
+                required="true"
+                type="checkbox"
+                value="Yes"
+            />
+            <label class="usa-checkbox__label" for="oasis_moa_doc_review_yes"
+                >I have reviewed the OASIS+ Delegation of Procurment Authority Memorandum of Agreement (MOA)</label>
+        </div>
+
+        <div class="usa-checkbox">
+            <input
+                class="usa-checkbox__input validate-checkbox"
+                id="Individual-above-yes"
+                name="I_represent_that_I_am_the_individual_whose_information_appears_above"
+                required="true"
+                type="checkbox"
+                value="Yes"
+            />
+            <label class="usa-checkbox__label" for="Individual-above-yes"
+                >I represent that I am the individual whose information appears
+                above.</label>
+        </div>
+
+        <div class="usa-checkbox">
+            <input
+                class="usa-checkbox__input validate-checkbox"
+                id="Agree-to-MOA-terms-yes"
+                name="rep_acceptance"
+                required="true"
+                type="checkbox"
+                value="Yes"
+            />
+            <label class="usa-checkbox__label" for="Agree-to-MOA-terms-yes"
+                >I accept and agree to the terms of the delegation of procurement authority 
+                found in the applicable Delegation of Procurement Authority Letter and
+                will fulfill the roles and responsibilities identified therein.</label>
+        </div>
+
+        <div class="usa-checkbox">
+            <input
+                class="usa-checkbox__input validate-checkbox"
+                id="accept_terms_yes"
+                name="accept_terms"
+                required="true"
+                type="checkbox"
+                value="Yes"
+            />
+            <label class="usa-checkbox__label" for="accept_terms_yes"
+                >I accept and agree to the terms identified in the OASIS+ Contract(s) and the
+            Ordering Guide. I will fulfill the roles and responsibilities
+            identified therein.</label>
+        </div>
+
+        <div class="usa-checkbox">
+            <input
+                class="usa-checkbox__input validate-checkbox"
+                id="Warranted-contracting-officer-yes"
+                name="rep_warranted"
+                required="true"
+                type="checkbox"
+                value="Yes"
+            />
+            <label class="usa-checkbox__label" for="Warranted-contracting-officer-yes"
+                >I represent that I am a duly appointed contracting officer per
+                FAR Part 1.603 or authorized official with authority to obligate
+                funds for the agency (or tribe, or other entity authorized to
+                use the contract per GSA Order OGP 4800.2I).</label>
+        </div>
 
     </fieldset>
         <div class="usa-form-group">

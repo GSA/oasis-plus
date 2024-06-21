@@ -145,6 +145,10 @@ function beginValidation(form_selector) {
       let required_inputs = js_form.querySelectorAll(".validate-input");
 
       [].forEach.call(required_inputs, function (text_input) {
+        if (window.getComputedStyle(text_input).display == 'none') {
+          console.log("skeipping hidden: ", text_input)
+          return
+        }
         let error_msg = text_input.getAttribute("data-error-msg")
         let invalid = text_input.validity.patternMismatch || text_input.validity.valueMissing || text_input.validity.typeMismatch;
 
@@ -245,7 +249,15 @@ function setNoValidate(arg) {
 
 function didNotPass() {
   setTimeout(function () {
-    document.querySelector("[class$=-error] input, [class$=-error] select").focus();
+    var elements = document.querySelectorAll("[class$=-error] :is(input, select)");
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      // Check if the element is visible
+      if (window.getComputedStyle(element).display !== 'none') {
+        element.focus();  
+        return
+      }
+  }
   }, 100);
 };
 

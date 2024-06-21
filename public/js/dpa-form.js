@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("running")
   function initRecaptcha() {
     if (typeof grecaptcha == "undefined") {
-      console.log("no captcha")
       return;
     }
-    console.log("captcha!")
     grecaptcha.ready(function() {
       grecaptcha.execute(recaptcha_site_key, {
         action: 'submit'
       }).then(function(token) {
         if (token.length > 0) {
-          console.log("token: ", token)
           document.getElementById('g-token').value = token;
         }
       });
@@ -21,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
   initRecaptcha();
   setInterval(initRecaptcha, 30000);
   
+  /**  
+   * Handle showing additional fields exposed by
+   * clicking yes on some radio buttons
+   */
 
   function switchVar() {
     var assistanceYes = document.getElementById("assistanceYes");
@@ -43,6 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   switchVar();
+
+/**
+ *  validation based on GSA.gov form validation
+ */
+
   document.querySelectorAll("input[name=Assistancequestion]").forEach(function(element) {
     element.addEventListener('change', switchVar);
   });
@@ -91,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 
-// validation
-// based on GSA.gov form validation
 
 let validateThis = "form.validate-form[validate='true']";
 
@@ -103,7 +106,6 @@ function beginValidation(form_selector) {
 
   const js_forms = document.querySelectorAll(form_selector);
 
-  // Lets loop thru all possible forms in the DOM
   for (const js_form of js_forms) {
     // Disable default html5 validation for all forms on page
     setNoValidate(js_form);
@@ -116,7 +118,7 @@ function beginValidation(form_selector) {
     let error_container_class = "usa-form-group--error"
     let check_boxes_min = document.querySelectorAll('.js-min_one[type="checkbox"]')
 
-    // begin by reseting all values on $load
+    // begin by reseting all values on load
     document.addEventListener('DOMContentLoaded', function() {
     
       [].forEach.call(required_inputs, function (text_input) {
@@ -151,18 +153,22 @@ function beginValidation(form_selector) {
           console.log(`${text_input.name} is missing the data-error-msg to display error feedback`)
         }
 
-        //console.table(text_input.name + error_msg);
-
         if (invalid) {
           not_pass = true;
           text_input.closest(".usa-form-group").classList.add(error_container_class);
           text_input.classList.add("usa-input--error");
-          text_input.previousElementSibling.innerText = error_msg;
+          var errorId = text_input.getAttribute('data-error-id');
+          var errorSpan = document.getElementById(errorId);
+          if (errorSpan) {
+            errorSpan.innerText = error_msg
+          }
           console.log(`${text_input.name} is missing`);
         } else {
 
           text_input.closest(".usa-form-group").classList.remove(error_container_class);
-          text_input.previousElementSibling.innerText = " ";
+          var errorId = text_input.getAttribute('data-error-id');
+          var errorSpan = document.getElementById(errorId);
+          errorSpan.innerText = " ";
           text_input.classList.remove("usa-input--error");
         }
       });
@@ -188,7 +194,7 @@ function beginValidation(form_selector) {
       if (document.body.contains(check_boxes[0])) {
         // Get all radio buttons, convert to an array.
         const inputs_array = Array.prototype.slice.call(check_boxes);
-        console.log("input array", inputs_array)
+
         // Reduce to get an array of radio button sets
         const questions = Object.values(inputs_array.reduce((result, el) => {
           return Object.assign(result, {[el.name]: (result[el.name] || []).concat(el)});

@@ -114,7 +114,7 @@ function beginValidation(form_selector) {
     let select_inputs = js_form.querySelectorAll("select:not(#perdiemSearchVO_fy)")
     let textarea_inputs = js_form.querySelectorAll("textarea")
     let check_boxes = js_form.querySelectorAll(".usa-radio__input[type=radio],.usa-checkbox__input.validate-checkbox[type=checkbox]")
-    let check_min_inputs = js_form.querySelectorAll(".js-min_one[type=checkbox]")
+    
     let error_container_class = "usa-form-group--error"
     let check_boxes_min = document.querySelectorAll('.js-min_one[type="checkbox"]')
 
@@ -146,7 +146,6 @@ function beginValidation(form_selector) {
 
       [].forEach.call(required_inputs, function (text_input) {
         if (window.getComputedStyle(text_input).display == 'none') {
-          console.log("skeipping hidden: ", text_input)
           return
         }
         let error_msg = text_input.getAttribute("data-error-msg")
@@ -177,21 +176,6 @@ function beginValidation(form_selector) {
         }
       });
 
-      // Require at least one checkbox with the class specified
-      if (document.body.contains(check_min_inputs[0])) {
-        let len = document.querySelectorAll('.js-min_one[type="checkbox"]:checked').length
-        
-        let container = document.querySelectorAll('.check-min-one')[0];
-
-        if (len <= 0) {
-          //msg.innerHTML = "Please check at least one";
-          container.classList.add(error_container_class);
-          not_pass = true;
-        } else {
-          container.classList.remove(error_container_class);
-          //not_pass = false;
-        }
-      }
 
       // If inputs exist
       // It is assumed that all radios and checkboxes are required and atleast one text input will also exist on the page.
@@ -199,23 +183,35 @@ function beginValidation(form_selector) {
         // Get all radio buttons, convert to an array.
         const inputs_array = Array.prototype.slice.call(check_boxes);
 
-        // Reduce to get an array of radio button sets
+        // Group inputs by parent id
         const questions = Object.values(inputs_array.reduce((result, el) => {
-          return Object.assign(result, {[el.name]: (result[el.name] || []).concat(el)});
+          let parent = el.closest('fieldset');
+          return Object.assign(result, {[parent.id]: (result[parent.id] || []).concat(el)});
         }, {}));
 
         // Loop through each question, looking for any that aren't answered.
         let hasUnanswered = questions.some(question => !question.some(el => el.checked));
         questions.forEach(question => {
-          if (!question.some(el => {
-            return el.checked;
-          })) {
-            hasUnanswered = true;
-            question.forEach(el => el.closest(".usa-fieldset").classList.add(error_container_class));
+          var fieldset =  question[0].closest(".usa-fieldset")
+          var errorId = fieldset.getAttribute('data-error-id');
+          var error_msg = fieldset.getAttribute("data-error-msg")
+          var input_type = question[0].type
 
+          // at least one radio button in the group or all checkboxes must be checked
+          if ((input_type == "radio" && !question.some(el => el.checked)) || (input_type == "checkbox" && !question.every(el => el.checked))) {
+            hasUnanswered = true;
+          
+            fieldset.classList.add(error_container_class);
+            if (errorId && error_msg) {
+                var errorSpan = document.getElementById(errorId)
+                errorSpan.innerText = error_msg
+            }
           } else {
-            // hasUnanswered = false;
-            question.forEach(el => el.closest(".usa-fieldset").classList.remove(error_container_class));
+            fieldset.classList.remove(error_container_class);
+            if (errorId && error_msg) {
+              var errorSpan = document.getElementById(errorId)
+              errorSpan.innerText = " "
+            }
           }
         });
         // Radio button is un answered

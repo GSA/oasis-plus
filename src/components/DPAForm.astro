@@ -339,13 +339,18 @@
         <legend class="usa-legend usa-legend--large">
             Service requirement request
         </legend>
-        <fieldset class="usa-fieldset fieldset-radio">
+        <fieldset 
+            class="usa-fieldset fieldset-radio"
+            id="assistance_group"
+            data-error-id="assistance_missing_message"
+            data-error-msg="This field is required; please indicate if you need assistance">
             <legend class="usa-legend font-sans-md padding-top-3"
                 >Do you need assistance with a current or future professional
                 service requirement?
             </legend>
 
             <div class="usa-radio">
+                <span id="assistance_missing_message" class="usa-error-message"></span>
                 <input
                     class="usa-radio usa-radio__input"
                     id="assistanceYes"
@@ -386,14 +391,19 @@
             </div>
         </fieldset>
     </fieldset>
-    <fieldset class="usa-fieldset margin-top-4">
+    <fieldset 
+        id = "acknowldgement_group"
+        class="usa-fieldset margin-top-4"
+        data-error-id="acknowledgement_missing_message"
+        data-error-msg="All acknowledgements are required; please acknowledge each item."
+    >
         <legend class="usa-legend usa-legend--large">
             Acknowledgements
         </legend>
-        
-         <p>By completing and submitting this request:</p>
+        <span id="acknowledgement_missing_message" class="usa-error-message"></span>
 
-        <div class="usa-checkbox">
+         <p>By completing and submitting this request:</p>
+         <div class="usa-checkbox">
             <input
                 class="usa-checkbox__input validate-checkbox"
                 id="oasis_moa_doc_review_yes"

@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }).then(function(token) {
         if (token.length > 0) {
           document.getElementById('g-token').value = token;
+
+          // prevent a11y from complaining about the hidden textarea
+          // that google palces on the page
+          var textarea = document.getElementById("g-recaptcha-response");
+          textarea.setAttribute("aria-hidden", "true");
+          textarea.setAttribute("aria-label", "unused");
+          textarea.setAttribute("aria-readonly", "true");
         }
       });
     });

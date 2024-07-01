@@ -73,26 +73,26 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
         <h2>Table of Contents</h2>
         <ul>
           <!--About TOC -->
-          <li>{toc_about_parent_title}
+          <li><a href={`#${slug(toc_about_parent_title)}` } class="usa-link">{toc_about_parent_title}</a>
             <ul>
               {toc_about.map(item => (  
-                <li>{item.data.title}</li>
+                <li><a  href={`#${slug(item.data.title)}`} class="usa-link">{item.data.title}</a></li>
               ))}
             </ul>
           </li>
           <!--Research Contract features TOC -->
-          <li>{toc_research_parent_title}
+          <li><a href={`#${slug(toc_research_parent_title)}`} class="usa-link">{toc_research_parent_title}</a>
             {toc_research_child_pages.length >0 &&
             <ul>
               {toc_research_child_pages.map(item => (  
-                <li>{item.data.title}</li>
+                <li><a  href={`#${slug(item.data.title)}`} class="usa-link">{item.data.title}</a></li>
               ))}
             </ul>
             }
           </li>
           <!--Rest of Buyers guide pages TOC -->
           {toc_buyers_other_pages.map(item => (  
-            <li>{item.data.title}</li>
+            <li><a  href={`#${slug(item.data.title)}`} class="usa-link">{item.data.title}</a></li>
           ))}
         </ul>
       </div>

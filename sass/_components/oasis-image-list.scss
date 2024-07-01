@@ -32,3 +32,27 @@ ul.oasis-image-list{
         }
     }
 }
+
+.oasis-1-column-image-list {
+    ul {
+        @include at-media(tablet) {
+            columns: 1;
+            column-gap: .25em;
+        }
+        list-style: none;
+        padding-left:0;
+        li {
+            padding-bottom: 1.5em;
+            break-inside: avoid-column;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            img {
+                width: 20%;
+                vertical-align: middle;
+                margin-right: .5em;
+                float:left;
+            }
+        }
+    }
+}

@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // prevent a11y from complaining about the hidden textarea
           // that google palces on the page
-          var textarea = document.getElementById("g-recaptcha-response");
-          textarea.setAttribute("aria-hidden", "true");
-          textarea.setAttribute("aria-label", "unused");
-          textarea.setAttribute("aria-readonly", "true");
+          var textarea = document.getElementsByName("g-recaptcha-response")[0];
+          if (textarea) {
+            textarea.setAttribute("aria-hidden", "true");
+            textarea.setAttribute("aria-label", "unused");
+            textarea.setAttribute("aria-readonly", "true");
+          }
         }
       });
     });

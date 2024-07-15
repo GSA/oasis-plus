@@ -616,7 +616,6 @@
   icon: images/domain-icons/logistics.svg
   clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
-  
     - Analysis & recommendation of support equipment
     - Cold chain medical supply services
     - Deployment logistics

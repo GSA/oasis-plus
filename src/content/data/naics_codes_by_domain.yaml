@@ -616,20 +616,7 @@
   icon: images/domain-icons/logistics.svg
   clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
   scopeAreas:
-    - Analysis & recommendation of support equipment
-    - Cold chain medical supply services
-    - Deployment logistics
-    - Disaster management/contingency operations
-    - Distribution & transportation
-    - Food & perishable goods supply services
-    - Industrial relocation/expansion services
-    - Infrastructure services (including transportation & delivery)
-    - Integrated Product Support (IPS) technical requirement creation
-    - Integrating public & private resources
-    - IPS system design, risk assessment, schedules creation & performance tracking
-    - Inventory management
-    - Life cycle sustainment
-    - Logistical studies & evaluation
+  
     - Analysis & recommendation of support equipment
     - Cold chain medical supply services
     - Deployment logistics

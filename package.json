@@ -24,7 +24,7 @@
     "@astrojs/sitemap": "^3.1.6",
     "@uswds/uswds": "3.8.1",
     "astro": "^4.11.5",
-    "dayjs": "^1.11.11",
+    "dayjs": "^1.11.12",
     "typescript": "^5.5.3",
     "unist-util-visit": "^5.0.0"
   },

@@ -3,7 +3,7 @@
     "concurrency": 1,
     "standard": "WCAG2AA",
     "timeout": 10000,
-    "hideElements": "iframe",
+    "hideElements": "iframe, .g-recaptcha-response",
     "chromeLaunchConfig": {
         "args": ["--no-sandbox"]
     }

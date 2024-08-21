@@ -1,0 +1,26 @@
+---
+title: DPA Request Form
+description: "Find out if and why you need a delegation of procurement authority (DPA), how to get one, and stay updated on DPA training."
+order: 5
+is_hidden: true
+is_child: true
+---
+import DPAForm from "@components/DPAForm.astro"
+import Alert from "@components/USWDSAlert.astro";
+import ArrowListItem from "@components/ArrowListItem.astro";
+import IconList from "@components/IconList.astro";
+export const components = {ul: IconList, li: ArrowListItem};
+
+
+<Alert status="success" heading="Your form was successfully submitted.">
+    You will receive confirmation of the DPA via email within two business days.
+</Alert>
+
+## Before you submit the form
+
+- You must have completed OASIS+ DPA training. If you have not completed training, check [Events & Training](/events-training/) for the next available session.
+- After you have completed training, provide the CO warrant number and DPA training completion certificate to OASIS+ DPA training at oasisplusDPA@gsa.gov.
+
+
+<DPAForm />
+

@@ -12,18 +12,14 @@ pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
 
   <nav class="sticky_site_nav" aria-label="Secondary navigation">
     <ul class="usa-sidenav">
-      {pages.filter(page => !page.data.is_child).map(page => (
+      {pages.filter(page => !page.data.is_child && !page.data.is_hidden).map(page => (
         <li class="usa-sidenav__item">
           <!--single menu or parent menu -->
-          {!page.data.is_child &&
-            (
-            <a 
+          <a 
             class={id === page.id ? 'usa-current' : null } 
             href={`${import.meta.env.BASE_URL}${parent_path}/${page.slug}/`}
             >{page.data.title}
-            </a>
-            )
-          }
+          </a>
           <!--Sub menus for child pages with direct link -->
           {id.split('/')[0] === page.id.split('/')[0] &&
           (

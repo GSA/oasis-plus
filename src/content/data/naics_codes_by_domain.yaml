@@ -71,7 +71,7 @@
 - name: Technical & Engineering
   shortName: T&E
   icon: images/domain-icons/tech.svg
-  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=URZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
     - Advanced technology pilot & trials
     - Alternative energy sources & engineering
@@ -166,7 +166,7 @@
 - name: Research & Development
   shortName: R&D
   icon: images/domain-icons/research.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
   - Cell & tissue culture & engineering
   - Conceptual design & modification of product or process alternatives
@@ -205,57 +205,57 @@
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
-      clin: RD-541330-XX
+      clin: X0301
     - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
       sizeStandard: $47.0 Million
-      clin: RD-541330E1-XX
+      clin: X0302
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
-      clin: RD-541330E2-XX
+      clin: X0303
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
-      clin: RD-541330E3-XX
+      clin: X0304
     - codeAndTitle: 541380 Testing Laboratories
       sizeStandard: $19.0 Million
-      clin: RD-541380-XX
+      clin: X0305
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
-      clin: RD-541611-XX
+      clin: X0306
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: RD-541690-XX
+      clin: X0307
     - codeAndTitle: 541713 Research and Technology in Nanotechnology
       sizeStandard: 1,000 employees
-      clin: RD-541713-XX
+      clin: X0308
     - codeAndTitle: 541714 Research and Technology in Biotechnology (except Nanobiotechnology)
       sizeStandard: 1,000 employees
-      clin: RD-541714-XX
+      clin: X0309
     - codeAndTitle: 541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
       sizeStandard: 1,000 employees
-      clin: RD-541715-XX
+      clin: X0310
     - codeAndTitle: 541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts
       sizeStandard: 1,500 employees
-      clin: RD-541715E1-XX
+      clin: X0311
     - codeAndTitle: 541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment
       sizeStandard: 1,250 employees
-      clin: RD-541715E2-XX
+      clin: X0312
     - codeAndTitle: 541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts
       sizeStandard: 1,300 employees
-      clin: RD-541715E3-XX
+      clin: X0313
     - codeAndTitle: 541720 Research and Development in the Social Sciences and Humanities
       sizeStandard: $28.0 Million
-      clin: RD-541720-XX
+      clin:X0314
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: RD-541990-XX
+      clin: X0315
     - codeAndTitle: 621511 Medical Laboratories
       sizeStandard: $41.5 Million
-      clin: RD-621511-XX
+      clin: X0316
 
 - name: Intelligence Services
   shortName: INTEL
   icon: images/domain-icons/intelligence.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
     - Assured positioning, navigation & timing capabilities support
     - Prototyping, integrating & testing
@@ -304,57 +304,57 @@
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
-      clin: INT-541330-XX
+      clin: X0401
     - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
       sizeStandard: $47.0 Million
-      clin: INT-541330E1-XX
+      clin: X0402
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
-      clin: INT-541330E2-XX
+      clin: X0403
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
-      clin: INT-541330E3-XX
+      clin: X0404
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
-      clin: INT-541611-XX
+      clin: X0405
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
-      clin: INT-541614-XX
+      clin: X0406
     - codeAndTitle: 541618 Other Management Consulting Services
       sizeStandard: $19.0 Million
-      clin: INT-541618-XX
+      clin: X0407
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: INT-541690-XX
+      clin: X0408
     - codeAndTitle: 541715 Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
       sizeStandard: 1,000 employees
-      clin: INT-541715-XX
+      clin: X0409
     - codeAndTitle: 541715 (Exception 1) Aircraft, Aircraft Engine and Engine Parts
       sizeStandard: 1,500 employees
-      clin: INT-541715E1-XX
+      clin: X0410
     - codeAndTitle: 541715 (Exception 2) Other Aircraft Parts and Auxiliary Equipment
       sizeStandard: 1,250 employees
-      clin: INT-541715E2-XX
+      clin: X0411
     - codeAndTitle: 541715 (Exception 3) Guided Missiles and Space Vehicles, Their Propulsion Units and Propulsion Parts
       sizeStandard: 1,300 employees
-      clin: INT-541715E3-XX
+      clin: X0412
     - codeAndTitle: 541720 Research and Development in the Social Sciences and Humanities
       sizeStandard: $28.0 Million
-      clin: INT-541720-XX
+      clin: X0413
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: INT-541990-XX
+      clin: X0414
     - codeAndTitle: 561499 All Other Business Support Services
       sizeStandard: $21.5 Million
-      clin: INT-561499-XX
+      clin: X0415
     - codeAndTitle: 561611 Investigation Services
       sizeStandard: $25.0 Million
-      clin: INT-561611-XX
+      clin: X0416
 
 - name: Environmental
   shortName: ENV
   icon: images/domain-icons/sustainability.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
     - Air monitoring
     - Air toxicology, criteria pollutants & greenhouse gas (GHG) emissions strategy & analyses
@@ -410,42 +410,42 @@
   naics:
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
-      clin: ENV-541330-XX
+      clin: X0601
     - codeAndTitle: 541360 Geophysical Surveying and Mapping Services
       sizeStandard: $28.5 Million
-      clin: ENV-541360-XX
+      clin: X0602
     - codeAndTitle: 541380 Testing Laboratories
       sizeStandard: $19.0 Million
-      clin: ENV-541380-XX
+      clin: X0603
     - codeAndTitle: 541620 Environmental Consulting Services
       sizeStandard: $19.0 Million
-      clin: ENV-541620-XX
+      clin: X0604
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: ENV-541690-XX
+      clin: X0605
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: ENV-541990-XX
+      clin: X0606
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
-      clin: ENV-561210-XX
+      clin: X0607
     - codeAndTitle: 562112 Hazardous Waste Collection
       sizeStandard: $47.0 Million
-      clin: ENV-562112-XX
+      clin: X0608
     - codeAndTitle: 562211 Hazardous Waste Treatment and Disposal
       sizeStandard: $47.0 Million
-      clin: ENV-562211-XX
+      clin: X0609
     - codeAndTitle: 562910 Remediation Services
       sizeStandard: $25.0 Million
-      clin: ENV-562910-XX
+      clin: X0610
     - codeAndTitle: 562910 (Exception) Environmental Remediation Services
       sizeStandard: 1,000 employees
-      clin: ENV-562910E-XX
+      clin: X0611
 
 - name: Facilities
   shortName: FAC
   icon: images/domain-icons/facilities.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
     - Airfield lighting services
     - Airport security services & surveillance
@@ -525,96 +525,96 @@
   naics:
     - codeAndTitle: 238160 Roofing Contractors
       sizeStandard: $19.0 Million
-      clin: FAC-238160-XX
+      clin: X0701
     - codeAndTitle: 238210 Electrical Contractors and Other Wiring Installation Contractors
       sizeStandard: $19.0 Million
-      clin: FAC-238210-XX
+      clin: X0702
     - codeAndTitle: 238220 Plumbing, Heating, and Air Conditioning Contractors
       sizeStandard: $19.0 Million
-      clin: FAC-238220-XX
+      clin: X0703
     - codeAndTitle: 238290 Other Building Equipment Contractors
       sizeStandard: $22.0 Million
-      clin: FAC-238290-XX
+      clin: X0704
     - codeAndTitle: 238320 Painting and Wall Covering Contractors
       sizeStandard: $19.0 Million
-      clin: FAC-238320-XX
+      clin: X0705
     - codeAndTitle: 238990 All Other Specialty Trade Contractors
       sizeStandard: $19.0 Million
-      clin: FAC-238990-XX
+      clin: X0706
     - codeAndTitle: 485999 All Other Transit and Ground Passenger transportation
       sizeStandard: $19.0 Million
-      clin: FAC-485999-XX
+      clin: X0707
     - codeAndTitle: 488190 Other Support Activities for Air Transportation
       sizeStandard: $40.0 Million
-      clin: FAC-488190-XX
+      clin: X0708
     - codeAndTitle: 488490 Other Support Activities for Road Transportation
       sizeStandard: $18.0 Million
-      clin: FAC-488490-XX
+      clin: X0709
     - codeAndTitle: 488999 All Other Support Activities for Transportation
       sizeStandard: $25.0 Million
-      clin: FAC-488999-XX
+      clin: X0710
     - codeAndTitle: 531311 Residential Property Managers
       sizeStandard: $12.5 Million
-      clin: FAC-531311-XX
+      clin: X0711
     - codeAndTitle: 531312 Nonresidential Property Managers
       sizeStandard: $19.5 Million
-      clin: FAC-531312-XX
+      clin: X0712
     - codeAndTitle: 541320 Landscape Architectural Services
       sizeStandard: $9.0 Million
-      clin: FAC-541320-XX
+      clin: X0713
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
-      clin: FAC-541330-XX
+      clin: X0714
     - codeAndTitle: 541350 Building Inspection Services
       sizeStandard: $11.5 Million
-      clin: FAC-541350-XX
+      clin: X0715
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
-      clin: FAC-541611-XX
+      clin:X0716
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
-      clin: FAC-541614-XX
+      clin: X0717
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: FAC-541690-XX
+      clin: X0718
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: FAC-541990-XX
+      clin: X0719
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
-      clin: FAC-561210-XX
+      clin: X0720
     - codeAndTitle: 561621 Security Systems Services (except Locksmiths)
       sizeStandard: $25.0 Million
-      clin: FAC-561621-XX
+      clin: X0721
     - codeAndTitle: 561710 Exterminating and Pest Control Services
       sizeStandard: $17.5 Million
-      clin: FAC-561710-XX
+      clin: X0722
     - codeAndTitle: 561720 Janitorial Services
       sizeStandard: $22.0 Million
-      clin: FAC-561720-XX
+      clin: X0723
     - codeAndTitle: 561730 Landscaping Services
       sizeStandard: $9.5 Million
-      clin: FAC-561730-XX
+      clin: X0724
     - codeAndTitle: 561990 All Other Support Services
       sizeStandard: $16.5 Million
-      clin: FAC-561990-XX
+      clin: X07025
     - codeAndTitle: 562111 Solid Waste Collection
       sizeStandard: $47.0 Million
-      clin: FAC-562111-XX
+      clin: X07026
     - codeAndTitle: 562112 Hazardous Waste Collection
       sizeStandard: $47.0 Million
-      clin: FAC-562112-XX
+      clin: X0727
     - codeAndTitle: 562211 Hazardous Waste Treatment and Disposal
       sizeStandard: $47.0 Million
-      clin: FAC-562211-XX
+      clin: X0728
     - codeAndTitle: 811310 Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance
       sizeStandard: $12.5 Million
-      clin: FAC-811310-XX
+      clin: X07029
 
 - name: Logistics
   shortName: LOG
   icon: images/domain-icons/logistics.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
     - Analysis & recommendation of support equipment
     - Cold chain medical supply services
@@ -648,61 +648,61 @@
   naics:
     - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
-      clin: LOG-336611-XX
+      clin: X0801
     - codeAndTitle: 481211 Nonscheduled Chartered Passenger Air Transportation
       sizeStandard: 1,500 employees
-      clin: LOG-481211-XX
+      clin: X0801
     - codeAndTitle: 485991 Special Needs Transportation
       sizeStandard: $19.0 Million
-      clin: LOG-485991-XX
+      clin: X0801
     - codeAndTitle: 485999 All Other Transit and Ground Passenger Transportation
       sizeStandard: $19.0 Million
-      clin: LOG-485999-XX
+      clin: X0801
     - codeAndTitle: 488111 Air Traffic Control
       sizeStandard: $40.0 Million
-      clin: LOG-488111-XX
+      clin: X0801
     - codeAndTitle: 488190 Other Support Activities for Air Transportation
       sizeStandard: $40.0 Million
-      clin: LOG-488190-XX
+      clin: X0801
     - codeAndTitle: 488999 All Other Support Activities for Transportation
       sizeStandard: $25.0 Million
-      clin: LOG-488999-XX
+      clin: X0801
     - codeAndTitle: 492110 Couriers and Express Delivery Services
       sizeStandard: 1,500 employees
-      clin: LOG-492110-XX
+      clin: X0801
     - codeAndTitle: 493110 General Warehousing and Storage
       sizeStandard: $34.0 Million
-      clin: LOG-493110-XX
+      clin: X0801
     - codeAndTitle: 493120 Refrigerated Warehousing and Storage
       sizeStandard: $36.5 Million
-      clin: LOG-493120-XX
+      clin: X0801
     - codeAndTitle: 493190 Other Warehousing and Storage
       sizeStandard: $36.5 Million
-      clin: LOG-493190-XX
+      clin: X0801
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
-      clin: LOG-541330-XX
+      clin: X0801
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
-      clin: LOG-541614-XX
+      clin: X0801
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: LOG-541690-XX
+      clin: X0801
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: LOG-541990-XX
+      clin: X0801
     - codeAndTitle: 561210 Facilities Support Services
       sizeStandard: $47.0 Million
-      clin: LOG-561210-XX
+      clin: X0801
     - codeAndTitle: 811114 Specialized Automotive Repair
       sizeStandard: $9.0 Million
-      clin: LOG-811114-XX
+      clin: X0801
     - codeAndTitle: 811121 Automotive Body, Paint and Interior Repair and Maintenance
       sizeStandard: $9.0 Million
-      clin: LOG-811121-XX
+      clin: X0801
     - codeAndTitle: 811198 All Other Automotive Repair and Maintenance
       sizeStandard: $10.0 Million
-      clin: LOG-811198-XX
+      clin: X0801
 
 
 - name: Enterprise Solutions (UR Only)

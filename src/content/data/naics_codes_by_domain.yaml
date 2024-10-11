@@ -244,7 +244,7 @@
       clin: X0313
     - codeAndTitle: 541720 Research and Development in the Social Sciences and Humanities
       sizeStandard: $28.0 Million
-      clin:X0314
+      clin: X0314
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
       clin: X0315
@@ -570,7 +570,7 @@
       clin: X0715
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
-      clin:X0716
+      clin: X0716
     - codeAndTitle: 541614 Process, Physical Distribution and Logistics Consulting Services
       sizeStandard: $20.0 Million
       clin: X0717

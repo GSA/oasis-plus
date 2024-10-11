@@ -1,7 +1,7 @@
 - name: Management & Advisory
   shortName: M&A
   icon: images/domain-icons/management.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=UR"
   scopeAreas:
     - Acquisition & grants management support
     - Business case development/analysis support
@@ -45,33 +45,33 @@
   naics:
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
-      clin: MA-541611-XX
+      clin: X0101
     - codeAndTitle: 541612 Human Resources Consulting Services
       sizeStandard: $29.0 Million
-      clin: MA-541612-XX
+      clin: X0102
     - codeAndTitle: 541613 Marketing Consulting Services
       sizeStandard: $19.0 Million
-      clin: MA-541613-XX
+      clin: X0103
     - codeAndTitle: 541614 Process, Physical Distribution, and Logistics Consulting Services
       sizeStandard: $20.0 Million
-      clin: MA-541614-XX
+      clin: X0104
     - codeAndTitle: 541618 Other Management Consulting Services
       sizeStandard: $19.0 Million
-      clin: MA-541618-XX
+      clin: X0105
     - codeAndTitle: 541620 Environmental Consulting Services
       sizeStandard: $19.0 Million
-      clin: MA-541620-XX
+      clin: X0106
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: MA-541690-XX
+      clin: X0107
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: MA-541990-XX
+      clin: X0108
 
 - name: Technical & Engineering
   shortName: T&E
   icon: images/domain-icons/tech.svg
-  clinKey: "XX = UR, SB, 8A, VO, WO, HZ"
+  clinKey: "X: 1=SB; 2=8(a); 3=HUBZone; 4=SDVOSB; 5=WOSB; 6=URZ"
   scopeAreas:
     - Advanced technology pilot & trials
     - Alternative energy sources & engineering
@@ -116,52 +116,52 @@
   naics:
     - codeAndTitle: 336611 Ship Building and Repairing
       sizeStandard: 1,300 employees
-      clin: TE-336611-XX
+      clin: X0201
     - codeAndTitle: 488190 Other Support Activities for Air Transportation
       sizeStandard: $40.0 Million
-      clin: TE-488190-XX
+      clin: X0202
     - codeAndTitle: 488999 All Other Support Activities for Transportation
       sizeStandard: $25.0 Million
-      clin: TE-488999-XX
+      clin: X0203
     - codeAndTitle: 541310 Architectural Services
       sizeStandard: $12.5 Million
-      clin: TE-541310-XX
+      clin: X0204
     - codeAndTitle: 541330 Engineering Services
       sizeStandard: $25.5 Million
-      clin: TE-541330-XX
+      clin: X0205
     - codeAndTitle: 541330 (Exception 1) Military and Aerospace Equipment and Military Weapons
       sizeStandard: $47.0 Million
-      clin: TE-541330E1-XX
+      clin: X0206
     - codeAndTitle: 541330 (Exception 2) Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy Act of 1992
       sizeStandard: $47.0 Million
-      clin: TE-541330E2-XX
+      clin: X0207
     - codeAndTitle: 541330 (Exception 3) Marine Engineering and Naval Architecture
       sizeStandard: $47.0 Million
-      clin: TE-541330E3-XX
+      clin: X0208
     - codeAndTitle: 541350 Building Inspection Services
       sizeStandard: $11.5 Million
-      clin: TE-541350-XX
+      clin: X0209
     - codeAndTitle: 541360 Geophysical Surveying and Mapping Services
       sizeStandard: $28.5 Million
-      clin: TE-541360-XX
+      clin: X0210
     - codeAndTitle: 541370 Surveying and Mapping (except Geophysical) Services
       sizeStandard: $19.0 Million
-      clin: TE-541370-XX
+      clin: X0211
     - codeAndTitle: 541380 Testing Laboratories
       sizeStandard: $19.0 Million
-      clin: TE-541380-XX
+      clin: X0212
     - codeAndTitle: 541611 Administrative Management and General Management Consulting Services
       sizeStandard: $24.5 Million
-      clin: TE-541611-XX
+      clin: X0213
     - codeAndTitle: 541690 Other Scientific and Technical Consulting Services
       sizeStandard: $19.0 Million
-      clin: TE-541690-XX
+      clin: X0214
     - codeAndTitle: 541990 All Other Professional, Scientific and Technical Services
       sizeStandard: $19.5 Million
-      clin: TE-541990-XX
+      clin: X0215
     - codeAndTitle: 611512 Flight Training
       sizeStandard: $34.0 Million
-      clin: TE-611512-XX      
+      clin: X0216      
 
 - name: Research & Development
   shortName: R&D

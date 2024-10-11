@@ -5,6 +5,9 @@ import oasisLogo from '@assets/images/logo-ordering-guide.png';
 import PageContentLayoutWideScreen from '@layouts/PageContentLayoutWideScreen.astro';
 import { slug } from 'github-slugger';
 
+// Change this to update revision date:
+let REVISION_DATE = "10/11/2024"
+
 // get about section pages that for print
 let about_pages = await getCollection('about');
 about_pages.sort((a, b) => parseInt(a.data.order) - parseInt(b.data.order))
@@ -54,10 +57,10 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
       <li>8(a) Small Business and Service-Disabled Veteran-Owned Small Business  </li>
       <li>Task Order Procurements</li>
      </ul>
-      
+     <p><strong>Initial Release Date:</strong> 03/19/2024</p>
+     <p><strong>Revision Date:</strong> {REVISION_DATE}</p>
+
     </p>
-    <p><strong>Initial Release Date:</strong> 03/19/2024 </p>
-    <p><strong>Revision Date:</strong> Not Applicable </p>
     <p>Contact the OASIS+ Program: <a href="mailto:oasisplus@gsa.gov">oasisplus@gsa.gov</a></p>
   </div>
     <PageContentLayoutWideScreen title={page_title} id="header-hidden-for-print">
@@ -71,6 +74,11 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
           </button>
       </div>
       <div>
+        <p class="hide_on_print">
+          <strong>Initial Release Date:</strong> 03/19/2024 <br />
+          <strong>Revision Date:</strong> {REVISION_DATE}
+        </p>
+    
         <h2>Table of Contents</h2>
         <ul>
           <!--About TOC -->
@@ -147,6 +155,7 @@ const toc_buyers_other_pages = buyers_entries.filter(h =>!h.slug.startsWith('res
   
 
     @media print {
+      .hide_on_print {display: none}
       #print_button {display: none;}
       .usa-layout-docs__sidenav{display:none;}
       #oasis-menu-button {display:none;}

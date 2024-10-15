@@ -192,7 +192,7 @@ const base_url = import.meta.env.BASE_URL;
                         ['Facilities', facilities_icon, 'about/domains-naicscodes-scope-labor-categories/#-facilities-fac'],
                         ['Technical & Engineering', tech_engineering_icon,'about/domains-naicscodes-scope-labor-categories/#-technical-and-engineering-te'],
                         ['Logistics', logistics_icon,'about/domains-naicscodes-scope-labor-categories/#-logistics-log']
-                      ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" url={url}>{text}</ImageListItem>) }
+                      ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" alt={text} url={url}>{text}</ImageListItem>) }
                     </ImageList>
                   </div>
 
@@ -203,7 +203,7 @@ const base_url = import.meta.env.BASE_URL;
                       ['Research & Development', r_d_icon,'about/domains-naicscodes-scope-labor-categories/#-research-and-development-rd'],
                       ['Environmental', environmental_icon,'about/domains-naicscodes-scope-labor-categories/#-environmental-env'],
                       ['Enterprise Solutions ', enterprise_icon,'about/domains-naicscodes-scope-labor-categories/#-enterprise-solutions']
-                    ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" url={url}>{text}</ImageListItem>) }
+                    ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" alt={text} url={url}>{text}</ImageListItem>) }
                     </ImageList>
                   </div>
                 </div>

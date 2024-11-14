@@ -17,6 +17,13 @@ declare module 'astro:content' {
 		}>;
 	}
 }
+export {};
+declare global {
+	interface Window {
+	  dataLayer: any[]; 
+	  gtag: (...args: any[]) => void; 
+	}
+  }
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';

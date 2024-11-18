@@ -23,7 +23,7 @@
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/sitemap": "^3.2.1",
     "@uswds/uswds": "3.9.0",
-    "astro": "^4.16.10",
+    "astro": "^4.16.13",
     "dayjs": "^1.11.13",
     "typescript": "^5.6.3",
     "unist-util-visit": "^5.0.0"

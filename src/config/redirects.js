@@ -6,7 +6,8 @@ import path from "path"
 
 const redirects = {
   "/ordering-guide/": "/oasis-plus/buyers-guide/printable/",
-  
+  "/about/contract-families/":"/oasis-plus/about/contracts/",
+  "/buyers-guide/register-in-symphony/":"/oasis-plus/buyers-guide/gsa-ebuy-for-oasis-plus/",
 }
 
 

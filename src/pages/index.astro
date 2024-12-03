@@ -54,7 +54,7 @@ const base_url = import.meta.env.BASE_URL;
       </Fragment>
       <Fragment slot="callout">
         <p>
-          We are the largest governmentwide, multi-agency contracting program that provides professional services via six Indefinite Delivery, Indefinite Quantity (IDIQ) contract families.
+          We are the largest governmentwide, multi-agency contract program that provides professional services via six Indefinite Delivery, Indefinite Quantity (IDIQ) contracts.
         </p>
         <div class="oasis-banner__actions">
           <div class="oasis-banner__action">
@@ -66,6 +66,19 @@ const base_url = import.meta.env.BASE_URL;
 
     <div class="grid-container">
       <USWSDAlert heading="Announcements and upcoming dates">
+<p><strong>OASIS+ 8(a) Formal Awards and Notices to Proceed:</strong> Issued November 6, 2024 and officially marks the beginning of the contract's period of performance (PoP).</p>
+
+<p><strong>OASIS+ 8(a) Awards Decision:</strong> October 24, 2024 - The OASIS+ Small Business announcements were published on <a class="usa-link usa-link--external" href="https://sam.gov/opp/7ece48e74cf8405fa62c7873f51c7987/view">SAM.GOV:</a>.</p>
+
+<p><strong>OASIS+ Socioeconomic Set-Asides Formal Awards and Notices to Proceed (NTPS):</strong> Issued September 30, 2024 and officially marks the beginning of each contract's PoP. </p>
+
+<p><strong>OASIS+ Socioeconomic Set-Asides Award Decision:</strong> September 19, 2024 - The OASIS+ Socioeconomic announcements were published on <a class="usa-link usa-link--external" href="https://sam.gov/content/home">SAM.GOV:</a> </p>
+<ul>
+          <li><a class="usa-link usa-link--external" href="https://sam.gov/opp/14c387a1c48f48cab05830d7e2a474a2/view">Women-Owned SB (WOSB)</a></li>
+          <li><a class="usa-link usa-link--external" href="https://sam.gov/opp/0e50b6b1d5bd4d0198ab32e73de975b8/view">Historically Underutilized Business Zone (HUBZone) SB</a></li>
+          <li><a class="usa-link usa-link--external" href="https://sam.gov/opp/5bce1a9aedd149eaa814ba1ac3ecfdb2/view">Service-Disabled Veteran-Owned SB (SDVOSB)</a></li>
+        </ul>
+
 <p><strong>Notice of a Delay of OASIS+ Small Business Awards:</strong> August 13, 2024 - Learn more from the <a class="usa-link usa-link--external" href="https://buy.gsa.gov/interact/community/196/activity-feed">OASIS+ Interact Community blog.</a> </p>
 
 <p><strong>OASIS+ Small Business Awards Announcement:</strong> July 30, 2024 - The OASIS+ Small Business announcements were published on <a href="https://sam.gov/opp/ccc8988feb9c4823a584353dbde0b3db/view" class="usa-link usa-link--external">SAM.GOV</a>.</p>
@@ -74,8 +87,8 @@ const base_url = import.meta.env.BASE_URL;
       <p><strong>Initial proposal submissions:</strong> Closed on October 20, 2023.</p>
         <p>Upcoming dates:</p>
         <ul>
-          <li>Estimated award dates: Throughout Q4 FY 2024 and Q1 FY 2025.</li>
-          <li>Notice to Proceed (official start date to buy or sell services): Estimated Q4 FY 2024 and Q1 FY 2025.</li>
+          <li>Estimated award dates: Throughout Q1 FY 2025.</li>
+          <li>Notice to Proceed (official start date to buy or sell services): Estimated throughout Q1 FY 2025.</li>
           <li>Solicitations re-open: The OASIS+ Solicitations will re-open in FY25 and will be continuously open to receive offers.</li>
         </ul>
         <p>
@@ -128,8 +141,8 @@ const base_url = import.meta.env.BASE_URL;
         <div class="grid-container">
           <div class="grid-row grid-gap margin-bottom-4">
             <div class="tablet:grid-col">
-                <h2 class="margin-top-0">OASIS+ contract families </h2>
-                <p>OASIS+ has six separate and distinct IDIQ contract families. The size and type of your business determines what contract you are eligible for.</p>
+                <h2 class="margin-top-0">OASIS+ contracts</h2>
+                <p>OASIS+ has six separate and distinct IDIQ contracts. The size and type of your business determines what contract you are eligible for.</p>
                 <IconList>
                   {
                     [
@@ -183,7 +196,7 @@ const base_url = import.meta.env.BASE_URL;
                         ['Facilities', facilities_icon, 'about/domains-naicscodes-scope-labor-categories/#-facilities-fac'],
                         ['Technical & Engineering', tech_engineering_icon,'about/domains-naicscodes-scope-labor-categories/#-technical-and-engineering-te'],
                         ['Logistics', logistics_icon,'about/domains-naicscodes-scope-labor-categories/#-logistics-log']
-                      ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" url={url}>{text}</ImageListItem>) }
+                      ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" alt={text} url={url}>{text}</ImageListItem>) }
                     </ImageList>
                   </div>
 
@@ -194,7 +207,7 @@ const base_url = import.meta.env.BASE_URL;
                       ['Research & Development', r_d_icon,'about/domains-naicscodes-scope-labor-categories/#-research-and-development-rd'],
                       ['Environmental', environmental_icon,'about/domains-naicscodes-scope-labor-categories/#-environmental-env'],
                       ['Enterprise Solutions ', enterprise_icon,'about/domains-naicscodes-scope-labor-categories/#-enterprise-solutions']
-                    ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" url={url}>{text}</ImageListItem>) }
+                    ].map(([text, img, url]) =>  <ImageListItem image={img} image_width="50px" alt={text} url={url}>{text}</ImageListItem>) }
                     </ImageList>
                   </div>
                 </div>

@@ -22,7 +22,7 @@ const toc_about_parent_title = about_entries.filter(h => h.slug == './')[0].data
 const toc_about = about_entries.filter(h => h.slug != './');
 
 // get buyer's guide section pages that for print
-let buyers_pages = await getCollection('buyers-guide');
+let buyers_pages = await getCollection('buyersguide');
 // don't include the DPA form in the printable page
 buyers_pages = buyers_pages.filter(h => ((h.slug != './') && (h.slug != 'obtain-dpa/dpa-form') && (h.slug != 'obtain-dpa/dpa-form-success')));
 

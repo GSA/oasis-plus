@@ -11,7 +11,7 @@ import PageContentLayout from '@layouts/PageContentLayout.astro';
 import SideNav from '@components/SideNav.astro'
 
 // We need all the buyers guide posts for the side nav
-const buyers_guide_posts = await getCollection('buyers-guide')
+const buyers_guide_posts = await getCollection('buyersguide')
 
 // … but just the  research contract features subpages for the table of contents
 const guide_posts = buyers_guide_posts.filter(({ slug }) => slug.startsWith('research-contract-features'))

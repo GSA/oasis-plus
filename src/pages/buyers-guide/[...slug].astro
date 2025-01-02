@@ -6,7 +6,7 @@ import PageContentLayoutWideScreen from '@layouts/PageContentLayoutWideScreen.as
 import SideNav from '@components/SideNav.astro'
 
 export async function getStaticPaths() {
-  const pages = await getCollection('buyers-guide');
+  const pages = await getCollection('buyersguide');
   return pages.map((entry, index) => {
     const slug = entry.slug == './' ? undefined : entry.slug
     return {params: {slug: slug }, props: { entry, pages, index }}

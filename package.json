@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.17.0",
+    "@eslint/js": "^9.19.0",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "@uswds/compile": "^1.2.1",

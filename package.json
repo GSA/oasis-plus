@@ -31,7 +31,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
     "@eslint/js": "^9.22.0",
-    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.29.0",
     "@uswds/compile": "^1.2.1",
     "eslint": "^9.22.0",
